@@ -141,17 +141,22 @@ class IsolatedFilesystemTests(unittest.TestCase):
         self.put(source/'LICENSE-MIT', 'original license text')
         self.put(source/'ATTRIBUTION.toml', 'original asset authors')
         self.put(stage/'vendor/sources/craft-fonts/OFL.txt', 'reserved font names')
+        self.put(stage/('vendor/sources/craft-i18n-'+'c'*40+'/language-data/en-us/LICENCE-SCOWL.txt'), 'original dictionary terms')
         target = stage/'app/src/play/assets/suite/pdfcraft'
         self.put(target/'MTOUAA-ASSET-ATTRIBUTION.toml', 'independent artwork')
         updater.write_json(target/'mtouaa-build.json', {'files': {}})
         self.put(stage/'app/src/play/assets/THIRD_PARTY_NOTICES.txt', 'Base runtime notices\n')
         updater.write_json(stage/'tools/play-source-lock.json', [{'id':'pdfcraft','commit':'a'*40}])
+        updater.write_json(stage/'release/build-tools.json', {'additionalSourceInputs':[{'repo':'storytold/craft-i18n','commit':'c'*40}]})
+        self.put(stage/'release/dependency-notices.txt', 'extra dependency copyright')
         updater.preserve_notices(stage,[{'id':'pdfcraft','repo':'storytold/pdfcraft','name':'PdfCraft','version':'1.0.0'}],[('craft-fonts',{'commit':'b'*40})])
         self.assertEqual((target/'upstream-legal/source/NOTICE').read_text(), 'Copyright ArtCraft Team')
         self.assertEqual((target/'upstream-legal/source/ATTRIBUTION.toml').read_text(),'original asset authors')
         self.assertEqual((target/('upstream-legal/fonts/'+'b'*40+'/OFL.txt')).read_text(),'reserved font names')
+        self.assertEqual((target/('upstream-legal/inputs/craft-i18n/'+'c'*40+'/language-data/en-us/LICENCE-SCOWL.txt')).read_text(),'original dictionary terms')
         self.assertEqual((target/'MTOUAA-ASSET-ATTRIBUTION.toml').read_text(),'independent artwork')
         self.assertIn('original license text',(stage/'app/src/play/assets/THIRD_PARTY_NOTICES.txt').read_text())
+        self.assertIn('extra dependency copyright',(stage/'app/src/play/assets/THIRD_PARTY_NOTICES.txt').read_text())
         report=updater.read_json(target/'mtouaa-build.json')
         for name, checksum in report['files'].items(): self.assertEqual(updater.digest(target/name),checksum)
 
@@ -167,6 +172,17 @@ class IsolatedFilesystemTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,'Build invoked'): builder.build({'id':'pdfcraft'}, {})
         with patch.object(builder,'ROOT',self.root), patch.object(builder,'DEST',dest):
             with self.assertRaisesRegex(RuntimeError,'compile before staging'): builder.build({'id':'pdfcraft'}, {},stage_only=True)
+
+    def test_resume_rejects_incomplete_snapshot_without_network(self):
+        catalog=[dict(id=a[0], name=a[1], description=a[2], repo='storytold/'+a[0], version='1.0.0') for a in updater.discover_suite.APPS]
+        updater.write_json(self.root/'tools/suite-lock.json',catalog)
+        stage=self.root/updater.REPORT/'workspace'
+        updater.write_json(stage/'tools/suite-lock.json',catalog)
+        updater.write_json(stage/'tools/play-source-lock.json',[])
+        with patch.object(updater,'latest') as discover:
+            with self.assertRaisesRegex(ValueError,'Invalid staged catalog'):
+                updater.run(type('Args',(),{'check':False,'resume':True})())
+            discover.assert_not_called()
 
 
 if __name__ == '__main__': unittest.main()

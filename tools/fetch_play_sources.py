@@ -54,6 +54,16 @@ def fetch_fonts():
             raise ValueError('Font archive checksum mismatch: ' + name)
         extract_archive(archive, DEST / name)
         print(name + ' source ' + pin['commit'], flush=True)
+    for pin in tools.get('additionalSourceInputs', []):
+        if pin['repo'] != 'storytold/craft-i18n': raise ValueError('Unsupported additional source input')
+        name = 'craft-i18n-' + pin['commit']
+        archive = DEST / (name + '.tar.gz')
+        if not archive.exists():
+            with request('https://codeload.github.com/' + pin['repo'] + '/tar.gz/' + pin['commit']) as response:
+                archive.write_bytes(response.read())
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != pin['sha256']: raise ValueError('Additional source checksum mismatch: ' + name)
+        extract_archive(archive, DEST / name)
+        print(name + ' source ' + pin['commit'], flush=True)
 
 def fetch(app):
     pin = next((p for p in pins if p['id'] == app['id'] and p['version'] == app['version']), None)

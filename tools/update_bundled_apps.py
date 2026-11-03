@@ -90,7 +90,7 @@ def inventory(source):
     files = {}
     for path in sorted(source.rglob('*')):
         relative = path.relative_to(source)
-        if path.is_file() and (is_legal(relative) or path.name in ('Cargo.lock', 'Cargo.toml', 'deny.toml', 'manifest.txt') or str(relative) == '.github/workflows/release.yml'):
+        if path.is_file() and (is_legal(relative) or path.name in ('Cargo.lock', 'Cargo.toml', 'deny.toml', 'manifest.txt', 'craft-i18n.rev') or str(relative) == '.github/workflows/release.yml'):
             files[str(relative)] = digest(path)
     return files
 
@@ -105,10 +105,13 @@ def policy_for(stage, catalog, fonts):
     for name, pin in fonts:
         if not any(is_legal(p.relative_to(stage / 'vendor/sources' / name)) for p in (stage / 'vendor/sources' / name).rglob('*') if p.is_file()):
             raise ValueError('Missing font license records: ' + pin['commit'])
-    return {'format': 1, 'inputs': {
+    result = {'format': 1, 'inputs': {
         **{app['id']: inventory(stage / 'vendor/sources' / app['id']) for app in catalog},
         **{'font:' + pin['commit']: inventory(stage / 'vendor/sources' / name) for name, pin in fonts}
     }}
+    for pin in read_json(stage / 'release/build-tools.json').get('additionalSourceInputs', []):
+        result['inputs'][pin['repo'] + ':' + pin['commit']] = inventory(stage / 'vendor/sources' / (pin['repo'].split('/')[-1] + '-' + pin['commit']))
+    return result
 
 
 def policy_changes(old, new):
@@ -176,6 +179,21 @@ def stage_inputs(stage, catalog, pins):
                 known.add(ref)
     write_json(stage / 'release/build-tools.json', tools)
     fetch_play_sources.fetch_fonts()
+    extra = tools.setdefault('additionalSourceInputs', [])
+    for app in catalog:
+        revision = stage / 'vendor/sources' / app['id'] / 'craft-i18n.rev'
+        if not revision.is_file(): continue
+        commit = revision.read_text().strip()
+        if not re.fullmatch('[a-f0-9]{40}', commit): raise ValueError('Unpinned translation input in ' + app['id'])
+        archive = stage / 'vendor/sources' / ('craft-i18n-' + commit + '.tar.gz')
+        if not archive.exists():
+            with fetch_play_sources.request('https://codeload.github.com/storytold/craft-i18n/tar.gz/' + commit) as stream, archive.open('wb') as output:
+                shutil.copyfileobj(stream, output)
+        known_input = next((p for p in extra if p['repo'] == 'storytold/craft-i18n' and p['commit'] == commit), None)
+        if known_input and digest(archive) != known_input['sha256']: raise ValueError('Translation input checksum mismatch')
+        if not known_input: extra.append({'repo': 'storytold/craft-i18n', 'commit': commit, 'sha256': digest(archive)})
+        fetch_play_sources.extract_archive(archive, stage / 'vendor/sources' / ('craft-i18n-' + commit))
+    write_json(stage / 'release/build-tools.json', tools)
     fonts = [('craft-fonts', tools['craft-fonts'])] + [('craft-fonts-' + p['commit'], p) for p in tools['additionalFontInputs']]
     return pins, fonts
 
@@ -188,6 +206,7 @@ def preserve_notices(stage, catalog, fonts):
         if legal.exists(): shutil.rmtree(legal)
         sources = [('source', stage / 'vendor/sources' / app['id'])]
         sources += [('fonts/' + pin['commit'], stage / 'vendor/sources' / name) for name, pin in fonts]
+        sources += [('inputs/' + pin['repo'].split('/')[-1] + '/' + pin['commit'], stage / 'vendor/sources' / (pin['repo'].split('/')[-1] + '-' + pin['commit'])) for pin in read_json(stage / 'release/build-tools.json').get('additionalSourceInputs', [])]
         for prefix, source in sources:
             for path in source.rglob('*'):
                 relative = path.relative_to(source)
@@ -198,8 +217,11 @@ def preserve_notices(stage, catalog, fonts):
         report['files'] = {str(p.relative_to(target)): digest(p) for p in sorted(target.rglob('*')) if p.is_file() and p != report_path}
         write_json(report_path, report)
     notices = stage / 'app/src/play/assets/THIRD_PARTY_NOTICES.txt'
-    base = notices.read_text().split('\n--- Bundled editor source notices ---')[0]
-    parts = [base, '\n--- Bundled editor source notices ---\n']
+    base = notices.read_text().split('\n--- Bundled editor source notices ---')[0].split('\n--- Additional dependency license notices ---')[0]
+    parts = [base]
+    extra = stage / 'release/dependency-notices.txt'
+    if extra.is_file(): parts += ['\n--- Additional dependency license notices ---\n', extra.read_text()]
+    parts += ['\n--- Bundled editor source notices ---\n']
     pins = {p['id']: p for p in read_json(stage / 'tools/play-source-lock.json')}
     for app in catalog:
         pin = pins[app['id']]
@@ -236,17 +258,32 @@ def run(args):
     old = read_json(ROOT / 'tools/suite-lock.json')
     if {a['id'] for a in old} != {a[0] for a in discover_suite.APPS} or len(old) != 15:
         raise ValueError('Expected the existing 15 official editors')
-    write_json(report_dir / 'report.json', {'status': 'discovering'})
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        found = list(pool.map(latest, old))
-    catalog, pins = map(list, zip(*found))
+    stage = report_dir / 'workspace'
+    resume = getattr(args, 'resume', False)
+    if resume:
+        catalog = read_json(stage / 'tools/suite-lock.json'); pins = read_json(stage / 'tools/play-source-lock.json')
+        if {a['id'] for a in catalog} != {a['id'] for a in old} or len(catalog) != 15 or len(pins) != 15: raise ValueError('Invalid staged catalog')
+        for app, pin in zip(catalog, pins):
+            if app['id'] != pin['id'] or app['repo'] != 'storytold/' + app['id'] or pin['repo'] != app['repo'] or pin['version'] != app['version'] or not re.fullmatch('[a-f0-9]{40}', pin['commit']):
+                raise ValueError('Invalid staged source pin')
+        print('Resuming the previously discovered immutable release snapshot; not querying newer releases.', flush=True)
+    else:
+        write_json(report_dir / 'report.json', {'status': 'discovering'})
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            found = list(pool.map(latest, old))
+        catalog, pins = map(list, zip(*found))
     report = {'status': 'discovered', 'editors': [dict(id=a['id'], previous=b['version'], latest=a['version'], commit=p['commit']) for a,b,p in zip(catalog,old,pins)],
-              'scope': '15 bundled editors and their upstream-pinned font inputs; Android/Gecko/toolchain dependencies remain pinned'}
+              'scope': '15 bundled editors and their upstream-pinned fonts, translations and dictionaries; Android/Gecko/toolchain dependencies remain pinned'}
     write_json(report_dir / 'report.json', report)
     for app, previous in zip(catalog, old): print(f'{app["id"]}: {previous["version"]} -> {app["version"]}', flush=True)
     if args.check:
         print('Discovery only; locks and bundled assets unchanged. See ' + str(report_dir / 'report.json')); return
-    stage = report_dir / 'workspace'; configure_stage(stage)
+    if not resume: configure_stage(stage)
+    else:
+        for script in (ROOT / 'tools').glob('*.py'): shutil.copy2(script, stage / 'tools' / script.name)
+        shutil.copy2(ROOT / 'release/brand.json', stage / 'release/brand.json')
+        extra_notices = ROOT / 'release/dependency-notices.txt'
+        if extra_notices.is_file(): shutil.copy2(extra_notices, stage / 'release/dependency-notices.txt')
     pins, fonts = stage_inputs(stage, catalog, pins)
     policy = policy_for(stage, catalog, fonts)
     write_json(report_dir / 'candidate-license-policy.json', policy)
@@ -259,11 +296,16 @@ def run(args):
     prepare_suite.main()
     # Reuse only outputs whose source and patch report remain valid; the builder checks all hashes.
     source_assets = ROOT / 'app/src/play/assets/suite'
-    if source_assets.exists(): shutil.copytree(source_assets, stage / 'app/src/play/assets/suite')
+    if source_assets.exists() and not (stage / 'app/src/play/assets/suite').exists(): shutil.copytree(source_assets, stage / 'app/src/play/assets/suite')
     for command in ('prepare_play_sources.py', 'build_play_engines.py'):
         subprocess.run([sys.executable, str(stage / 'tools' / command)], cwd=stage, check=True)
     preserve_notices(stage, catalog, fonts)
     subprocess.run([sys.executable, str(stage / 'tools/check_play_release.py'), '--assets-only'], cwd=stage, check=True)
+    # The normal Android build checks the stock archives too. Keep verified downloads
+    # in its immutable cache so the first build after an update stays offline.
+    for archive in (stage / 'vendor').glob('*.zip'):
+        cached = ROOT / 'vendor' / archive.name
+        if not cached.exists(): os.link(archive, cached)
     backup = report_dir / 'previous'
     if backup.exists(): shutil.rmtree(backup)
     promote(stage, ['tools/suite-lock.json', 'tools/play-source-lock.json', 'release/build-tools.json',
@@ -278,6 +320,7 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Discover stable versions only, without downloads/builds or lock changes')
+    parser.add_argument('--resume', action='store_true', help='Resume the exact staged release snapshot, rechecking pins, archives and license inputs')
     args = parser.parse_args()
     lock = ROOT / '.tools/bundled-update.lock'; lock.parent.mkdir(exist_ok=True)
     with lock.open('w') as stream:

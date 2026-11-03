@@ -28,6 +28,13 @@ def build(app,env,stage_only=False,force=False):
         if previous['source']==pin and previous['patch']==json.loads((source/'mtouaa-patch.json').read_text()) and all((DEST/app['id']/name).is_file() and hashlib.sha256((DEST/app['id']/name).read_bytes()).hexdigest()==digest for name,digest in previous['files'].items()):
             print('Already built '+app['id'],flush=True);return
     env=dict(env)
+    i18n_ref=source/'craft-i18n.rev'
+    if i18n_ref.is_file():
+        revision=i18n_ref.read_text().strip()
+        i18n=source/'mtouaa-i18n'
+        if not re.fullmatch('[a-f0-9]{40}',revision) or not i18n.is_dir():raise RuntimeError('Missing pinned translation input '+revision)
+        env['CRAFT_I18N_DIR']=str(i18n)
+        env['CRAFT_I18N_REQUIRED']='1'
     workflow=source/'.github/workflows/release.yml'
     font_ref=re.search(r'craft-fonts-ref:\s*([0-9a-f]{40})',workflow.read_text()) if workflow.is_file() else None
     if font_ref and font_ref[1]!='b076417b5880bd4154bd22f00695b1d28c6bea83':

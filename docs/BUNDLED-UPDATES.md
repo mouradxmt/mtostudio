@@ -22,7 +22,7 @@ To check versions without changing locks or assets:
 ## Scope and behavior
 
 The task updates **all 15 existing editors** to their upstream GitHub `releases/latest`
-stable release and uses each release's pinned font inputs. It rejects prereleases,
+stable release and uses each release's pinned font, translation and dictionary inputs. It rejects prereleases,
 downgrades, missing/ambiguous web archives, absent SHA-256 release digests and moved
 release tags. A missing web build stops the update; an editor is never silently dropped.
 It resolves annotated tags to immutable commits and hashes downloaded source archives.
@@ -78,6 +78,14 @@ cp .tools/bundled-update/candidate-license-policy.json tools/bundled-license-pol
 Do not copy the candidate file just to bypass a failed check. The rerun rediscovers releases
 and rechecks hashes; a newer or changed input requires another review. There is no blanket
 ignore-license switch.
+
+To continue the exact already-discovered snapshot after review, use
+`./gradlew -PresumeBundledUpdate=true updateBundledApps`. This rechecks staged source/archive
+pins and license inputs without another latest-release lookup or discarding completed
+editor builds. Run without that property when you want a fresh discovery. The current
+Writer release also pins `craft-i18n.rev`; translations and dictionary data are fetched
+at that commit with their archive hash in `release/build-tools.json`. Dictionary files
+remain intact; a private source copy of interface translations receives the branding patch.
 
 The update preserves original legal files byte for byte under each editor's
 `upstream-legal/source/`, alongside the official web package's notices and the independently

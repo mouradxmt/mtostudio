@@ -1,7 +1,7 @@
 # AdMob plan for Mtouaa Studio
 
 Publisher: **Mtouaa Labs**. Reviewed 3 November 2026.
-Status: planning only. Version 0.4.2 has no advertising SDK, ad requests or ad placements.
+Status: planning only. Version 0.5.0 has no advertising SDK, ad requests or ad placements.
 No AdMob account, production IDs or app-ads.txt record has been created by this project.
 
 ## Recommended first placement

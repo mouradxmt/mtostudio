@@ -79,9 +79,15 @@ def prepare(app):
     if not (original/'Cargo.toml').is_file(): raise RuntimeError('Fetch pinned sources first: '+app['id'])
     if dest.exists(): shutil.rmtree(dest)
     shutil.copytree(original,dest,ignore=shutil.ignore_patterns('target','dist','.git'))
+    i18n_ref=original/'craft-i18n.rev'
+    if i18n_ref.is_file():
+        revision=i18n_ref.read_text().strip()
+        translations=ROOT/'vendor/sources'/('craft-i18n-'+revision)
+        if not re.fullmatch('[a-f0-9]{40}',revision) or not translations.is_dir():raise RuntimeError('Fetch pinned translations first: '+app['id'])
+        shutil.copytree(translations,dest/'mtouaa-i18n',ignore=shutil.ignore_patterns('target','dist','.git'))
     changed=[]
     # Keep NOTICE, LICENSE*, ATTRIBUTION*, contributor records and fonts intact.
-    for parent in ['crates','apps']:
+    for parent in ['crates','apps','mtouaa-i18n/locales']:
         for p in (dest/parent).rglob('*'):
             locale_path=any(part in ['i18n','locales'] for part in p.parts)
             is_locale=p.suffix in ['.json','.toml'] and locale_path

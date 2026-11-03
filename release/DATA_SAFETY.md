@@ -4,7 +4,7 @@ These answers describe the independently branded **Play** edition. Review them a
 final signed bundle and its third-party runtime before submitting them in Play Console.
 They are not a submitted or Google-approved declaration.
 
-Publisher: **Mtouaa Labs**. The 0.4.2 candidate contains no AdMob SDK or advertising.
+Publisher: **Mtouaa Labs**. The 0.5.0 candidate contains no AdMob SDK or advertising.
 The planned monetized edition must use a revised policy and worksheet before launch;
 see [ADMOB_PLAN.md](ADMOB_PLAN.md). An ad-supported version cannot reuse the current
 "no advertising SDK" answer. Declare ads in Play Console when that edition is submitted,

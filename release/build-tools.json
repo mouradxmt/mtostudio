@@ -31,5 +31,12 @@
       "commit": "aced4137c022f1f587624d48e81ec77e1914a9cc",
       "sha256": "fd0a918e08537816453dc5e37962c14a1b2068d89b2c966b34f877901fd08f84"
     }
+  ],
+  "additionalSourceInputs": [
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "059cbf95c2a3eb95d637ca8584faca1129d17f48",
+      "sha256": "2abb92b3806bbdb5c0edf54f13621c04ef02923dcc761b39120b17a6d199671d"
+    }
   ]
 }

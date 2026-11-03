@@ -2,106 +2,106 @@
   {
     "id": "photocraft",
     "repo": "storytold/photocraft",
-    "version": "0.19.0",
-    "commit": "2df9f807702a935184041355a86405380bda8274",
-    "sha256": "c4e7c71ab1a6036eaa7b3ee52a6af714e59f3515ed6264e3771e17f3d1e1769e"
+    "version": "0.20.1",
+    "commit": "327c4cc82e737a3e0af7c147a477126d77525495",
+    "sha256": "be16defd88c4f793c684da0eab0578bc21c0790b3139c56b810c0505707e95d0"
   },
   {
     "id": "vectorcraft",
     "repo": "storytold/vectorcraft",
-    "version": "0.20.0",
-    "commit": "5628de96f866185d8eb289b167b89691f213c0c3",
-    "sha256": "14e55f94d9752e892d9ec894813df44b77c12e62d6370c96194cdd0d2deac3e9"
+    "version": "0.21.0",
+    "commit": "11862f61198c8f62c0b22b6c9a331cc5950ac98d",
+    "sha256": "97e451e2c9556e904c9f72aa907d1771665b9c66d14bf47e23a8cac74f9ac406"
   },
   {
     "id": "filmcraft",
     "repo": "storytold/filmcraft",
-    "version": "0.16.0",
-    "commit": "77adc30a756bea17441199caff45a24415ba9753",
-    "sha256": "108938aac0707be20002e16193b2b9c1f9dfef6a01c61081d7344a089cd3b6d0"
+    "version": "0.17.0",
+    "commit": "eb59ec09daaea519c9c8fffa404a594ae50d00e0",
+    "sha256": "41f80be7e2a05f37d97c41845a8cebbbab1da1583ebc8573167d7be7ab1ca7b7"
   },
   {
     "id": "lightcraft",
     "repo": "storytold/lightcraft",
-    "version": "0.17.0",
-    "commit": "5a09d075306291a1522d5e8bb0710774f3733594",
-    "sha256": "4f3a7c62f488c0e925f23c1d5a7eb7de4ae18ea4cabb36202fbc47791b83ea4e"
+    "version": "0.18.0",
+    "commit": "32d569ad5d19a6b55cf8d5c077127faa0f44a83b",
+    "sha256": "46684290f7ec1174aeb61869b001800e9df18d8cdc9e8141a92416c902dbb0d8"
   },
   {
     "id": "pdfcraft",
     "repo": "storytold/pdfcraft",
-    "version": "0.17.0",
-    "commit": "7d78f3e14474b978be014715e0cc64895d77025a",
-    "sha256": "4e053de792acaf3968b3de9f07745594e19616adc9034035ac37271f7dd4639e"
+    "version": "0.18.0",
+    "commit": "3936f93a1479366a951206fc6d3094680fe2d3dc",
+    "sha256": "c36f79ffac9c05eb9809969cd1016a7f296669f5fb54b16aa99891a2bbd2ecd0"
   },
   {
     "id": "effectcraft",
     "repo": "storytold/effectcraft",
-    "version": "0.20.0",
-    "commit": "720c67117ea232ef01631a368bb617012f4c63d6",
-    "sha256": "6ffaff35413226db286d596dbb218bde25c68a1af12364eccf1faee154b63dd0"
+    "version": "0.21.0",
+    "commit": "7870b5916ae0749d497d880989683bf2946d6c8b",
+    "sha256": "bc43b5dd2bf18e4929802aedc779c05a78623f823f7adf0dad0c6074cb748e35"
   },
   {
     "id": "designcraft",
     "repo": "storytold/designcraft",
-    "version": "0.16.0",
-    "commit": "1fe8885bda7451263879cfbb256b9a3d46c411bf",
-    "sha256": "8d1dc671a44c269d8b557ba4b90cfbc96b26a9aa064539d343a811914ae7485b"
+    "version": "0.17.0",
+    "commit": "e79d682e02dc66f14370958b193bfa46072b2f41",
+    "sha256": "ca22ae422b6a7b74f5fee1bfd559618ea0e9aa78fa0ec8cd44e4f68d06ed5139"
   },
   {
     "id": "figcraft",
     "repo": "storytold/figcraft",
-    "version": "0.14.0",
-    "commit": "5fc2840d9089e0b21056b57c4dff9f795e38a4e3",
-    "sha256": "d8c59f6044078edb20662646c6d613fdf6b19e86cc4b42a3873b3d3de48c3d5b"
+    "version": "0.15.0",
+    "commit": "02c38a6d959f0afd82e44d9d67d396266e6ab4a3",
+    "sha256": "f8846c7539edeca5763063ca7d886dfa0f2d9b8b8aa693a470e96b0549f1dd2d"
   },
   {
     "id": "texturecraft",
     "repo": "storytold/texturecraft",
-    "version": "0.2.0",
-    "commit": "e01dac2c35c44e201cf9dc43965887e29f1b15d6",
-    "sha256": "6cf8f9726207cf38ff05f2776d68cfb377ad60ce8114441dcea6928da885c06a"
+    "version": "0.3.0",
+    "commit": "85475143fa4d219cc7d60cd039923f57b6c2209c",
+    "sha256": "38c6c781daeeb03d923f7b78a6edfb900845c6f3d3a0599f746ecb8dd3153eba"
   },
   {
     "id": "wordcraft",
     "repo": "storytold/wordcraft",
-    "version": "0.14.0",
-    "commit": "5cd53f184aab11def13b7fced18727159b9bc96a",
-    "sha256": "00aac6b992c09d093410f4aeea41b2ec255ad728b11f402ab9c9a41fb09125e4"
+    "version": "0.15.0",
+    "commit": "b47079fc791595fd84bb499d64dcd3f0624ef35a",
+    "sha256": "709668cd52d189362c91be7aec20b2dbafb2be662452b42f6bd8ed9116f40cc3"
   },
   {
     "id": "soundcraft",
     "repo": "storytold/soundcraft",
-    "version": "0.16.0",
-    "commit": "db51dd17398852ba70919c5a560d1c8ed9e3e6c6",
-    "sha256": "6b69dc032a04afaf782e1b8462a695265257829059020a167e51d102d1f6d832"
+    "version": "0.17.0",
+    "commit": "b35dd0f9eb0c08a198c1306021bd138f3a22d87c",
+    "sha256": "12bdc3ac2d1db230d95e7ca99aabc5ed9004cdb165e83b0727ec3b04f222be6e"
   },
   {
     "id": "deckcraft",
     "repo": "storytold/deckcraft",
-    "version": "0.14.1",
-    "commit": "ee39ff67816d0039143ec7c98ea604cefe0cd2e5",
-    "sha256": "bd99a151d9b9a69f8f92a99ea74e3b1e3c488bd8753263d0b2c264847f06b38e"
+    "version": "0.15.0",
+    "commit": "3e178d8f5a59c787a6a53a7ed0f052b3e4a1489f",
+    "sha256": "4128092e0eb04cc03539f77cadebe4569a268ce34850b7d2d8cd3c2fde0c7021"
   },
   {
     "id": "cadcraft",
     "repo": "storytold/cadcraft",
-    "version": "0.16.0",
-    "commit": "4b4ec8043ec6e378e1cbe238a56b7bab793ae5d0",
-    "sha256": "b1b3320790be45ff905ba82db6a5091fb1580261eaeb579389e144ef2ceb0302"
+    "version": "0.17.0",
+    "commit": "f389d6a72e3fc160ea125b4f264d68f64cbe2aba",
+    "sha256": "f2dfda3debfe318b6c9b77d37e1bc1dc4b7a8e9d0079c222a5bbad7145bafa00"
   },
   {
     "id": "gridcraft",
     "repo": "storytold/gridcraft",
-    "version": "0.15.0",
-    "commit": "30b210b4ef03b30616923465efa70766cefba379",
-    "sha256": "eef1c9f6ae8aab379e3fea6b2d9142e691e71a0b06c0ddc07884d199583d564f"
+    "version": "0.16.0",
+    "commit": "85e51e009c24fad47575f04d3c08f12342615d82",
+    "sha256": "46f1ba1fa7e35556087a7f6c2ddc03c686a98a95a5d9d448db999b5cebf7579e"
   },
   {
     "id": "craft-anything",
     "repo": "storytold/craft-anything",
-    "version": "0.2.0",
-    "commit": "b09b99aaa7985ebbc3d0fef467c4b688d4727cc1",
-    "sha256": "1cddae2b4ad9ce2c5adcdf9581417bdc9c46804751216d1cafe9f353e8ba1f9c"
+    "version": "0.3.0",
+    "commit": "e6280b5dc518b9f3266c82d794a4e2f0367d9a53",
+    "sha256": "8d53191a0e52c5c67d7f11de6113038dd9489b016fff3e67a95b7baa94711548"
   }
 ]
