@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Mtouaa Studio local editor bridge",
+  "version": "1.0.0.6",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "offline-bridge@mtouaa.local"
+    }
+  },
+  "permissions": [
+    "nativeMessaging",
+    "nativeMessagingFromContent",
+    "geckoViewAddons",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "network.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.localhost/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

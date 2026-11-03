@@ -1,0 +1,101 @@
+plugins { id 'com.android.application' }
+
+def brand = new groovy.json.JsonSlurper().parse(rootProject.file('release/brand.json'))
+def configString = { value -> groovy.json.JsonOutput.toJson(value.toString()) }
+def uploadProperties = new Properties()
+def uploadFile = rootProject.file('.release-secrets/upload.properties')
+if (uploadFile.isFile()) uploadFile.withInputStream { uploadProperties.load(it) }
+
+android {
+    namespace 'org.wordcraft.offline'
+    compileSdk 37
+    buildFeatures { buildConfig true; resValues true }
+    testBuildType providers.gradleProperty('testBuildType').getOrElse('release')
+    defaultConfig {
+        applicationId 'org.wordcraft.offline'
+        minSdk 26
+        targetSdk 36
+        versionCode 6
+        versionName '0.4.1'
+        resValue 'string', 'app_name', brand.appName
+        buildConfigField 'String', 'PUBLISHER_NAME', configString(brand.publisherName)
+        buildConfigField 'String', 'PUBLISHER_WEBSITE', configString(brand.website)
+        buildConfigField 'String', 'SUPPORT_EMAIL', configString(brand.supportEmail)
+        buildConfigField 'String', 'PRIVACY_POLICY_URL', configString(brand.privacyPolicyUrl)
+        testInstrumentationRunner 'org.wordcraft.offline.SuiteSmokeInstrumentation'
+        ndk { abiFilters 'arm64-v8a' }
+    }
+    flavorDimensions += 'distribution'
+    productFlavors {
+        sideload {
+            dimension 'distribution'
+            buildConfigField 'boolean', 'EXTERNAL_UPDATES', 'true'
+            buildConfigField 'int', 'LOCAL_PORT', '43871'
+        }
+        play {
+            dimension 'distribution'
+            applicationId brand.applicationId
+            buildConfigField 'boolean', 'EXTERNAL_UPDATES', 'false'
+            buildConfigField 'int', 'LOCAL_PORT', '43872'
+        }
+    }
+    sourceSets {
+        main.assets.srcDirs = ['src/shared/assets']
+        sideload.assets.srcDirs = ['src/main/assets', 'src/sideload/assets']
+        play.assets.srcDirs = ['src/play/assets']
+    }
+    signingConfigs {
+        upload {
+            if (!uploadProperties.isEmpty()) {
+                storeFile rootProject.file(uploadProperties['storeFile'])
+                storePassword uploadProperties['storePassword']
+                keyAlias uploadProperties['keyAlias']
+                keyPassword uploadProperties['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        preview {
+            initWith debug
+            applicationIdSuffix '.preview'
+            versionNameSuffix '-preview'
+            resValue 'string', 'app_name', brand.appName + ' Preview'
+            matchingFallbacks = ['debug']
+            buildConfigField 'int', 'LOCAL_PORT', '43873'
+        }
+        release {
+            debuggable false
+            if (!uploadProperties.isEmpty()) signingConfig signingConfigs.upload
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    packaging { jniLibs { useLegacyPackaging true } }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+    implementation 'org.mozilla.geckoview:geckoview:159.0.20261022150525'
+}
+
+tasks.register('checkSideloadEditor') {
+    doLast {
+        if (!file('src/main/assets/suite/catalog.json').isFile()) {
+            throw new GradleException('Run python3 tools/prepare_suite.py before building.')
+        }
+        def apps = new groovy.json.JsonSlurper().parse(file('src/main/assets/suite/catalog.json'))
+        apps.each { app ->
+            if (!file("src/main/assets/suite/${app.id}/index.html").isFile()) {
+                throw new GradleException("Missing bundled app: ${app.name}")
+            }
+        }
+    }
+}
+tasks.matching { it.name.startsWith('preSideload') && it.name.endsWith('Build') }.configureEach { dependsOn 'checkSideloadEditor' }
+tasks.register('checkPlayEditor', Exec) {
+    workingDir rootProject.projectDir
+    commandLine 'python3', 'tools/check_play_release.py', '--assets-only'
+}
+tasks.matching { it.name.startsWith('prePlay') && it.name.endsWith('Build') }.configureEach { dependsOn 'checkPlayEditor' }

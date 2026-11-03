@@ -1,0 +1,35 @@
+{
+  "rust": "1.99.1 (58cf8f9c3 2026-10-13)",
+  "target": "wasm32-unknown-unknown",
+  "trunk": {
+    "version": "0.22.1",
+    "sha256": "18e381936c848700fefb9ee3f64f362419fab700200eefee323ebc0d00a8e9db"
+  },
+  "wasm-bindgen": {
+    "version": "0.2.129",
+    "sha256": "81d4a23d56b3c3eb8187658329116d50e0b228a93b343825fb71f70179051cd1"
+  },
+  "wasm-opt": {
+    "version": "131",
+    "platform": "macOS arm64 (downloaded by pinned Trunk)",
+    "executableSha256": "13560cec4415f7fbc0225d8f31168b0d45674e6763f1d93225936cf7d000288f"
+  },
+  "bundletool": {
+    "version": "1.18.3",
+    "sha256": "a099cfa1543f55593bc2ed16a70a7c67fe54b1747bb7301f37fdfd6d91028e29"
+  },
+  "craft-fonts": {
+    "commit": "b076417b5880bd4154bd22f00695b1d28c6bea83",
+    "sha256": "35eadfeb7e4217a933f24b73a3d190b90fed81e6c933266f092c161746c0a9eb"
+  },
+  "additionalFontInputs": [
+    {
+      "commit": "37827adc41fd165f9a9234ac40f94dbad353aa69",
+      "sha256": "64c213260ee643c99edb1300ff047a2a00b270d7efef4aa943fec78641fdfef0"
+    },
+    {
+      "commit": "aced4137c022f1f587624d48e81ec77e1914a9cc",
+      "sha256": "fd0a918e08537816453dc5e37962c14a1b2068d89b2c966b34f877901fd08f84"
+    }
+  ]
+}

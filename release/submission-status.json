@@ -1,0 +1,8 @@
+{
+  "support_mailbox_created": false,
+  "public_privacy_policy_published_and_verified": false,
+  "publisher_identity_and_audience_confirmed": false,
+  "physical_device_file_roundtrips_passed": false,
+  "play_internal_test_and_prelaunch_report_reviewed": false,
+  "play_closed_testing_requirement_satisfied_if_applicable": false
+}

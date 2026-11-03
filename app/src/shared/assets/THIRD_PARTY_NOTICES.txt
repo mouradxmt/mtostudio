@@ -1,0 +1,22 @@
+ArtCraft Offline is an independent Android port. It is not an official ArtCraft or Mozilla product.
+
+The 15 bundled ArtCraft web engines retain their upstream MIT/Apache and asset/font licenses.
+License, NOTICE, ATTRIBUTION and OFL files are preserved with each engine inside the app assets.
+Source repositories are listed in the suite catalog and README.
+
+This application includes unmodified Mozilla GeckoView 159.0.20261022150525 and the Firefox
+browser engine, available under the Mozilla Public License 2.0 and its applicable third-party
+notices. Mozilla and Firefox are trademarks of the Mozilla Foundation.
+
+MPL 2.0: https://www.mozilla.org/MPL/2.0/
+Corresponding GeckoView source:
+https://hg.mozilla.org/releases/mozilla-release/rev/5add844c26613d7e4d84c799d6e23cf987b1240d
+Source archive:
+https://hg.mozilla.org/releases/mozilla-release/archive/5add844c26613d7e4d84c799d6e23cf987b1240d.tar.gz
+
+The runtime is included from Mozilla's official Maven repository. No Google Play Services or
+separate system WebView installation is required by the default bundled browser engine.
+
+The 15 individual app shortcut icons are copied unmodified from ArtCraft Launcher,
+under each app's MIT OR Apache-2.0 license. Attribution and original sources are
+preserved in APP_ICON_ATTRIBUTION.md.

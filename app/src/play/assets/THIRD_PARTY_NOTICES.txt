@@ -1,0 +1,29 @@
+Mtouaa Studio — independent Android creative suite
+Publisher: Mtouaa Labs. Website: https://mtouaa.com
+
+This edition is based on the open-source PhotoCraft, VectorCraft, FilmCraft, LightCraft,
+PdfCraft, EffectCraft, DesignCraft, FigCraft, TextureCraft, WordCraft, SoundCraft, DeckCraft,
+CADCraft, GridCraft and Craft Anything projects by their respective contributors.
+The source repositories and exact source commits are recorded in each editor's
+mtouaa-build.json file. Source patches and build instructions accompany this Android project.
+
+Modified 3 November 2026: upstream protected ArtCraft branding and shortcut artwork were
+replaced with original Mtouaa artwork; editor display names and publisher links were changed.
+The underlying open-source projects, contributors, copyright statements and required
+licences remain credited. This is not an official release of those projects and is not
+affiliated with or endorsed by the ArtCraft Team or Mozilla.
+
+The editor code retains its upstream MIT OR Apache-2.0 and dependency/asset/font licences.
+Per-editor LICENSE, NOTICE, ATTRIBUTION and OFL files remain bundled. Modification notices
+identify this independently built edition. Original artwork is described in
+APP_ICON_ATTRIBUTION.md. The original trademark assets are not included in this edition.
+
+Mozilla GeckoView 159.0.20261022150525 is included unmodified under MPL 2.0 and its
+applicable third-party notices. Mozilla and Firefox are trademarks of the Mozilla Foundation.
+MPL 2.0: https://www.mozilla.org/MPL/2.0/
+Corresponding GeckoView source:
+https://hg.mozilla.org/releases/mozilla-release/rev/5add844c26613d7e4d84c799d6e23cf987b1240d
+Source archive:
+https://hg.mozilla.org/releases/mozilla-release/archive/5add844c26613d7e4d84c799d6e23cf987b1240d.tar.gz
+
+The Play edition uses packaged, reviewed editors and is updated through Google Play.

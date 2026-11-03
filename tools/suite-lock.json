@@ -1,0 +1,167 @@
+[
+  {
+    "id": "photocraft",
+    "name": "PhotoCraft",
+    "description": "Photo and image editing",
+    "repo": "storytold/photocraft",
+    "version": "0.19.0",
+    "asset": "photocraft-web-0.19.0.zip",
+    "url": "https://github.com/storytold/photocraft/releases/download/v0.19.0/photocraft-web-0.19.0.zip",
+    "sha256": "74047f06da706c5b7c9dee77e05379a0928c52b5a7ea1e821e55c69851b0bd01",
+    "size": 13433636
+  },
+  {
+    "id": "vectorcraft",
+    "name": "VectorCraft",
+    "description": "Vector illustration",
+    "repo": "storytold/vectorcraft",
+    "version": "0.20.0",
+    "asset": "vectorcraft-web-0.20.0.zip",
+    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.20.0/vectorcraft-web-0.20.0.zip",
+    "sha256": "47c98c485ec149426cb055c1875e6535a88db7e91edb81f85a91596f34e9d101",
+    "size": 32438720
+  },
+  {
+    "id": "filmcraft",
+    "name": "FilmCraft",
+    "description": "Video editing",
+    "repo": "storytold/filmcraft",
+    "version": "0.16.0",
+    "asset": "filmcraft-web-0.16.0.zip",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.16.0/filmcraft-web-0.16.0.zip",
+    "sha256": "79da0f879f86f4520c1721d8296dfa61220c33eb0e39bf8e58fd883388800431",
+    "size": 15097399
+  },
+  {
+    "id": "lightcraft",
+    "name": "LightCraft",
+    "description": "Photo library and RAW development",
+    "repo": "storytold/lightcraft",
+    "version": "0.17.0",
+    "asset": "lightcraft-web-0.17.0.zip",
+    "url": "https://github.com/storytold/lightcraft/releases/download/v0.17.0/lightcraft-web-0.17.0.zip",
+    "sha256": "24df2d75857846ae3114293f3bef99a7b0fc83f09d329f178a76490622d389c0",
+    "size": 73311887
+  },
+  {
+    "id": "pdfcraft",
+    "name": "PdfCraft",
+    "description": "PDF editing and organization",
+    "repo": "storytold/pdfcraft",
+    "version": "0.17.0",
+    "asset": "pdfcraft-web-0.17.0.zip",
+    "url": "https://github.com/storytold/pdfcraft/releases/download/v0.17.0/pdfcraft-web-0.17.0.zip",
+    "sha256": "393420ab35e25afc174cb6d1791098bb714099aca91cf6598b4553e57c48a835",
+    "size": 17417347
+  },
+  {
+    "id": "effectcraft",
+    "name": "EffectCraft",
+    "description": "Motion graphics and visual effects",
+    "repo": "storytold/effectcraft",
+    "version": "0.20.0",
+    "asset": "effectcraft-web-0.20.0.zip",
+    "url": "https://github.com/storytold/effectcraft/releases/download/v0.20.0/effectcraft-web-0.20.0.zip",
+    "sha256": "24189ed0dc8e9b5ed893dbd65b27f4f130ce5294b4a4f6b4cd506746f916c13e",
+    "size": 21591778
+  },
+  {
+    "id": "designcraft",
+    "name": "DesignCraft",
+    "description": "Page layout and publishing",
+    "repo": "storytold/designcraft",
+    "version": "0.16.0",
+    "asset": "designcraft-web-0.16.0.zip",
+    "url": "https://github.com/storytold/designcraft/releases/download/v0.16.0/designcraft-web-0.16.0.zip",
+    "sha256": "1e74074b32d59185210042f303f28041b49dd3cc1a70d4d378a75ef23e4b0186",
+    "size": 26783459
+  },
+  {
+    "id": "figcraft",
+    "name": "FigCraft",
+    "description": "Interface design and prototyping",
+    "repo": "storytold/figcraft",
+    "version": "0.14.0",
+    "asset": "figcraft-web-0.14.0.zip",
+    "url": "https://github.com/storytold/figcraft/releases/download/v0.14.0/figcraft-web-0.14.0.zip",
+    "sha256": "e0379c8038c68f9639952b0a5c45b8c42640377111d97da2c4f8db9db8ec8083",
+    "size": 10326575
+  },
+  {
+    "id": "texturecraft",
+    "name": "TextureCraft",
+    "description": "3D texture painting",
+    "repo": "storytold/texturecraft",
+    "version": "0.2.0",
+    "asset": "texturecraft-web-0.2.0.zip",
+    "url": "https://github.com/storytold/texturecraft/releases/download/v0.2.0/texturecraft-web-0.2.0.zip",
+    "sha256": "77866fb28e658709b08ab72e8b427d598b0f1e36bd86d3b35d996b16e7220f84",
+    "size": 8221675
+  },
+  {
+    "id": "wordcraft",
+    "name": "WordCraft",
+    "description": "Writing and document design",
+    "repo": "storytold/wordcraft",
+    "version": "0.14.0",
+    "asset": "wordcraft-web-0.14.0.zip",
+    "url": "https://github.com/storytold/wordcraft/releases/download/v0.14.0/wordcraft-web-0.14.0.zip",
+    "sha256": "afbb7fb0d7c0d98e76bf0f25de82eade7783abb8bb1139c02447474b051e0d99",
+    "size": 18611600
+  },
+  {
+    "id": "soundcraft",
+    "name": "SoundCraft",
+    "description": "Audio editing and mixing",
+    "repo": "storytold/soundcraft",
+    "version": "0.16.0",
+    "asset": "soundcraft-web-0.16.0.zip",
+    "url": "https://github.com/storytold/soundcraft/releases/download/v0.16.0/soundcraft-web-0.16.0.zip",
+    "sha256": "ade89cb3e1faacd5c90388fc115317f61c974d5b77a3048e36834c898f89ed08",
+    "size": 6729079
+  },
+  {
+    "id": "deckcraft",
+    "name": "DeckCraft",
+    "description": "Presentations and slides",
+    "repo": "storytold/deckcraft",
+    "version": "0.14.1",
+    "asset": "deckcraft-web-0.14.1.zip",
+    "url": "https://github.com/storytold/deckcraft/releases/download/v0.14.1/deckcraft-web-0.14.1.zip",
+    "sha256": "929f0e44eb99c62271320a68a50c95c8266bb03db5e2205c4eb72c33b1936c97",
+    "size": 11611436
+  },
+  {
+    "id": "cadcraft",
+    "name": "CADCraft",
+    "description": "Computer-aided design",
+    "repo": "storytold/cadcraft",
+    "version": "0.16.0",
+    "asset": "cadcraft-web-0.16.0.zip",
+    "url": "https://github.com/storytold/cadcraft/releases/download/v0.16.0/cadcraft-web-0.16.0.zip",
+    "sha256": "db60c0b9f3b186b6ded1d293d350663a72f301295ff682f71eb2866788ae078a",
+    "size": 10404924
+  },
+  {
+    "id": "gridcraft",
+    "name": "GridCraft",
+    "description": "Spreadsheets and data analysis",
+    "repo": "storytold/gridcraft",
+    "version": "0.15.0",
+    "asset": "gridcraft-web-0.15.0.zip",
+    "url": "https://github.com/storytold/gridcraft/releases/download/v0.15.0/gridcraft-web-0.15.0.zip",
+    "sha256": "be8c8ce414a7c0621fab10f907be5c14ac2ad26e9db39da18e8a0c6f1dd3a99e",
+    "size": 8509119
+  },
+  {
+    "id": "craft-anything",
+    "name": "Craft Anything",
+    "description": "Software exploration and creation",
+    "repo": "storytold/craft-anything",
+    "version": "0.2.0",
+    "asset": "craft-anything-web-0.2.0.zip",
+    "url": "https://github.com/storytold/craft-anything/releases/download/v0.2.0/craft-anything-web-0.2.0.zip",
+    "sha256": "ebb32cafcb6cdf8942fe412ac3a3598586b5ed400739f44788e6adf966cb810b",
+    "size": 2646337
+  }
+]

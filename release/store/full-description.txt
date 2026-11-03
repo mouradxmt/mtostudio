@@ -1,0 +1,13 @@
+Mtouaa Studio brings 15 creative tools together in one app, with all editors included for offline use after installation.
+
+Write documents, work with PDFs and spreadsheets, prepare slides, edit images and vectors, explore page layouts, and work with audio, video, motion, CAD and textures.
+
+• Your files are processed on your device.
+• No account required.
+• Open and export files using Android's document picker.
+• Add individual editor shortcuts to your home screen.
+• Use full screen for more workspace on a tablet.
+
+The editors use desktop-style interfaces. A larger screen and a keyboard are recommended. Features and supported formats vary between editors. Save and verify exports before switching tools; not every upstream desktop feature is available in the browser editions.
+
+Published independently by Mtouaa Labs. Based on open-source editing engines, with original authors and licences credited inside the app. This edition is not affiliated with the upstream maintainers or Mozilla.
