@@ -84,6 +84,19 @@ branded Play assets. `--app pdfcraft` limits the source/engine scripts to one ed
 matching builds are reused; `--force` rebuilds them, and `--stage-only` refreshes packaging
 from already compiled outputs.
 
+To refresh all 15 bundled editors from the latest stable GitHub releases:
+
+```sh
+./gradlew checkBundledUpdates  # report available versions
+./gradlew updateBundledApps    # stage, check licenses, rebuild, verify, then replace assets
+```
+
+`./tools/build.sh updateBundledApps` selects this workspace's installed build tools.
+Changed license/attribution, dependency or font inputs stop for review before the current
+bundle is replaced. See [the update workflow](docs/BUNDLED-UPDATES.md) for the exact review
+steps, GitHub rate-limit authentication, rollback and release testing. Android/Gecko/build
+tools remain separately pinned. This task does not publish or enable runtime updates.
+
 The upload key/config live in ignored `.release-secrets/`, never in source control or store
 assets. Run `tools/create_upload_key.py` once if none exists, and back up the resulting files
 securely. The script refuses to overwrite an existing key. Release builds use this key when
@@ -101,6 +114,7 @@ Release candidate results, exact test conditions and remaining publication work 
 ```sh
 node --test tools/test_save_bridge.mjs
 python3 tools/test_play_release.py
+./gradlew testBundledUpdater
 ./tools/test_packages.sh
 ```
 

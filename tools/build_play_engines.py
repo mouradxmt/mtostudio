@@ -18,13 +18,14 @@ def build(app,env,stage_only=False,force=False):
     source=ROOT/'.tools/play-work'/app['id']
     web=source/'apps'/(app['id']+'-web')
     if not (source/'mtouaa-patch.json').is_file(): raise RuntimeError('Prepare rebranded sources first: '+app['id'])
+    pin=next(p for p in json.loads((ROOT/'tools/play-source-lock.json').read_text()) if p['id']==app['id'])
     existing=DEST/app['id']/'mtouaa-build.json'
     if stage_only:
-        if not existing.is_file() or json.loads(existing.read_text())['patch']['files']!=json.loads((source/'mtouaa-patch.json').read_text())['files']:
+        if not existing.is_file() or json.loads(existing.read_text())['source']!=pin or json.loads(existing.read_text())['patch']['files']!=json.loads((source/'mtouaa-patch.json').read_text())['files']:
             raise RuntimeError('Source inputs changed; compile before staging: '+app['id'])
     if existing.is_file() and not stage_only and not force:
         previous=json.loads(existing.read_text())
-        if previous['patch']==json.loads((source/'mtouaa-patch.json').read_text()) and all((DEST/app['id']/name).is_file() and hashlib.sha256((DEST/app['id']/name).read_bytes()).hexdigest()==digest for name,digest in previous['files'].items()):
+        if previous['source']==pin and previous['patch']==json.loads((source/'mtouaa-patch.json').read_text()) and all((DEST/app['id']/name).is_file() and hashlib.sha256((DEST/app['id']/name).read_bytes()).hexdigest()==digest for name,digest in previous['files'].items()):
             print('Already built '+app['id'],flush=True);return
     env=dict(env)
     workflow=source/'.github/workflows/release.yml'
@@ -86,7 +87,6 @@ def build(app,env,stage_only=False,force=False):
             output=target/p.relative_to(upstream);output.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,output)
     if (source/'ATTRIBUTION.toml').is_file():shutil.copy2(source/'ATTRIBUTION.toml',target/'MTOUAA-ASSET-ATTRIBUTION.toml')
     shutil.copy2(source/'MTOUAA-MODIFICATIONS.txt',target/'MTOUAA-MODIFICATIONS.txt')
-    pin=next(p for p in json.loads((ROOT/'tools/play-source-lock.json').read_text()) if p['id']==app['id'])
     report={'source':pin,'fontCommit':font_ref[1] if font_ref else None,
         'patch':json.loads((source/'mtouaa-patch.json').read_text()),'files':{str(p.relative_to(target)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.rglob('*')) if p.is_file()}}
     (target/'mtouaa-build.json').write_text(json.dumps(report,indent=2)+'\n')

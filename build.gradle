@@ -1,3 +1,35 @@
 plugins {
     id 'com.android.application' version '9.1.1' apply false
 }
+
+tasks.register('checkBundledUpdates', Exec) {
+    group = 'bundled editors'
+    description = 'Report latest stable versions of the 15 bundled editors without changing pins or assets.'
+    workingDir rootProject.projectDir
+    commandLine 'python3', 'tools/update_bundled_apps.py', '--check'
+    doFirst {
+        if (gradle.startParameter.offline) throw new GradleException('Checking GitHub releases requires network access; omit --offline.')
+    }
+}
+
+tasks.register('updateBundledApps', Exec) {
+    group = 'bundled editors'
+    description = 'Stage, check licenses, rebuild and verify all 15 editors from latest stable GitHub releases.'
+    workingDir rootProject.projectDir
+    commandLine 'python3', 'tools/update_bundled_apps.py'
+    doFirst {
+        if (gradle.startParameter.offline) throw new GradleException('Updating bundled editors requires network access; omit --offline.')
+    }
+}
+
+tasks.register('testBundledUpdater', Exec) {
+    group = 'verification'
+    description = 'Run offline regression tests for release discovery, license gates and rollback.'
+    workingDir rootProject.projectDir
+    commandLine 'python3', '-m', 'unittest', 'discover', '-s', 'tools', '-p', 'test_bundled_updates.py'
+}
+
+// A combined invocation must not read assets while the explicit updater replaces them.
+project(':app') {
+    tasks.configureEach { mustRunAfter rootProject.tasks.named('updateBundledApps') }
+}

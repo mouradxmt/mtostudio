@@ -42,6 +42,9 @@ python3 tools/verify_play_bundle.py
 
 `tools/build_play_engines.py --app pdfcraft` rebuilds one editor. Do not change pinned source
 revisions without reviewing/retesting the new sources and reapplying the independent branding.
+For all editors, use `./gradlew updateBundledApps`; the
+[bundled-update workflow](../docs/BUNDLED-UPDATES.md) stages and verifies assets and stops
+when licensing/dependency inputs change. This does not bump the Android version or publish.
 
 Output AAB: `app/build/outputs/bundle/playRelease/app-play-release.aab`.
 Output release APK: `app/build/outputs/apk/play/release/app-play-release.apk`.
