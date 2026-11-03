@@ -4,7 +4,7 @@ Mtouaa Studio is an independently branded offline creative suite for ARM64 Andro
 and phones. The Google Play edition packages 15 editors built from pinned open-source
 releases. Documents are processed locally, and no account is required.
 
-The public package is `com.mtouaa.studio`; the release candidate is version `0.4.1` (code 6),
+The public package is `com.mtouaa.studio`; the release candidate is version `0.4.2` (code 7),
 targeting Android API 36 with Android 8.0 as the minimum. The bundled Mozilla GeckoView
 runtime avoids dependence on Google Play Services or a separately installed system WebView.
 All editors are packaged for first-launch offline use.
@@ -121,9 +121,18 @@ The menu regression checks that each PDF dropdown stays open after touch release
 on the second tap. The shared adapter filters duplicate finger PointerEvents from the bundled
 eframe touch path while keeping original touch/drag/multi-touch handling, mouse and pen input.
 
+`-e importsOnly true` runs seven document-provider import checks with a test-only provider
+that has no filesystem path. It covers complete binary reads, Unicode names, duplicate names,
+safe cache paths, cancellation, unreadable selections and cleanup. Real PDF/DOCX picker
+imports are also verified using files placed in Downloads outside this app.
+
 ## Files, offline behavior and limits
 
 Android's document picker handles opening and exports, without broad storage permissions.
+Selected documents are streamed through Android's granted content URI into private cache
+before Gecko receives them. Copies last for the editor session and are removed on close or
+the next launch; original files are never modified by importing them. This avoids Gecko's
+provider-specific raw-path resolution failing for Downloads and other document providers.
 The native save bridge stages writes and acknowledges completion only after closing the
 destination stream. Exports are transferred in bounded chunks with a 256 MB limit. Some
 legacy engines mark blob exports saved before Android finishes its asynchronous picker;

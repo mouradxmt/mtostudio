@@ -29,18 +29,26 @@ public final class SuiteSmokeInstrumentation extends Instrumentation {
     private int checks;
     private File results;
     private boolean menusOnly;
+    private boolean importsOnly;
     private final java.util.List<String> engineFailures = new java.util.ArrayList<>();
     private void require(boolean condition, String message) { if (!condition) throw new AssertionError(message); }
     private void log(String message) { Log.i("SuiteSmoke", message); }
     @Override public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
         menusOnly = arguments != null && "true".equals(arguments.getString("menusOnly"));
+        importsOnly = arguments != null && "true".equals(arguments.getString("importsOnly"));
         start();
     }
 
     @Override public void onStart() {
         Bundle result = new Bundle();
         try {
+            if (importsOnly) {
+                checks = DocumentImportChecks.run(this);
+                result.putString("stream", "Passed " + checks + " document-provider import checks.\n");
+                finish(Activity.RESULT_OK, result);
+                return;
+            }
             getTargetContext().getSharedPreferences("suite", 0).edit()
                 .putBoolean("autoCheck", false).putBoolean("immersive", false).commit();
             results = new File(getTargetContext().getFilesDir(), "smoke-results"); results.mkdirs();

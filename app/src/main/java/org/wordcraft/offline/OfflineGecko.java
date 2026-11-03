@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.webkit.ValueCallback;
+import android.widget.Toast;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import org.json.JSONObject;
 import org.mozilla.geckoview.AllowOrDeny;
 import org.mozilla.geckoview.GeckoResult;
@@ -21,9 +24,12 @@ final class OfflineGecko {
     private static GeckoRuntime runtime;
     private final GeckoSession session = new GeckoSession();
     final GeckoView view;
-    private boolean closed;
+    private volatile boolean closed;
+    private final ExecutorService imports = Executors.newSingleThreadExecutor();
+    private final PickedDocuments pickedDocuments;
 
     OfflineGecko(Activity activity, SuiteManager suite, SuiteManager.App app, Bridge bridge, Picker picker, Runnable crashed) throws Exception {
+        pickedDocuments = new PickedDocuments(activity);
         LoopbackAssets.get(suite);
         if (runtime == null) {
             runtime = GeckoRuntime.create(activity.getApplicationContext(), new GeckoRuntimeSettings.Builder()
@@ -60,8 +66,28 @@ final class OfflineGecko {
             @Override public GeckoResult<PromptResponse> onFilePrompt(GeckoSession source, FilePrompt prompt) {
                 GeckoResult<PromptResponse> result = new GeckoResult<>();
                 if (prompt.type == FilePrompt.Type.FOLDER) { result.complete(prompt.dismiss()); return result; }
-                picker.open(uris -> result.complete(uris == null ? prompt.dismiss() : prompt.confirm(activity.getApplicationContext(), uris)),
-                    prompt.type == FilePrompt.Type.MULTIPLE);
+                picker.open(uris -> {
+                    if (closed || prompt.isComplete()) return;
+                    if (uris == null || uris.length == 0) { result.complete(prompt.dismiss()); return; }
+                    Uri[] selected = prompt.type == FilePrompt.Type.MULTIPLE ? uris : new Uri[]{uris[0]};
+                    imports.execute(() -> {
+                        try {
+                            // GeckoView's resolver returns null or an inaccessible raw path for
+                            // many SAF providers. Only the granted ContentResolver stream is reliable.
+                            Uri[] local = pickedDocuments.copy(selected, () -> closed);
+                            activity.runOnUiThread(() -> {
+                                if (!closed && !prompt.isComplete()) result.complete(prompt.confirm(activity.getApplicationContext(), local));
+                            });
+                        } catch (Exception error) {
+                            if (BuildConfig.DEBUG) android.util.Log.e("SuiteImport", "Could not read selected document", error);
+                            activity.runOnUiThread(() -> {
+                                if (closed || prompt.isComplete()) return;
+                                result.complete(prompt.dismiss());
+                                Toast.makeText(activity, "Could not open the selected file. Check that it is available and the device has free storage.", Toast.LENGTH_LONG).show();
+                            });
+                        }
+                    });
+                }, prompt.type == FilePrompt.Type.MULTIPLE);
                 return result;
             }
         });
@@ -92,8 +118,13 @@ final class OfflineGecko {
     }
 
     void close() {
+        if (closed) return;
         closed = true;
         view.releaseSession();
         session.close();
+        // Keep copies while the browser can still read a selected File, then remove
+        // them after pending reads stop. Originals are never changed or deleted.
+        imports.execute(pickedDocuments::clear);
+        imports.shutdown();
     }
 }

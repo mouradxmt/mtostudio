@@ -80,9 +80,11 @@ public final class MainActivity extends Activity {
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
+        File[] oldImports = PickedDocuments.root(this).listFiles();
         files.execute(() -> {
             File[] leftovers = getCacheDir().listFiles((dir, name) -> name.startsWith("wordcraft-save-") && name.endsWith(".tmp"));
             if (leftovers != null) for (File leftover : leftovers) leftover.delete();
+            if (oldImports != null) for (File leftover : oldImports) PickedDocuments.delete(leftover);
         });
         root = new FrameLayout(this);
         setContentView(root);
@@ -328,7 +330,8 @@ public final class MainActivity extends Activity {
                 if (openCallback != null) openCallback.onReceiveValue(null);
                 openCallback = callback;
                 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE)
-                    .setType("*/*").putExtra(Intent.EXTRA_ALLOW_MULTIPLE, multiple).putExtra(Intent.EXTRA_LOCAL_ONLY, true);
+                    .setType("*/*").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    .putExtra(Intent.EXTRA_ALLOW_MULTIPLE, multiple).putExtra(Intent.EXTRA_LOCAL_ONLY, true);
                 try { startActivityForResult(intent, OPEN); }
                 catch (Exception error) { openCallback.onReceiveValue(null); openCallback = null; }
             }, () -> {

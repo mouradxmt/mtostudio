@@ -1,7 +1,7 @@
 # Mtouaa Studio — Google Play preparation
 
 App name: **Mtouaa Studio**. Publisher display brand: **Mtouaa Labs**.
-Package: `com.mtouaa.studio`. Version: `0.4.1` / code `6`. ARM64, Android 8.0+,
+Package: `com.mtouaa.studio`. Version: `0.4.2` / code `7`. ARM64, Android 8.0+,
 target API 36. These settings do not establish the publisher's legal identity in Play Console.
 
 ## Prepared files
@@ -91,7 +91,7 @@ tasks are unfinished. Do not upload the privacy draft with a placeholder contact
 
 ## AdMob monetization
 
-AdMob is planned; version 0.4.1 does not include an advertising SDK or serve ads.
+AdMob is planned; version 0.4.2 does not include an advertising SDK or serve ads.
 The public listing no longer promises an ad-free product indefinitely. The current
 privacy policy and Data safety worksheet still describe the actual ad-free binary.
 Before adding ads, follow `ADMOB_PLAN.md`, update the policy and Play declarations,
