@@ -52,12 +52,14 @@ jobs:
           key: mac-arm64-${{ matrix.app }}-${{ hashFiles('tools/*lock.json', 'tools/prepare_play_sources.py', 'tools/build_play_engines.py', 'tools/ci/prepare_engines.py', 'tools/bundled-license-policy.json', 'release/brand.json', 'release/build-tools.json') }}
       - name: Prepare pinned source-build tools
         if: steps.editor-cache.outputs.cache-hit != 'true'
-        run: python3 tools/ci/bootstrap.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/ci/retry.py python3 tools/ci/bootstrap.py
       - name: Build reviewed offline editor
         if: steps.editor-cache.outputs.cache-hit != 'true'
         env:
           EDITOR: ${{ matrix.app }}
-        run: python3 tools/ci/prepare_engines.py --app "$EDITOR"
+        run: python3 tools/ci/retry.py python3 tools/ci/prepare_engines.py --app "$EDITOR"
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: editor-${{ matrix.app }}
@@ -99,11 +101,13 @@ jobs:
           merge-multiple: true
           path: app/src/play/assets/suite
       - name: Verify combined editors and original license notices
-        run: python3 tools/ci/prepare_engines.py --notices-only
+        run: python3 tools/ci/retry.py python3 tools/ci/prepare_engines.py --notices-only
       - name: Prepare Android SDK
         run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
       - name: Build Android editions without signing secrets
-        run: ./tools/build.sh assembleHuaweiRelease assemblePlayRelease bundlePlayRelease lintHuaweiRelease lintPlayRelease
+        run: |
+          python3 tools/prepare_play_metadata.py
+          python3 tools/ci/retry.py ./gradlew --no-daemon assembleHuaweiRelease assemblePlayRelease bundlePlayRelease lintHuaweiRelease lintPlayRelease
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: unsigned-android
@@ -144,9 +148,10 @@ jobs:
       - name: Verify and package signed updates
         env:
           RELEASE_REF: ${{ github.ref }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 tools/ci/check_version.py
-          python3 tools/ci/bootstrap.py --verification-only
+          python3 tools/ci/retry.py python3 tools/ci/bootstrap.py --verification-only
           python3 tools/verify_play_bundle.py
           python3 tools/package_release.py
       - name: Publish Mtouaa release
@@ -154,8 +159,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$RELEASE_TAG" dist/release/* --draft --verify-tag --title "Mtouaa Studio $RELEASE_TAG" --notes-file release/RELEASE_NOTES.md --repo "$GITHUB_REPOSITORY"
-          gh release edit "$RELEASE_TAG" --draft=false --latest --repo "$GITHUB_REPOSITORY"
+          python3 tools/ci/retry.py python3 tools/ci/publish_release.py
       - name: Remove private signing material
         if: always()
         run: rm -rf .release-secrets

@@ -61,7 +61,10 @@ python3 tools/package_release.py
 Push the reviewed source commit, then its matching `vX.Y.Z` tag. The release job publishes
 Huawei APK, Play APK/AAB, `mtouaa-update.json`, hashes and the committed verification record.
 It uploads to a draft first, then makes the completed release public so the update feed
-does not advertise a half-uploaded version. A failed upload leaves a draft for review.
+does not advertise a half-uploaded version. A retry can resume a partial draft upload;
+the workflow refuses to overwrite a published release. Transient HTTP 502/503/504 failures
+are retried up to three times against the same pinned inputs. License and source validation
+failures still stop the build.
 The AAB is not automatically submitted to Google Play; upload it to a test track and complete
 the publisher's remaining Play declarations. An existing published tag/release is not
 overwritten; fix a failed unpublished job or issue a new version.
@@ -107,7 +110,7 @@ fixture and corruption rejection. With installation permission enabled on the di
 device, `-e installer true` additionally checks the save-state gate, native confirmation,
 verified FileProvider handoff to Android's installer, and cancellation without upgrading.
 `tools/ci/update_fixture.py` creates a tiny fixture for
-0.6.0 tests; never install/publish it. Update the fixture's code/version for later releases.
+0.6.1 tests; never install/publish it. Update the fixture's code/version for later releases.
 
 Play checks use Google's `FakeAppUpdateManager` to test the actual native controller's
 availability, consent, progress, safe-state checks, restart cancellation and confirmed restart. A real Play

@@ -15,8 +15,8 @@ android {
         applicationId 'org.wordcraft.offline'
         minSdk 26
         targetSdk 36
-        versionCode 9
-        versionName '0.6.0'
+        versionCode 10
+        versionName '0.6.1'
         resValue 'string', 'app_name', brand.appName
         buildConfigField 'String', 'PUBLISHER_NAME', configString(brand.publisherName)
         buildConfigField 'String', 'PUBLISHER_WEBSITE', configString(brand.website)

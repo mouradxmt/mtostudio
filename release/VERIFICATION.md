@@ -1,6 +1,6 @@
-# Mtouaa Studio 0.6.0 — native update channels
+# Mtouaa Studio 0.6.1 — native update channels
 
-Verified locally 5 November 2026. Publisher: **Mtouaa Labs**. Version code **9**.
+Verified locally 5 November 2026. Publisher: **Mtouaa Labs**. Version code **10**.
 Android 8.0/API 26 minimum, target API 36, ARM64. Packages:
 `com.mtouaa.studio` (Play), `com.mtouaa.studio.huawei` (Huawei), and
 `com.mtouaa.studio.preview` (development Preview).
@@ -40,13 +40,13 @@ Android 16/API 36, ARM64, 16 KB pages, tablet landscape. User emulators were lef
   shortcuts with Google Play Services disabled; fullscreen/F11, launcher registrations,
   packaged-engine enforcement, and offline privacy/support controls passed. Network and
   Google services were restored afterward.
-- **26 host regressions** for bundle maintenance, license/rollback gates and branding,
+- **35 host regressions** for bundle maintenance, license/rollback gates and branding,
   plus **7 JavaScript save-bridge tests**, passed.
 - Signed Huawei/Play APKs and Play AAB built; lint reported no errors. Remaining warnings
   concern the intentionally pinned Gradle version and shared shortcut icon artwork.
 - Final Play AAB passed bundletool validation and JAR signature verification. Its exact
   universal APK passed certificate, package, non-debuggable, 16 KB ZIP alignment and all
-  13 native-library ELF alignment checks. Estimated compressed Play download: 354,504,405 bytes.
+  13 native-library ELF alignment checks. Download sizing is recorded in the generated bundle-verification.json.
 - Pinned CI tool URLs/checksums, CI source preparation, source lock stability, workflow
   YAML parsing and whitespace checks were validated locally.
 
@@ -59,8 +59,10 @@ Actual Google Play update delivery still needs a Play-owned installation and a h
 version available to that tester. No Google Play publication is claimed. Physical Huawei
 acceptance, including that tablet's installation-permission UI, is still required.
 
-GitHub source/build workflows are configured for `mouradxmt/mtostudio`. A clean hosted build
-must pass before release publication. The publisher explicitly authorized transferring the existing signing credentials to
+GitHub source/build workflows are configured for `mouradxmt/mtostudio`. The first clean hosted build compiled ten editors successfully; remaining jobs hit
+GitHub HTTP 504 download timeouts. The 0.6.1 workflow adds bounded transport retries,
+atomic tool downloads and an API fallback, plus a verified upfront Binaryen installation.
+A complete hosted build must pass before release publication. The publisher explicitly authorized transferring the existing signing credentials to
 GitHub Actions, and the four encrypted repository secrets are configured. Hosted signing
 and publication still require a successful tag workflow; local artifacts alone do not
 prove that workflow passed.

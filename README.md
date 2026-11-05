@@ -4,7 +4,7 @@ Mtouaa Studio is an independently branded offline creative suite for ARM64 Andro
 and phones. The Google Play edition packages 15 editors built from pinned open-source
 releases. Documents are processed locally, and no account is required.
 
-The Play package is `com.mtouaa.studio`; the release candidate is version `0.6.0` (code 9),
+The Play package is `com.mtouaa.studio`; the release candidate is version `0.6.1` (code 10),
 targeting Android API 36 with Android 8.0 as the minimum. The bundled Mozilla GeckoView
 runtime avoids dependence on Google Play Services or a separately installed system WebView.
 All editors are packaged for first-launch offline use.

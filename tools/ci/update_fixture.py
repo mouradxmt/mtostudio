@@ -12,7 +12,7 @@ def main():
     tools = sdk/'build-tools/36.0.0'
     folder = ROOT/'.tools/update-fixture'; folder.mkdir(exist_ok=True)
     manifest = folder/'AndroidManifest.xml'
-    manifest.write_text('''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mtouaa.studio.huawei" android:versionCode="10" android:versionName="0.6.1"><uses-sdk android:minSdkVersion="26" android:targetSdkVersion="36"/><application android:label="TEST FIXTURE ONLY" android:hasCode="false"/></manifest>''')
+    manifest.write_text('''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mtouaa.studio.huawei" android:versionCode="11" android:versionName="0.6.2"><uses-sdk android:minSdkVersion="26" android:targetSdkVersion="36"/><application android:label="TEST FIXTURE ONLY" android:hasCode="false"/></manifest>''')
     unsigned = folder/'fixture-unsigned.apk'; target = folder/'fixture.apk'
     subprocess.run([str(tools/'aapt'), 'package', '-f', '-M', str(manifest), '-I', str(sdk/'platforms/android-37.0/android.jar'), '-F', str(unsigned)], check=True)
     props = dict(line.split('=',1) for line in (ROOT/'.release-secrets/upload.properties').read_text().splitlines() if line and not line.startswith('#'))

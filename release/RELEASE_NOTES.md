@@ -1,4 +1,4 @@
-Mtouaa Studio 0.6.0 adds a **Check for updates** button on the Apps screen.
+Mtouaa Studio 0.6.1 adds a **Check for updates** button on the Apps screen.
 
 - **Huawei APK:** install this edition on Android-compatible Huawei tablets. Updates come from signed Mtouaa GitHub releases and use Android's installation confirmation. Google Play Services are not required for updates.
 - **Google Play:** uses Google Play's in-app update flow after installation from a Play testing or production track. The AAB is for Play Console; a locally installed APK cannot exercise the real Play update service.

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Mtouaa Studio local editor bridge",
-  "version": "1.0.0.9",
+  "version": "1.0.0.10",
   "browser_specific_settings": {
     "gecko": {
       "id": "offline-bridge@mtouaa.local"

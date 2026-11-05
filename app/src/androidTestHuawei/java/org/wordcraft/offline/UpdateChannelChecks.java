@@ -36,8 +36,8 @@ public final class UpdateChannelChecks {
         String pkg = test.getTargetContext().getPackageName(), repo = BuildConfig.RELEASE_REPOSITORY;
         long installed = ApkVerifier.code(ApkVerifier.info(test.getTargetContext(), null));
         JSONObject payload = new JSONObject().put("format", 1).put("channel", "huawei").put("applicationId", pkg)
-            .put("versionCode", installed+1).put("versionName", "0.6.1").put("apk", new JSONObject()
-                .put("url", "https://github.com/"+repo+"/releases/download/v0.6.1/Mtouaa-Studio-0.6.1-huawei.apk")
+            .put("versionCode", installed+1).put("versionName", "0.6.2").put("apk", new JSONObject()
+                .put("url", "https://github.com/"+repo+"/releases/download/v0.6.2/Mtouaa-Studio-0.6.2-huawei.apk")
                 .put("size", 100).put("sha256", "a".repeat(64)));
         byte[] valid = signed(payload, keys);
         require(UpdateRelease.read(valid, keys.getPublic(), pkg, installed, repo).code == installed+1, "New signed release rejected");
@@ -52,7 +52,7 @@ public final class UpdateChannelChecks {
         reject(() -> UpdateRelease.read(signed(payload, keys), keys.getPublic(), pkg, installed, repo));
         payload.put("channel", "huawei"); payload.getJSONObject("apk").put("url", "https://github.com/attacker/repo/app.apk");
         reject(() -> UpdateRelease.read(signed(payload, keys), keys.getPublic(), pkg, installed, repo));
-        payload.getJSONObject("apk").put("url", "https://github.com/"+repo+"/releases/download/v0.6.1/Mtouaa-Studio-0.6.1-huawei.apk").put("size", UpdateRelease.MAX_APK_BYTES+1);
+        payload.getJSONObject("apk").put("url", "https://github.com/"+repo+"/releases/download/v0.6.2/Mtouaa-Studio-0.6.2-huawei.apk").put("size", UpdateRelease.MAX_APK_BYTES+1);
         reject(() -> UpdateRelease.read(signed(payload, keys), keys.getPublic(), pkg, installed, repo));
         for (String url : new String[]{"http://github.com/file", "https://github.com.evil.test/file", "https://user@github.com/file", "https://github.com:444/file", "file:///data/app.apk"})
             require(!UpdateRelease.trustedTransport(new URL(url)), "Unsafe URL accepted: "+url);
