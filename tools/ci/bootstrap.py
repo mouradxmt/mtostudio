@@ -34,6 +34,13 @@ def main():
     version = lock['rust'].split()[0]
     subprocess.run([str(cargo/'rustup'), 'toolchain', 'install', version, '--profile', 'minimal', '--target', lock['target']], env=env, check=True)
     subprocess.run([str(cargo/'rustup'), 'default', version], env=env, check=True)
+    # Invoke the installed tools directly. Runner-provided rustup proxy builds
+    # can dispatch differently after copying them into a project-local CARGO_HOME.
+    toolchain = tools/'rustup/toolchains'/(version+'-aarch64-apple-darwin')/'bin'
+    for name in ('cargo', 'rustc', 'rustdoc'):
+        (cargo/name).unlink(missing_ok=True)
+        (cargo/name).symlink_to(toolchain/name)
+        subprocess.run([str(cargo/name), '--version'], env=env, check=True)
     binaries = tools/'wasm-bin'; binaries.mkdir(exist_ok=True)
     for name, repo, asset in [
         ('trunk', 'trunk-rs/trunk', 'trunk-aarch64-apple-darwin.tar.gz'),
