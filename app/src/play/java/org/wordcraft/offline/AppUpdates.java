@@ -25,11 +25,15 @@ final class AppUpdates extends UpdateControls {
             downloaded = true; busy = false;
             state("The update is ready. Save your work before restarting.", "Restart to update", true);
         } else if (update.installStatus() == InstallStatus.DOWNLOADING) {
-            busy = true;
+            busy = true; downloaded = false;
             long total = update.totalBytesToDownload();
             state(total > 0 ? "Downloading update: " + (100 * update.bytesDownloaded() / total) + "%" : "Downloading update…", "Downloading…", false);
+        } else if (update.installStatus() == InstallStatus.PENDING) {
+            busy = true; downloaded = false;
+            state("Waiting for Google Play to download the update…", "Downloading…", false);
         } else if (update.installStatus() == InstallStatus.FAILED || update.installStatus() == InstallStatus.CANCELED) {
-            busy = false; state("The update did not finish. You can try again.", "Check for updates", true);
+            busy = false; downloaded = false; available = null;
+            state("The update did not finish. You can try again.", "Check for updates", true);
         }
     };
     AppUpdates(Activity activity, BooleanSupplier safe) { this(activity, safe, AppUpdateManagerFactory.create(activity)); }
@@ -69,6 +73,7 @@ final class AppUpdates extends UpdateControls {
                     try {
                         busy = manager.startUpdateFlowForResult(info, activity, AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build(), REQUEST);
                         if (!busy) unavailable();
+                        else state("Waiting for Google Play to download the update…", "Downloading…", false);
                     } catch (Exception error) { unavailable(); }
                 }
             } else {

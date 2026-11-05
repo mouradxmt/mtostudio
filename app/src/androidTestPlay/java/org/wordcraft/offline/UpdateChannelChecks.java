@@ -30,6 +30,7 @@ public final class UpdateChannelChecks {
         test.runOnMainSync(() -> { safe.set(false); updates[0].clicked(); require(!manager.isConfirmationDialogVisible(), "Update started with unsaved editor state"); safe.set(true); updates[0].clicked(); });
         test.waitForIdleSync(); SystemClock.sleep(200);
         require(manager.isConfirmationDialogVisible(), "Flexible update consent not requested");
+        test.runOnMainSync(() -> require(!((Button)layout[0].getChildAt(1)).isEnabled(), "Pending update allowed duplicate requests"));
         test.runOnMainSync(() -> { manager.userAcceptsUpdate(); manager.downloadStarts(); manager.setTotalBytesToDownload(100); manager.setBytesDownloaded(50); });
         test.waitForIdleSync();
         test.runOnMainSync(() -> require(!((Button)layout[0].getChildAt(1)).isEnabled(), "Duplicate downloads allowed"));

@@ -46,7 +46,7 @@ Android 16/API 36, ARM64, 16 KB pages, tablet landscape. User emulators were lef
   concern the intentionally pinned Gradle version and shared shortcut icon artwork.
 - Final Play AAB passed bundletool validation and JAR signature verification. Its exact
   universal APK passed certificate, package, non-debuggable, 16 KB ZIP alignment and all
-  13 native-library ELF alignment checks. Estimated compressed Play download: 354,504,065 bytes.
+  13 native-library ELF alignment checks. Estimated compressed Play download: 354,504,405 bytes.
 - Pinned CI tool URLs/checksums, CI source preparation, source lock stability, workflow
   YAML parsing and whitespace checks were validated locally.
 
@@ -60,8 +60,10 @@ version available to that tester. No Google Play publication is claimed. Physica
 acceptance, including that tablet's installation-permission UI, is still required.
 
 GitHub source/build workflows are configured for `mouradxmt/mtostudio`. A clean hosted build
-must pass before release publication. Signing credentials must be explicitly authorized
-for GitHub Actions; having local signed artifacts does not activate hosted signing.
+must pass before release publication. The publisher explicitly authorized transferring the existing signing credentials to
+GitHub Actions, and the four encrypted repository secrets are configured. Hosted signing
+and publication still require a successful tag workflow; local artifacts alone do not
+prove that workflow passed.
 The public Huawei update feed becomes available when a stable signed release is published.
 
 AdMob remains planned, not installed. Support email, hosted privacy policy and the other

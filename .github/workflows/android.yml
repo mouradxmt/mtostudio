@@ -154,7 +154,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$RELEASE_TAG" dist/release/* --verify-tag --title "Mtouaa Studio $RELEASE_TAG" --notes-file release/RELEASE_NOTES.md --repo "$GITHUB_REPOSITORY"
+          gh release create "$RELEASE_TAG" dist/release/* --draft --verify-tag --title "Mtouaa Studio $RELEASE_TAG" --notes-file release/RELEASE_NOTES.md --repo "$GITHUB_REPOSITORY"
+          gh release edit "$RELEASE_TAG" --draft=false --latest --repo "$GITHUB_REPOSITORY"
       - name: Remove private signing material
         if: always()
         run: rm -rf .release-secrets

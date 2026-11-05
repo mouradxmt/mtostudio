@@ -60,6 +60,8 @@ python3 tools/package_release.py
 
 Push the reviewed source commit, then its matching `vX.Y.Z` tag. The release job publishes
 Huawei APK, Play APK/AAB, `mtouaa-update.json`, hashes and the committed verification record.
+It uploads to a draft first, then makes the completed release public so the update feed
+does not advertise a half-uploaded version. A failed upload leaves a draft for review.
 The AAB is not automatically submitted to Google Play; upload it to a test track and complete
 the publisher's remaining Play declarations. An existing published tag/release is not
 overwritten; fix a failed unpublished job or issue a new version.
