@@ -32,6 +32,15 @@ public final class UpdateChannelChecks {
     }
     public static int run(Instrumentation test, Bundle arguments) throws Exception {
         count = 0;
+        if ("true".equals(arguments.getString("live"))) {
+            String repo=BuildConfig.RELEASE_REPOSITORY;
+            JSONObject latest=new JSONObject(new String(ReleaseDownload.small("https://api.github.com/repos/"+repo+"/releases/latest",256*1024),StandardCharsets.UTF_8));
+            String tag=latest.getString("tag_name");
+            byte[] descriptor=ReleaseDownload.small("https://github.com/"+repo+"/releases/download/"+tag+"/mtouaa-update.json",256*1024);
+            UpdateRelease candidate=UpdateRelease.read(descriptor,ApkVerifier.publicKey(test.getTargetContext()),test.getTargetContext().getPackageName(),ApkVerifier.code(ApkVerifier.info(test.getTargetContext(),null)),repo);
+            android.util.Log.i("SuiteSmoke","LIVE UPDATE "+tag+" signature valid; "+(candidate==null?"up to date":"new version "+candidate.version));
+            return 3;
+        }
         KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA"); generator.initialize(2048); KeyPair keys = generator.generateKeyPair();
         String pkg = test.getTargetContext().getPackageName(), repo = BuildConfig.RELEASE_REPOSITORY;
         long installed = ApkVerifier.code(ApkVerifier.info(test.getTargetContext(), null));

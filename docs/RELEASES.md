@@ -71,6 +71,8 @@ Signed key rotation is not implemented: retain the existing key for Huawei relea
 
 ## Testing
 
+The completed public 0.6.0 → 0.6.1 upgrade is recorded in `release/ACCEPTANCE-0.6.1.md`.
+
 Use only a disposable emulator or a device with exported/backed-up documents. Never install
 over an emulator in which the user has unsaved work. Build matching instrumentation APKs:
 
@@ -80,6 +82,10 @@ over an emulator in which the user has unsaved work. Build matching instrumentat
 adb -s SERIAL shell am instrument -w -e updatesOnly true com.mtouaa.studio.huawei.test/org.wordcraft.offline.SuiteSmokeInstrumentation
 adb -s SERIAL shell am instrument -w -e updatesOnly true com.mtouaa.studio.test/org.wordcraft.offline.SuiteSmokeInstrumentation
 ```
+
+`-e updatesOnly true -e live true` checks the real public descriptor and its signature
+without downloading an APK. If a disposable emulator has DNS failures, supply explicit DNS
+servers when launching that emulator; do not change a user device for this test.
 
 Huawei checks exercise Android RSA verification, tampering/wrong-key rejection, downgrade
 rejection, channel/package/origin checks, size bounds, and FileProvider permissions. Optional
