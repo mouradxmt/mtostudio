@@ -1,0 +1,165 @@
+name: Mtouaa Android
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Check release identity
+        env:
+          RELEASE_REF: ${{ github.ref }}
+        run: python3 tools/ci/check_version.py
+      - name: Regression checks
+        run: |
+          python3 -m unittest discover -s tools -p 'test_*.py'
+          node tools/test_save_bridge.mjs
+
+  editors:
+    needs: checks
+    runs-on: macos-15
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        app: [photocraft, vectorcraft, filmcraft, lightcraft, pdfcraft, effectcraft, designcraft, figcraft, texturecraft, wordcraft, soundcraft, deckcraft, cadcraft, gridcraft, craft-anything]
+    env:
+      CARGO_BUILD_JOBS: '2'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        id: editor-cache
+        with:
+          path: app/src/play/assets/suite/${{ matrix.app }}
+          key: mac-arm64-${{ matrix.app }}-${{ hashFiles('tools/*lock.json', 'tools/prepare_play_sources.py', 'tools/build_play_engines.py', 'tools/ci/prepare_engines.py', 'tools/bundled-license-policy.json', 'release/brand.json', 'release/build-tools.json') }}
+      - name: Prepare pinned source-build tools
+        if: steps.editor-cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/ci/retry.py python3 tools/ci/bootstrap.py
+      - name: Build reviewed offline editor
+        if: steps.editor-cache.outputs.cache-hit != 'true'
+        env:
+          EDITOR: ${{ matrix.app }}
+        run: python3 tools/ci/retry.py python3 tools/ci/prepare_engines.py --app "$EDITOR"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: editor-${{ matrix.app }}
+          path: app/src/play/assets/suite/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+      - name: Preserve compiler diagnostics
+        if: failure()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: editor-log-${{ matrix.app }}
+          path: .tools/play-logs/
+          retention-days: 7
+
+  build:
+    needs: editors
+    runs-on: macos-15
+    timeout-minutes: 45
+    env:
+      GRADLE_USER_HOME: ${{ github.workspace }}/.tools/gradle-cache
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: |
+            .tools/gradle-cache/caches
+            .tools/gradle-cache/wrapper
+          key: mac-arm64-gradle-${{ hashFiles('**/*.gradle', 'gradle/wrapper/gradle-wrapper.properties') }}
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          pattern: editor-*
+          merge-multiple: true
+          path: app/src/play/assets/suite
+      - name: Verify combined editors and original license notices
+        run: python3 tools/ci/retry.py python3 tools/ci/prepare_engines.py --notices-only
+      - name: Prepare Android SDK
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
+      - name: Build Android editions without signing secrets
+        run: |
+          python3 tools/prepare_play_metadata.py
+          python3 tools/ci/retry.py ./gradlew --no-daemon assembleHuaweiRelease assemblePlayRelease bundlePlayRelease lintHuaweiRelease lintPlayRelease
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: unsigned-android
+          path: |
+            app/build/outputs/apk/huawei/release/*-unsigned.apk
+            app/build/outputs/apk/play/release/*-unsigned.apk
+            app/build/outputs/bundle/playRelease/*.aab
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name == 'push'
+    needs: build
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: unsigned-android
+          path: app/build/outputs
+      - name: Sign APKs and Play bundle
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: python3 tools/ci/sign_release.py
+      - name: Verify and package signed updates
+        env:
+          RELEASE_REF: ${{ github.ref }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 tools/ci/check_version.py
+          python3 tools/ci/retry.py python3 tools/ci/bootstrap.py --verification-only
+          python3 tools/verify_play_bundle.py
+          python3 tools/package_release.py
+      - name: Publish Mtouaa release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 tools/ci/retry.py python3 tools/ci/publish_release.py
+      - name: Remove private signing material
+        if: always()
+        run: rm -rf .release-secrets

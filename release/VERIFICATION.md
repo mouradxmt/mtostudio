@@ -59,14 +59,12 @@ Actual Google Play update delivery still needs a Play-owned installation and a h
 version available to that tester. No Google Play publication is claimed. Physical Huawei
 acceptance, including that tablet's installation-permission UI, is still required.
 
-GitHub source/build workflows are configured for `mouradxmt/mtostudio`. The first clean hosted build compiled ten editors successfully; remaining jobs hit
-GitHub HTTP 504 download timeouts. The 0.6.1 workflow adds bounded transport retries,
-atomic tool downloads and an API fallback, plus a verified upfront Binaryen installation.
-A complete hosted build must pass before release publication. The publisher explicitly authorized transferring the existing signing credentials to
-GitHub Actions, and the four encrypted repository secrets are configured. Hosted signing
-and publication still require a successful tag workflow; local artifacts alone do not
-prove that workflow passed.
-The public Huawei update feed becomes available when a stable signed release is published.
+Cloud builds and schedules are disabled after the publisher requested lower resource use.
+Temporary Actions artifacts were deleted. Releases are now built, signed and verified on the
+publisher's Mac using existing caches, then uploaded directly to GitHub Releases. The local
+release command does not compile the editor engines or refresh license/source pins.
+A clean hosted build is not claimed. The public Huawei feed is activated by publishing the
+verified local release; live update acceptance is recorded separately after publication.
 
 AdMob remains planned, not installed. Support email, hosted privacy policy and the other
 Play submission gates remain unfinished in `submission-status.json`.

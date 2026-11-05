@@ -21,58 +21,36 @@ Android may close the process during installation. Documents remain in Android's
 package data on an ordinary same-package update, but unsaved editor state is not guaranteed.
 Moving between Preview/Play/Huawei requires explicit document export/import.
 
-## Automated builds
+## Local release automation
 
-`.github/workflows/android.yml` builds on main pushes, pull requests, tag pushes and manual
-dispatch. A macOS 15 ARM64 runner matches the reviewed Trunk/bindgen archive checksums.
-Source jobs have read-only permissions and no signing secrets. Five parallel editor jobs
-at most each compile one engine; compiler targets do not accumulate across all 15 engines
-on a standard runner. Only completed engine assets are cached, and a native build job
-combines/revalidates them. Each source job downloads the committed
-source archives, verifies their checksums and the reviewed license/dependency inventory,
-rebrands source, compiles/reuses matching editor outputs, preserves legal notices, then builds
-both Android editions and the Play AAB. Artifacts are retained for seven days; they are
-unsigned until the separate release job signs them.
+Cloud workflows remain disabled to avoid repeated compilation and Actions artifact storage.
+Neither pushes nor tags start a cloud job. The remaining workflows are manual-only small
+checks; they do not build APKs or upload artifacts. The previous cloud build definition is
+archived in `docs/ANDROID-CLOUD-BUILD.yml.example` for reference, outside the workflow folder.
 
-Only a `vX.Y.Z` tag push starts signing/publishing. The version must match `app/build.gradle`,
-and its versionCode must exceed prior release tags. Signing occurs in a separate fresh job,
-using these repository Actions secrets (never commit them):
-
-- `ANDROID_KEYSTORE_BASE64`: base64 of the existing PKCS12 upload key.
-- `ANDROID_STORE_PASSWORD`
-- `ANDROID_KEY_ALIAS`
-- `ANDROID_KEY_PASSWORD`
-
-The release APK must retain certificate SHA-256
-`c4388b1fc99fe8bf576970455a0f4089bffe8d272583f53500a8f8eee6dd1576`.
-Keep an independent encrypted backup of this key: replacing it breaks Huawei upgrades.
-GitHub Actions can sign future apps once these secrets are configured. Restrict repository
-and workflow write access accordingly. Temporary key files are removed even after failure.
-
-Before tagging, update app version/code, `release/RELEASE_NOTES.md`, and the verification
-record with actual testing for the change. Rebuild/verify locally if needed:
+Run one local command after changing the app version/code and reviewing the release notes:
 
 ```sh
-./tools/build.sh assembleHuaweiRelease assemblePlayRelease bundlePlayRelease lintHuaweiRelease lintPlayRelease
-python3 tools/verify_play_bundle.py
-python3 tools/package_release.py
+python3 tools/release_local.py
+# After committing the tested source, publish the same release:
+python3 tools/release_local.py --publish
 ```
 
-Push the reviewed source commit, then its matching `vX.Y.Z` tag. The release job publishes
-Huawei APK, Play APK/AAB, `mtouaa-update.json`, hashes and the committed verification record.
-It uploads to a draft first, then makes the completed release public so the update feed
-does not advertise a half-uploaded version. A retry can resume a partial draft upload;
-the workflow refuses to overwrite a published release. Transient HTTP 502/503/504 failures
-are retried up to three times against the same pinned inputs. License and source validation
-failures still stop the build.
-The AAB is not automatically submitted to Google Play; upload it to a test track and complete
-the publisher's remaining Play declarations. An existing published tag/release is not
-overwritten; fix a failed unpublished job or issue a new version.
+This checks the pinned editor outputs, performs an offline Gradle build using local caches,
+validates APK signatures/permissions and the Play bundle, and generates the signed Huawei
+update descriptor. It does not refresh upstream engines or compile Rust. The publish option
+pushes the source/tag and uploads the final APKs/AAB, descriptor, hashes and verification
+record directly to GitHub Releases, without Actions builds or intermediate artifact uploads.
+Uploads remain a draft until complete. Published releases cannot be overwritten.
+The AAB is not automatically submitted to Google Play.
 
-`upstream-check.yml` compares all 15 latest stable upstream versions every Monday and saves
-a report. It does not silently approve new licenses, change pins, or publish upstream code.
-Use the existing `updateBundledApps` maintenance task and review its license gate before
-committing updated editor pins. New editor versions reach tablets in a new Mtouaa APK.
+The local signing key remains in ignored `.release-secrets/`. Keep its independent backup:
+replacing it breaks Huawei upgrades. Previously authorized Actions signing secrets remain
+unused while workflows are disabled; the manual checks do not access them.
+
+For new upstream editor versions, run `updateBundledApps` explicitly and review its license
+report before committing new pins. New editor versions reach tablets in a new Mtouaa APK.
+The manual upstream-check workflow reports versions only; it has no scheduled trigger.
 
 ## Huawei trust and failure behavior
 
