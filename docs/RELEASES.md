@@ -25,7 +25,10 @@ Moving between Preview/Play/Huawei requires explicit document export/import.
 
 `.github/workflows/android.yml` builds on main pushes, pull requests, tag pushes and manual
 dispatch. A macOS 15 ARM64 runner matches the reviewed Trunk/bindgen archive checksums.
-The source job has read-only permissions and no signing secrets. It downloads the committed
+Source jobs have read-only permissions and no signing secrets. Five parallel editor jobs
+at most each compile one engine; compiler targets do not accumulate across all 15 engines
+on a standard runner. Only completed engine assets are cached, and a native build job
+combines/revalidates them. Each source job downloads the committed
 source archives, verifies their checksums and the reviewed license/dependency inventory,
 rebrands source, compiles/reuses matching editor outputs, preserves legal notices, then builds
 both Android editions and the Play AAB. Artifacts are retained for seven days; they are
