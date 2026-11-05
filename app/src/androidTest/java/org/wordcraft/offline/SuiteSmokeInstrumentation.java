@@ -30,11 +30,13 @@ public final class SuiteSmokeInstrumentation extends Instrumentation {
     private File results;
     private boolean menusOnly;
     private boolean importsOnly;
+    private Bundle arguments;
     private final java.util.List<String> engineFailures = new java.util.ArrayList<>();
     private void require(boolean condition, String message) { if (!condition) throw new AssertionError(message); }
     private void log(String message) { Log.i("SuiteSmoke", message); }
     @Override public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
+        this.arguments = arguments;
         menusOnly = arguments != null && "true".equals(arguments.getString("menusOnly"));
         importsOnly = arguments != null && "true".equals(arguments.getString("importsOnly"));
         start();
@@ -43,6 +45,13 @@ public final class SuiteSmokeInstrumentation extends Instrumentation {
     @Override public void onStart() {
         Bundle result = new Bundle();
         try {
+            if (arguments != null && "true".equals(arguments.getString("updatesOnly"))) {
+                checks = (Integer) Class.forName("org.wordcraft.offline.UpdateChannelChecks")
+                    .getMethod("run", Instrumentation.class, Bundle.class).invoke(null, this, arguments);
+                result.putString("stream", "Passed " + checks + " update channel checks.\n");
+                finish(Activity.RESULT_OK, result);
+                return;
+            }
             if (importsOnly) {
                 checks = DocumentImportChecks.run(this);
                 result.putString("stream", "Passed " + checks + " document-provider import checks.\n");
@@ -169,6 +178,8 @@ public final class SuiteSmokeInstrumentation extends Instrumentation {
             result.putString("stream", "Passed " + checks + " Android integration checks. Screenshots in files/smoke-results.\n");
             finish(Activity.RESULT_OK, result);
         } catch (Throwable error) {
+            if (error instanceof java.lang.reflect.InvocationTargetException && error.getCause() != null) error = error.getCause();
+            Log.e("SuiteSmoke", "Instrumentation failed", error);
             log("FAIL " + error);
             result.putString("stream", "FAILED after " + checks + " checks: " + error + "\n");
             result.putString("error", error.toString());

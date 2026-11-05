@@ -61,6 +61,7 @@ public final class MainActivity extends Activity {
     private SuiteManager.App currentApp;
     private FrameLayout root;
     private TextView updateStatus;
+    private AppUpdates appUpdates;
     private boolean checking, installing;
     private boolean immersive;
     private Button fullscreenControl;
@@ -107,6 +108,7 @@ public final class MainActivity extends Activity {
             return;
         }
         immersive = suite.prefs.getBoolean("immersive", false);
+        appUpdates = new AppUpdates(this, () -> currentApp == null && token == null && pickerReply == null);
         showHome();
         applyFullscreen();
         maybeCheckUpdates();
@@ -193,6 +195,7 @@ public final class MainActivity extends Activity {
         column.addView(fullscreenButton());
         updateStatus = text(status, 14, Color.rgb(71, 85, 105));
         column.addView(updateStatus);
+        if (appUpdates != null) appUpdates.addTo(column);
         if (BuildConfig.EXTERNAL_UPDATES) {
         Button check = button(checking ? "Checking GitHub…" : "Check GitHub updates", this::checkUpdates);
         check.setEnabled(!checking && !installing); column.addView(check);
@@ -487,6 +490,7 @@ public final class MainActivity extends Activity {
 
     @Override protected void onActivityResult(int request, int result, Intent data) {
         super.onActivityResult(request, result, data);
+        if (appUpdates != null && appUpdates.activityResult(request, result, data)) return;
         if (request == OPEN && openCallback != null) {
             Uri[] uris = null;
             if (result == RESULT_OK && data != null) {
@@ -618,7 +622,13 @@ public final class MainActivity extends Activity {
         finish();
     }
 
+    @Override protected void onResume() {
+        super.onResume();
+        if (appUpdates != null) appUpdates.resumed();
+    }
+
     @Override protected void onDestroy() {
+        if (appUpdates != null) appUpdates.close();
         if (openCallback != null) openCallback.onReceiveValue(null);
         files.execute(this::cleanup);
         files.shutdown();

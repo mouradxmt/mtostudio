@@ -15,13 +15,14 @@ android {
         applicationId 'org.wordcraft.offline'
         minSdk 26
         targetSdk 36
-        versionCode 8
-        versionName '0.5.0'
+        versionCode 9
+        versionName '0.6.0'
         resValue 'string', 'app_name', brand.appName
         buildConfigField 'String', 'PUBLISHER_NAME', configString(brand.publisherName)
         buildConfigField 'String', 'PUBLISHER_WEBSITE', configString(brand.website)
         buildConfigField 'String', 'SUPPORT_EMAIL', configString(brand.supportEmail)
         buildConfigField 'String', 'PRIVACY_POLICY_URL', configString(brand.privacyPolicyUrl)
+        buildConfigField 'String', 'RELEASE_REPOSITORY', configString('mouradxmt/mtostudio')
         testInstrumentationRunner 'org.wordcraft.offline.SuiteSmokeInstrumentation'
         ndk { abiFilters 'arm64-v8a' }
     }
@@ -38,11 +39,19 @@ android {
             buildConfigField 'boolean', 'EXTERNAL_UPDATES', 'false'
             buildConfigField 'int', 'LOCAL_PORT', '43872'
         }
+        huawei {
+            dimension 'distribution'
+            applicationId brand.applicationId + '.huawei'
+            buildConfigField 'boolean', 'EXTERNAL_UPDATES', 'false'
+            buildConfigField 'int', 'LOCAL_PORT', '43874'
+        }
     }
     sourceSets {
         main.assets.srcDirs = ['src/shared/assets']
         sideload.assets.srcDirs = ['src/main/assets', 'src/sideload/assets']
         play.assets.srcDirs = ['src/play/assets']
+        huawei.assets.srcDirs = ['src/play/assets']
+        huawei.res.srcDirs = ['src/play/res', 'src/huawei/res']
     }
     signingConfigs {
         upload {
@@ -78,6 +87,8 @@ android {
 dependencies {
     implementation 'androidx.webkit:webkit:1.12.1'
     implementation 'org.mozilla.geckoview:geckoview:159.0.20261022150525'
+    playImplementation 'com.google.android.play:app-update:2.1.0'
+    huaweiImplementation 'androidx.core:core:1.19.1'
 }
 
 tasks.register('checkSideloadEditor') {
@@ -99,3 +110,4 @@ tasks.register('checkPlayEditor', Exec) {
     commandLine 'python3', 'tools/check_play_release.py', '--assets-only'
 }
 tasks.matching { it.name.startsWith('prePlay') && it.name.endsWith('Build') }.configureEach { dependsOn 'checkPlayEditor' }
+tasks.matching { it.name.startsWith('preHuawei') && it.name.endsWith('Build') }.configureEach { dependsOn 'checkPlayEditor' }

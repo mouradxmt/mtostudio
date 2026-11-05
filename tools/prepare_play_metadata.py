@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parent.parent
 brand=json.loads((ROOT/'release/brand.json').read_text())
 support=brand['supportEmail'] or '[Support email must be added before publication]'
 policy=f'''{brand['appName']} — Privacy policy
-Prepared 3 November 2026
+Prepared 5 November 2026
 Publisher: {brand['publisherName']}
 Website: {brand['website']}
 Contact: {support}
@@ -22,13 +22,13 @@ Accounts, advertising and analytics
 The app does not require an account. The publisher has not added advertising, analytics, tracking or payment SDKs. The bundled Mozilla browser runtime executes the editors locally. Its open-source notices and corresponding source are available in About & licenses.
 
 Network access
-The editors load their files from an on-device loopback server; this traffic stays on your device. Editor web requests to outside sites are blocked. The Google Play edition does not check GitHub or download replacement editors. Google Play handles app distribution and updates under Google's policies. Opening Support or the public privacy page uses your browser, where the website's privacy practices apply.
+The editors load their files from an on-device loopback server; this traffic stays on your device. Editor web requests to outside sites are blocked. The Google Play edition's update button uses Google's Play In-App Updates library; Google Play handles availability checks, downloads and installation under Google's terms and privacy practices. The separate Huawei edition checks the publisher's public GitHub releases and downloads a signed Mtouaa APK only when you choose to update. GitHub receives normal connection information, such as your IP address and the update client's user agent; document contents are not sent. Installing an update requires your confirmation and can close the app, so save your work first. Opening Support or the public privacy page uses your browser, where the website's privacy practices apply.
 
 Local storage and deletion
 Editor preferences, browser storage and temporary import/export files may be stored locally. Selected documents are read through Android's granted document access and copied into private cache while the editor needs them. These import copies are removed when the editor closes or on the next app launch; originals are not changed. Temporary export files are cleared after use or on the next app launch. You choose where exported documents are saved. Clear the app's storage or uninstall it to remove its internal data; exported files remain where you saved them and can be deleted using your file manager.
 
 Permissions
-Internet and network-state permissions are needed by the local browser/server connection and browser runtime. The app does not request broad storage access, contacts, location, microphone or camera permissions. Android's file picker handles document access.
+Internet and network-state permissions are needed by the local browser/server connection, browser runtime and optional update checks/downloads. The Huawei edition also requests permission to open Android's APK installer; you choose whether to allow installations from it in Android settings and confirm each installation. That installer permission is absent from the Google Play edition. The app does not request broad storage access, contacts, location, microphone or camera permissions. Android's file picker handles document access.
 
 Children
 This general-purpose creative suite is not specifically designed for children. The Play Console target-audience declaration must match the intended audience selected by the publisher.
@@ -80,12 +80,25 @@ for app in catalog:
     (res/'drawable-nodpi'/('ic_'+app['id'].replace('-','_')+'.png')).write_bytes(png(128))
 ET.indent(tree,space='    ') if hasattr(ET,'indent') else None
 tree.write(manifest,encoding='unicode',xml_declaration=True)
+import copy
+huawei=copy.deepcopy(tree)
+huawei.getroot().insert(0,ET.Element('uses-permission',{f'{{{ns}}}name':'android.permission.REQUEST_INSTALL_PACKAGES'}))
+provider=ET.SubElement(huawei.getroot().find('application'),'provider',{
+    f'{{{ns}}}name':'androidx.core.content.FileProvider',f'{{{ns}}}authorities':'${applicationId}.updates',
+    f'{{{ns}}}exported':'false',f'{{{ns}}}grantUriPermissions':'true'})
+ET.SubElement(provider,'meta-data',{f'{{{ns}}}name':'android.support.FILE_PROVIDER_PATHS',f'{{{ns}}}resource':'@xml/update_paths'})
+huawei_manifest=ROOT/'app/src/huawei/AndroidManifest.xml';huawei_manifest.parent.mkdir(parents=True,exist_ok=True)
+ET.indent(huawei,space='    ') if hasattr(ET,'indent') else None
+huawei.write(huawei_manifest,encoding='unicode',xml_declaration=True)
 extension=ROOT/'app/src/play/assets/gecko-extension';extension.mkdir(parents=True,exist_ok=True)
 for script in ['network.js','content.js']:
     (extension/script).write_text((shared/'gecko-extension'/script).read_text().replace("'43871'","'43872'"))
 preview=ROOT/'app/src/preview/assets/gecko-extension';preview.mkdir(parents=True,exist_ok=True)
 for script in ['network.js','content.js']:
     (preview/script).write_text((shared/'gecko-extension'/script).read_text().replace("'43871'","'43873'"))
+huawei_extension=ROOT/'app/src/huaweiRelease/assets/gecko-extension';huawei_extension.mkdir(parents=True,exist_ok=True)
+for script in ['network.js','content.js']:
+    (huawei_extension/script).write_text((shared/'gecko-extension'/script).read_text().replace("'43871'","'43874'"))
 notices=ROOT/'app/src/play/assets/THIRD_PARTY_NOTICES.txt'
 notices.write_text(re.sub(r'^Publisher: .*$',
     lambda _: f"Publisher: {brand['publisherName']}. Website: {brand['website']}",

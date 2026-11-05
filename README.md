@@ -4,10 +4,21 @@ Mtouaa Studio is an independently branded offline creative suite for ARM64 Andro
 and phones. The Google Play edition packages 15 editors built from pinned open-source
 releases. Documents are processed locally, and no account is required.
 
-The public package is `com.mtouaa.studio`; the release candidate is version `0.5.0` (code 8),
+The Play package is `com.mtouaa.studio`; the release candidate is version `0.6.0` (code 9),
 targeting Android API 36 with Android 8.0 as the minimum. The bundled Mozilla GeckoView
 runtime avoids dependence on Google Play Services or a separately installed system WebView.
 All editors are packaged for first-launch offline use.
+
+The separate Huawei edition is `com.mtouaa.studio.huawei`. Install its signed Huawei APK
+to receive optional updates from [Mtouaa releases](https://github.com/mouradxmt/mtostudio/releases).
+On the Apps screen, choose **Check for updates**, then download and confirm installation.
+Save and export work first. Preview uses a different package/signature; export documents
+from Preview and import them into Huawei before removing Preview.
+
+Play builds use Google Play's flexible in-app update service. Its real update flow requires
+a Play installation and a higher version offered to that account; locally sideloaded APKs
+cannot test it. Neither edition downloads replacement editor ZIPs in the app.
+See [release automation and update testing](docs/RELEASES.md).
 
 ## Google Play edition
 
@@ -95,7 +106,8 @@ To refresh all 15 bundled editors from the latest stable GitHub releases:
 Changed license/attribution, dependency or font inputs stop for review before the current
 bundle is replaced. See [the update workflow](docs/BUNDLED-UPDATES.md) for the exact review
 steps, GitHub rate-limit authentication, rollback and release testing. Android/Gecko/build
-tools remain separately pinned. This task does not publish or enable runtime updates.
+tools remain separately pinned. This maintenance task does not itself publish a release;
+the APK/AAB must be rebuilt and distributed through the configured release channel.
 
 The upload key/config live in ignored `.release-secrets/`, never in source control or store
 assets. Run `tools/create_upload_key.py` once if none exists, and back up the resulting files

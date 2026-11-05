@@ -1,0 +1,26 @@
+name: Check editor releases
+on:
+  schedule:
+    - cron: '20 8 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Compare stable upstream versions
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 tools/update_bundled_apps.py --check
+          cat .tools/bundled-update/report.json >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: editor-update-report
+          path: .tools/bundled-update/report.json
+          if-no-files-found: error

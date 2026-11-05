@@ -1,5 +1,5 @@
 Mtouaa Studio — Privacy policy
-Prepared 3 November 2026
+Prepared 5 November 2026
 Publisher: Mtouaa Labs
 Website: https://mtouaa.com
 Contact: [Support email must be added before publication]
@@ -11,13 +11,13 @@ Accounts, advertising and analytics
 The app does not require an account. The publisher has not added advertising, analytics, tracking or payment SDKs. The bundled Mozilla browser runtime executes the editors locally. Its open-source notices and corresponding source are available in About & licenses.
 
 Network access
-The editors load their files from an on-device loopback server; this traffic stays on your device. Editor web requests to outside sites are blocked. The Google Play edition does not check GitHub or download replacement editors. Google Play handles app distribution and updates under Google's policies. Opening Support or the public privacy page uses your browser, where the website's privacy practices apply.
+The editors load their files from an on-device loopback server; this traffic stays on your device. Editor web requests to outside sites are blocked. The Google Play edition's update button uses Google's Play In-App Updates library; Google Play handles availability checks, downloads and installation under Google's terms and privacy practices. The separate Huawei edition checks the publisher's public GitHub releases and downloads a signed Mtouaa APK only when you choose to update. GitHub receives normal connection information, such as your IP address and the update client's user agent; document contents are not sent. Installing an update requires your confirmation and can close the app, so save your work first. Opening Support or the public privacy page uses your browser, where the website's privacy practices apply.
 
 Local storage and deletion
 Editor preferences, browser storage and temporary import/export files may be stored locally. Selected documents are read through Android's granted document access and copied into private cache while the editor needs them. These import copies are removed when the editor closes or on the next app launch; originals are not changed. Temporary export files are cleared after use or on the next app launch. You choose where exported documents are saved. Clear the app's storage or uninstall it to remove its internal data; exported files remain where you saved them and can be deleted using your file manager.
 
 Permissions
-Internet and network-state permissions are needed by the local browser/server connection and browser runtime. The app does not request broad storage access, contacts, location, microphone or camera permissions. Android's file picker handles document access.
+Internet and network-state permissions are needed by the local browser/server connection, browser runtime and optional update checks/downloads. The Huawei edition also requests permission to open Android's APK installer; you choose whether to allow installations from it in Android settings and confirm each installation. That installer permission is absent from the Google Play edition. The app does not request broad storage access, contacts, location, microphone or camera permissions. Android's file picker handles document access.
 
 Children
 This general-purpose creative suite is not specifically designed for children. The Play Console target-audience declaration must match the intended audience selected by the publisher.

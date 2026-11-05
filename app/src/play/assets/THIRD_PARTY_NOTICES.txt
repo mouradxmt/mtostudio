@@ -28,7 +28,18 @@ https://hg.mozilla.org/releases/mozilla-release/archive/5add844c26613d7e4d84c799
 
 The Play edition uses packaged, reviewed editors and is updated through Google Play.
 
+Google Play In-App Updates Library 2.1.0 (Play edition only):
+Copyright Google LLC. Licensed under the Play Core Software Development Kit Terms of Service:
+https://developer.android.com/guide/playcore#play-core-software-development-kit-terms-of-service
+https://developer.android.com/guide/playcore/in-app-updates
+This SDK is not included in the Huawei edition. AndroidX Core and WebKit are distributed
+under Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0
+Huawei updates use Mtouaa APKs signed with the publisher's existing Android signing key;
+the app preserves the same editor source, font, and dependency notices after updates.
+
+
 --- Additional dependency license notices ---
+
 Additional notices for dependencies introduced by the November 2026 editor update.
 Some packages are native-only or build dependencies and are included conservatively.
 

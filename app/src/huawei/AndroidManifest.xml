@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-feature android:glEsVersion="0x00030000" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <application android:appCategory="productivity">
+        <activity-alias android:name=".PhotoCraft" android:label="Photos" tools:replace="android:label" />
+        <activity-alias android:name=".VectorCraft" android:label="Vectors" tools:replace="android:label" />
+        <activity-alias android:name=".FilmCraft" android:label="Video" tools:replace="android:label" />
+        <activity-alias android:name=".LightCraft" android:label="Photo Library" tools:replace="android:label" />
+        <activity-alias android:name=".PdfCraft" android:label="PDF" tools:replace="android:label" />
+        <activity-alias android:name=".EffectCraft" android:label="Motion" tools:replace="android:label" />
+        <activity-alias android:name=".DesignCraft" android:label="Layouts" tools:replace="android:label" />
+        <activity-alias android:name=".FigCraft" android:label="Interface Design" tools:replace="android:label" />
+        <activity-alias android:name=".TextureCraft" android:label="Textures" tools:replace="android:label" />
+        <activity-alias android:name=".WordCraft" android:label="Writer" tools:replace="android:label" />
+        <activity-alias android:name=".SoundCraft" android:label="Audio" tools:replace="android:label" />
+        <activity-alias android:name=".DeckCraft" android:label="Slides" tools:replace="android:label" />
+        <activity-alias android:name=".CADCraft" android:label="CAD" tools:replace="android:label" />
+        <activity-alias android:name=".GridCraft" android:label="Sheets" tools:replace="android:label" />
+        <activity-alias android:name=".CraftAnything" android:label="Explorer" tools:replace="android:label" />
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.updates" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/update_paths" />
+        </provider>
+    </application>
+</manifest>

@@ -4,7 +4,7 @@ These answers describe the independently branded **Play** edition. Review them a
 final signed bundle and its third-party runtime before submitting them in Play Console.
 They are not a submitted or Google-approved declaration.
 
-Publisher: **Mtouaa Labs**. The 0.5.0 candidate contains no AdMob SDK or advertising.
+Publisher: **Mtouaa Labs**. The 0.6.0 candidate contains no AdMob SDK or advertising.
 The planned monetized edition must use a revised policy and worksheet before launch;
 see [ADMOB_PLAN.md](ADMOB_PLAN.md). An ad-supported version cannot reuse the current
 "no advertising SDK" answer. Declare ads in Play Console when that edition is submitted,
@@ -17,6 +17,7 @@ and assess the SDK's actual collection/sharing, consent behavior and merged perm
 | Documents and media | Processed locally. The wrapper does not upload document contents. User-selected Android document providers have their own storage practices. |
 | Location, contacts, camera, microphone | No such Android permissions are requested. Audio recording is not supplied by this wrapper. |
 | External engine updater | Disabled in the Play flavor, including the native update/check APIs and activation of external packs. Updates are distributed through Google Play. |
+| In-app update SDK | Google Play In-App Updates 2.1.0 is included only in the Play edition. An explicit button queries Play and requests a flexible update. Google Play handles delivery and installation; review its SDK data disclosure alongside the final Play Console form. The Huawei edition uses optional HTTPS requests to GitHub instead and is not the Play submission binary. |
 | Analytics | No publisher analytics SDK is added. Validate the bundled Mozilla runtime and final network behavior; do not infer SDK behavior solely from the wrapper. |
 | Crash handling | Local runtime crash callback displays an error. The wrapper does not implement a crash-upload service. Review runtime configuration and the final merged manifest. |
 | Local data removal | Clear app storage or uninstall. Exported documents remain in their selected locations. |

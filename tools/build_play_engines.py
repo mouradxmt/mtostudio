@@ -101,7 +101,7 @@ def build(app,env,stage_only=False,force=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--app');parser.add_argument('--stage-only',action='store_true');parser.add_argument('--force',action='store_true');args=parser.parse_args()
-    env=dict(os.environ, RUSTUP_HOME=str(ROOT/'.tools/rustup'),CARGO_HOME=str(ROOT/'.tools/cargo'),CARGO_TARGET_DIR=str(ROOT/'.tools/play-target'),CRAFT_FONTS_DIR=str(ROOT/'vendor/sources/craft-fonts'),XDG_CACHE_HOME=str(ROOT/'.tools/cache'),CARGO_BUILD_JOBS='4',CARGO_NET_GIT_FETCH_WITH_CLI='true')
+    env=dict(os.environ, RUSTUP_HOME=str(ROOT/'.tools/rustup'),CARGO_HOME=str(ROOT/'.tools/cargo'),CARGO_TARGET_DIR=str(ROOT/'.tools/play-target'),CRAFT_FONTS_DIR=str(ROOT/'vendor/sources/craft-fonts'),XDG_CACHE_HOME=str(ROOT/'.tools/cache'),CARGO_BUILD_JOBS=os.environ.get('CARGO_BUILD_JOBS','4'),CARGO_NET_GIT_FETCH_WITH_CLI='true')
     env['PATH']=str(ROOT/'.tools/wasm-bin')+':'+str(ROOT/'.tools/cargo/bin')+':'+env['PATH']
     DEST.mkdir(parents=True,exist_ok=True)
     catalog=json.loads((ROOT/'tools/suite-lock.json').read_text())

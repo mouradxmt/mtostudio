@@ -15,9 +15,11 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-JAVA_HOME = ROOT / '.tools/jdk-17.0.21+9/Contents/Home'
+JAVA_HOME = Path(os.environ.get('JAVA_HOME', str(ROOT / '.tools/jdk-17.0.21+9/Contents/Home')))
 JAVA = JAVA_HOME / 'bin/java'
-TOOLS = ROOT / '.tools/android-sdk/build-tools/36.0.0'
+SDK = Path(os.environ.get('ANDROID_HOME', str(ROOT / '.tools/android-sdk')))
+if not (SDK / 'build-tools/36.0.0').is_dir(): SDK = ROOT / '.tools/android-sdk'
+TOOLS = SDK / 'build-tools/36.0.0'
 BUNDLETOOL = ROOT / '.tools/bundletool.jar'
 BUNDLE = ROOT / 'app/build/outputs/bundle/playRelease/app-play-release.aab'
 DEST = ROOT / '.tools/play-verification'
