@@ -1,70 +1,71 @@
-# Mtouaa Studio 0.6.1 — native update channels
+# Mtouaa Studio 0.7.0 — editor refresh
 
-Verified locally 5 November 2026. Publisher: **Mtouaa Labs**. Version code **10**.
-Android 8.0/API 26 minimum, target API 36, ARM64. Packages:
-`com.mtouaa.studio` (Play), `com.mtouaa.studio.huawei` (Huawei), and
-`com.mtouaa.studio.preview` (development Preview).
+Release preparation: 12 November 2026. Publisher: **Mtouaa Labs**.
+Version code **11**, Android 8/API 26 minimum, target API 36, ARM64.
+Packages and signing key remain unchanged from 0.6.1.
 
-## Changes and trust
+## Source and license inputs
 
-The native Apps screen now offers optional update checks. Play uses the unmodified Google
-Play In-App Updates 2.1.0 SDK and flexible delivery. Huawei uses public Mtouaa GitHub release
-metadata signed with the existing RSA APK key; it checks package, increasing versionCode,
-version name, canonical repository URL, APK length/hash and certificate before handing it
-to Android's installer. The installer permission/FileProvider exists only in Huawei;
-the Play APK neither requests it nor contains the Huawei updater classes. Both editions
-keep external editor ZIP activation disabled. Installation/restart requires a safe Apps
-state and an explicit save-work confirmation.
+All 15 stable upstream releases were discovered from GitHub on 12 November 2026.
+Exact versions, source commits and archive hashes are recorded in `tools/suite-lock.json`
+and `tools/play-source-lock.json`; README.md and RELEASE_NOTES.md list the versions.
+Each editor is rebuilt from source with original Mtouaa artwork and display branding.
+Android, GeckoView and the build tools remain pinned; Cargo uses upstream locked versions.
 
-Signing certificate SHA-256:
-`c4388b1fc99fe8bf576970455a0f4089bffe8d272583f53500a8f8eee6dd1576`.
-All 15 reviewed editor source pins and compiled engines remain those of 0.5.0. Original
-licenses, contributor records, fonts and dependency notices remain bundled. The visible
-About notices now also identify the Play SDK and contain 674,779 bytes, below the 1 MiB limit.
-The source pipeline's license inventory and branding/output hashes passed again.
+The changed-input review is in `editor-update-review.json`. All 15 top-level MIT and
+Apache-2.0 license texts match the previous reviewed release. New dependency archives
+were verified against Cargo.lock checksums, and new Git dependencies were inspected at
+exact immutable revisions. Original notices, contributor credits, font terms and asset
+attribution remain bundled; added license and attribution texts are in
+`dependency-notices.txt`. The objc2-io-kit archive omits its license; the same exact upstream
+VCS license retained for objc2-core-text supplies that notice.
 
-## Executed checks
+All 18 embedded language-data paths in the reviewed craft-proof revisions have one
+Embeddable attribution row at each of the three new craft-i18n pins. No GPL/AGPL/LGPL or
+CC-BY-SA dictionary data is embedded. Optional language-pack downloads are unavailable in
+the web backend. Font archives remain at each upstream release's pinned commit.
+Vectors reports optional Arabic font families absent from its pinned archive; these
+additional families are not bundled. This is changed-input/notice verification, not a
+comprehensive legal or security audit.
 
-All device checks used only the disposable `mtouaa-play-16k` emulator on port 5570:
-Android 16/API 36, ARM64, 16 KB pages, tablet landscape. User emulators were left untouched.
+## Executed verification
 
-- **24 Huawei update checks:** Android RSA verification, tampering and wrong-key rejection,
-  downgrade rejection, channel/package/URL checks, private provider, real signed future-APK
-  parsing, corrupt-APK rejection, active-editor gate, save-work confirmation, FileProvider
-  handoff to Android's package installer, and cancellation without changing the installed
-  version. The tiny future fixture was never installed.
-- **9 Play update checks:** production controller with Google's `FakeAppUpdateManager`;
-  availability, flexible consent, progress/duplicate-download guard, active-editor gate,
-  downloaded state, cancelled restart and explicit confirmed restart.
-- **18 offline suite checks in Huawei:** all 15 editors started through their launcher
-  shortcuts with Google Play Services disabled; fullscreen/F11, launcher registrations,
-  packaged-engine enforcement, and offline privacy/support controls passed. Network and
-  Google services were restored afterward.
-- **35 host regressions** for bundle maintenance, license/rollback gates and branding,
-  plus **7 JavaScript save-bridge tests**, passed.
-- Signed Huawei/Play APKs and Play AAB built; lint reported no errors. Remaining warnings
-  concern the intentionally pinned Gradle version and shared shortcut icon artwork.
-- Final Play AAB passed bundletool validation and JAR signature verification. Its exact
-  universal APK passed certificate, package, non-debuggable, 16 KB ZIP alignment and all
-  13 native-library ELF alignment checks. Download sizing is recorded in the generated bundle-verification.json.
-- Pinned CI tool URLs/checksums, CI source preparation, source lock stability, workflow
-  YAML parsing and whitespace checks were validated locally.
+- Passed 35 host regression tests and 7 JavaScript save-bridge tests.
+- All 15 source engines compiled and passed output hashes and protected-brand scanning.
+- Built signed Huawei/Play release APKs and the Play AAB; Android lint has zero errors
+  and one intentional shared-shortcut-icon warning in each edition.
+- On only the disposable `mtouaa-play-16k` emulator (5570), Android 16/API 36, ARM64,
+  16 KB pages, 2560 × 1600: **18 offline suite checks** passed with Google Play Services
+  disabled, including all 15 editor shortcuts/startup, fullscreen/F11, packaged-engine
+  enforcement, privacy and support.
+- **6 PDF touch-menu checks**, **7 document-provider import checks**, **18 Huawei
+  update-security checks**, and **9 Play update-controller checks** passed. The Play
+  tests use Google's FakeAppUpdateManager; they do not claim actual Play delivery.
+- In airplane mode, PDF 0.21.1 loaded the external two-page PDF selected in Android's
+  real file picker. Cancelling another selection retained the document. Writer 0.18.1
+  loaded the external DOCX, rendered both pages and its final test paragraph. Original
+  Downloads file SHA-256 hashes match the synthetic fixture originals. Missing Aptos
+  family fonts use the editor's fallback; proprietary font files are not bundled.
+- The exact signed Play AAB passed bundletool and JAR-signature validation. Its generated
+  universal APK passed package, target SDK, non-debuggable, signing-certificate and
+  16 KB ZIP checks. All **13 native libraries** passed ELF 16 KB alignment checks.
+- Estimated compressed Play download: **381,724,390 bytes**; Play Console determines
+  final delivery size. Native About contains **902,987 bytes**, below its 1 MiB limit.
+- Signing certificate SHA-256:
+  `c4388b1fc99fe8bf576970455a0f4089bffe8d272583f53500a8f8eee6dd1576`.
+- Device logs, synthetic-import screenshots and bundle verification evidence are saved
+  locally in `dist/Mtouaa-Studio-0.7.0-verification/`. Other emulators were untouched.
+  The Huawei public descriptor will be checked after the release is published.
 
-The prior file-import/PDF-menu acceptance and full editor refresh are recorded in
-`history/VERIFICATION-0.5.0.md`; those engine changes were not repeated in this release.
+## Delivery and remaining external work
 
-## Remaining external acceptance
+Builds run locally using existing caches. GitHub Actions workflows remain disabled;
+no cloud build or Actions artifact storage is used. Final release files are uploaded
+straight to GitHub Releases. The Huawei updater uses the existing app-signing key and
+Android's installation confirmation; the Play package uses Play delivery only.
 
-Actual Google Play update delivery still needs a Play-owned installation and a higher
-version available to that tester. No Google Play publication is claimed. Physical Huawei
-acceptance, including that tablet's installation-permission UI, is still required.
-
-Cloud builds and schedules are disabled after the publisher requested lower resource use.
-Temporary Actions artifacts were deleted. Releases are now built, signed and verified on the
-publisher's Mac using existing caches, then uploaded directly to GitHub Releases. The local
-release command does not compile the editor engines or refresh license/source pins.
-A clean hosted build is not claimed. The public Huawei feed is activated by publishing the
-verified local release; live update acceptance is recorded separately after publication.
-
-AdMob remains planned, not installed. Support email, hosted privacy policy and the other
-Play submission gates remain unfinished in `submission-status.json`.
+Physical Huawei acceptance, actual Google Play delivery, full editing/export/format and
+codec coverage remain separate tasks. Play publication is not claimed. Support contact,
+hosted privacy policy and publisher declarations remain pending. AdMob is not included.
+Historical 0.6.1 update-channel and public-upgrade acceptance is retained in
+`history/VERIFICATION-0.6.1.md` and `ACCEPTANCE-0.6.1.md`.

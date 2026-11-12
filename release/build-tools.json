@@ -37,6 +37,21 @@
       "repo": "storytold/craft-i18n",
       "commit": "059cbf95c2a3eb95d637ca8584faca1129d17f48",
       "sha256": "2abb92b3806bbdb5c0edf54f13621c04ef02923dcc761b39120b17a6d199671d"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "e02939ef009218e81c44e8ec001fbb7603461de4",
+      "sha256": "0bd1481c0de61d0e31dd2dd9f955135e573f8ebdbb04a87f4567125674b350bd"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "575cfdef63227b14daf173b8cc87928bfdfa325e",
+      "sha256": "e20d52955038a2e5d8296dce0a0162b1daf1d5c7a03653da40527d5755830d76"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "1e515422afdda2f317af430c1f9d68a5f83935b4",
+      "sha256": "f80b9e41011f55963cb3cdb06f0e613996b0593a8f6236cd7d09a52f8b10a2e6"
     }
   ]
 }

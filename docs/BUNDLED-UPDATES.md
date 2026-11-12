@@ -82,10 +82,10 @@ ignore-license switch.
 To continue the exact already-discovered snapshot after review, use
 `./gradlew -PresumeBundledUpdate=true updateBundledApps`. This rechecks staged source/archive
 pins and license inputs without another latest-release lookup or discarding completed
-editor builds. Run without that property when you want a fresh discovery. The current
-Writer release also pins `craft-i18n.rev`; translations and dictionary data are fetched
-at that commit with their archive hash in `release/build-tools.json`. Dictionary files
-remain intact; a private source copy of interface translations receives the branding patch.
+editor builds. Run without that property when you want a fresh discovery. Several editor releases also pin `craft-i18n.rev`; translations and dictionary data are
+fetched at each required commit with archive hashes in `release/build-tools.json`.
+Dictionary files remain intact; private source copies of interface translations receive
+the branding patch.
 
 The update preserves original legal files byte for byte under each editor's
 `upstream-legal/source/`, alongside the official web package's notices and the independently

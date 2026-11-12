@@ -1,0 +1,445 @@
+{
+  "registry": [
+    {
+      "name": "sctk-adwaita",
+      "version": "0.10.1",
+      "sha256": "b6277f0217056f77f1d8f49f2950ac6c278c0d607c45f5ee99328d792ede24ec",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "tiny-skia",
+      "version": "0.11.4",
+      "sha256": "83d13394d44dae3207b52a326c0c85a8bf87f1541f23b0d143811088497b09ab",
+      "licenses": [
+        "BSD-3-Clause"
+      ]
+    },
+    {
+      "name": "tiny-skia-path",
+      "version": "0.11.4",
+      "sha256": "9c9e7fc0c2e86a30b117d0462aa261b72b7a99b7ebd7deb3a14ceda95c5bdc93",
+      "licenses": [
+        "BSD-3-Clause"
+      ]
+    },
+    {
+      "name": "nix",
+      "version": "0.31.3",
+      "sha256": "cf20d2fde8ff38632c426f1165ed7436270b44f199fc55284c38276f9db47c3d",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "typed-path",
+      "version": "0.12.4",
+      "sha256": "54ec2755506471f54baf5e4bb5499d8e510cc1caf271270e778a736bd2d7336c",
+      "licenses": [
+        "MIT OR Apache-2.0"
+      ]
+    },
+    {
+      "name": "zip",
+      "version": "9.0.5",
+      "sha256": "6e04976da629d3b04204ba8105b396a193af8ad2583b2c79bfb3ab8af580a11e",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "fontique",
+      "version": "0.11.1",
+      "sha256": "6688bc1294fe7117d788937b6c53480169b29c566954af490830d4c09da9516a",
+      "licenses": [
+        "Apache-2.0 OR MIT"
+      ]
+    },
+    {
+      "name": "objc2-core-text",
+      "version": "0.3.2",
+      "sha256": "0cde0dfb48d25d2b4862161a4d5fcc0e3c24367869ad306b0c9ec0073bfed92d",
+      "licenses": [
+        "Zlib OR Apache-2.0 OR MIT"
+      ]
+    },
+    {
+      "name": "parlance",
+      "version": "0.1.1",
+      "sha256": "73072a9470554c8e794778acece2312661218aaabb635600957d952cf01c716e",
+      "licenses": [
+        "Apache-2.0 OR MIT"
+      ]
+    },
+    {
+      "name": "ruzstd",
+      "version": "0.9.1",
+      "sha256": "69e4ce4a039f42bf25920b95667e4d789e98749ab11bbb8d2c2936f788421bb5",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "webpki-roots",
+      "version": "1.0.11",
+      "sha256": "f5f280bbb2b287bc8e7de7e3852945a0ff50d1bbcb5ed42b6c7a568c546df171",
+      "licenses": [
+        "CDLA-Permissive-2.0"
+      ]
+    },
+    {
+      "name": "yeslogic-fontconfig-sys",
+      "version": "6.0.1",
+      "sha256": "1d8b8abf912b9a29ff112e1671c97c33636903d13a69712037190e6805af4f76",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "arrayref",
+      "version": "0.3.9",
+      "sha256": "76a2e8124351fda1ef8aaaa3bbd7ebbcb486bbcd4225aca0aa0d84bb2db8fecb",
+      "licenses": [
+        "BSD-2-Clause"
+      ]
+    },
+    {
+      "name": "strict-num",
+      "version": "0.1.1",
+      "sha256": "6637bab7722d379c8b41ba849228d680cc12d0a45ba1fa2b48f2a30577a06731",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "core_maths",
+      "version": "0.1.1",
+      "sha256": "77745e017f5edba1a9c1d854f6f3a52dac8a12dd5af5d2f54aecf61e43d80d30",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "icu_segmenter",
+      "version": "2.3.0",
+      "sha256": "82d07aafccd67af15d02512a6adf5896fbc5ed00f2e99b471d2efa14016db3db",
+      "licenses": [
+        "Unicode-3.0"
+      ]
+    },
+    {
+      "name": "icu_segmenter_data",
+      "version": "2.3.0",
+      "sha256": "ae293c039020f9ec10710af98d29ce6aa2051486638b49c9a6409f3b4a9e98ad",
+      "licenses": [
+        "Unicode-3.0"
+      ]
+    },
+    {
+      "name": "bit-set",
+      "version": "0.8.0",
+      "sha256": "08807e080ed7f9d5433fa9b275196cfc35414f66a0c79d864dc51a0d825231a3",
+      "licenses": [
+        "Apache-2.0 OR MIT"
+      ]
+    },
+    {
+      "name": "bit-vec",
+      "version": "0.8.0",
+      "sha256": "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7",
+      "licenses": [
+        "Apache-2.0 OR MIT"
+      ]
+    },
+    {
+      "name": "fancy-regex",
+      "version": "0.14.0",
+      "sha256": "6e24cb5a94bcae1e5408b0effca5cd7172ea3c5755049c5f3af4cd283a165298",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "phf",
+      "version": "0.11.3",
+      "sha256": "1fd6780a80ae0c52cc120a26a1a42c1ae51b247a253e4e06113d23d2c2edd078",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "phf_generator",
+      "version": "0.11.3",
+      "sha256": "3c80231409c20246a13fddb31776fb942c38553c51e871f8cbd687a4cfb5843d",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "phf_macros",
+      "version": "0.11.3",
+      "sha256": "f84ac04429c13a7ff43785d75ad27569f2951ce0ffd30a3321230db2fc727216",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "phf_shared",
+      "version": "0.11.3",
+      "sha256": "67eabc2ef2a60eb7faa00097bd1ffdb5bd28e62bf39990626a582201b7a754e5",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "rand",
+      "version": "0.8.8",
+      "sha256": "e058c7de0b26af77780c769414d6257830bb240f3c38477dbc2c16e5f54d6d4c",
+      "licenses": [
+        "MIT OR Apache-2.0"
+      ]
+    },
+    {
+      "name": "ratex-font",
+      "version": "0.1.14",
+      "sha256": "6a7b73531dabe934a3e725ed5c90d18dacf43778b7a208381390943a9a8c24db",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "ratex-layout",
+      "version": "0.1.14",
+      "sha256": "1792738e2e36683cd20de742296a5233759565efc8cd03831064a0ccfb1fe0f7",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "ratex-lexer",
+      "version": "0.1.14",
+      "sha256": "f704add86d7bf4c4ecc7767f45ab38a44f1bbfa4b49725b2ae53c32e83b8a61e",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "ratex-parser",
+      "version": "0.1.14",
+      "sha256": "079ec2e7ac6bc76137a6de093a173d1f901139a51318589ab9ce17139c21a6f0",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "ratex-types",
+      "version": "0.1.14",
+      "sha256": "0cf0be3d050525f0f7d37af55a443d7648c222ccc617639950e3de1f8e6f9900",
+      "licenses": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "regex-lite",
+      "version": "0.1.9",
+      "sha256": "cab834c73d247e67f4fae452806d17d3c7501756d98c8808d7c9c7aa7d18f973",
+      "licenses": [
+        "MIT OR Apache-2.0"
+      ]
+    },
+    {
+      "name": "unicode-normalization",
+      "version": "0.1.26",
+      "sha256": "75cd3fb03d5288b3ba9a1ee103ac7e9cbb59f0b03d64f8ddfcc04dd42758a85d",
+      "licenses": [
+        "(MIT OR Apache-2.0) AND Unicode-3.0"
+      ]
+    },
+    {
+      "name": "sys-locale",
+      "version": "0.3.2",
+      "sha256": "8eab9a99a024a169fe8a903cf9d4a3b3601109bcc13bd9e3c6fff259138626c4",
+      "licenses": [
+        "MIT OR Apache-2.0"
+      ]
+    }
+  ],
+  "git": [
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "14d5dbb50c317b8747a9cf9eb35ab8a22515f137",
+      "sha256": "3cfe7f68be3da054c45108f26575e7debbde25cb89aed138664d2c5d1c91adee"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "762a06a4c6b48b522b7d4de84a87917ef90265e6",
+      "sha256": "92af024515095c2a88a84cdf5065c99da51b8ed13f7948a8fc16735ba955dd0a"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "787a7a0f972fd1d7a7618fdbeca3a5267a0407ff",
+      "sha256": "dfdd68c3260c88634b7871fe5d50097eefd1fb061503669888f4989449075f96"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "89fa1559e94378ecef85cd7e4681400f4df053e0",
+      "sha256": "1f4943a1b3e5944f136f464ebb6811181a528f3352cef7bf00c8c27a260dde52"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "b8f7d93b00dfb8f172938f3d2d796ae62dcfe123",
+      "sha256": "247c219e3b51933d2939ffcc291fc6e1e3bb8ddca689461c1a23473bef9363f3"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "ca1b5e2edb8568335c6c14f390307bd5beae8238",
+      "sha256": "8374ff3c164347f2332cc42714909e3845d1e98f79668f931eeef2044f103560"
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "fb08be5fa19eee8d37e624397fcdc96df6035e92",
+      "sha256": "7d5aab88978a6c9d4646d033cf70961dd56740c283060fe9fcd70cd4e5748740"
+    }
+  ],
+  "date": "2026-11-03",
+  "release": "0.5.0",
+  "sourcePins": [
+    {
+      "id": "photocraft",
+      "repo": "storytold/photocraft",
+      "version": "0.20.1",
+      "commit": "327c4cc82e737a3e0af7c147a477126d77525495",
+      "sha256": "be16defd88c4f793c684da0eab0578bc21c0790b3139c56b810c0505707e95d0"
+    },
+    {
+      "id": "vectorcraft",
+      "repo": "storytold/vectorcraft",
+      "version": "0.21.0",
+      "commit": "11862f61198c8f62c0b22b6c9a331cc5950ac98d",
+      "sha256": "97e451e2c9556e904c9f72aa907d1771665b9c66d14bf47e23a8cac74f9ac406"
+    },
+    {
+      "id": "filmcraft",
+      "repo": "storytold/filmcraft",
+      "version": "0.17.0",
+      "commit": "eb59ec09daaea519c9c8fffa404a594ae50d00e0",
+      "sha256": "41f80be7e2a05f37d97c41845a8cebbbab1da1583ebc8573167d7be7ab1ca7b7"
+    },
+    {
+      "id": "lightcraft",
+      "repo": "storytold/lightcraft",
+      "version": "0.18.0",
+      "commit": "32d569ad5d19a6b55cf8d5c077127faa0f44a83b",
+      "sha256": "46684290f7ec1174aeb61869b001800e9df18d8cdc9e8141a92416c902dbb0d8"
+    },
+    {
+      "id": "pdfcraft",
+      "repo": "storytold/pdfcraft",
+      "version": "0.18.0",
+      "commit": "3936f93a1479366a951206fc6d3094680fe2d3dc",
+      "sha256": "c36f79ffac9c05eb9809969cd1016a7f296669f5fb54b16aa99891a2bbd2ecd0"
+    },
+    {
+      "id": "effectcraft",
+      "repo": "storytold/effectcraft",
+      "version": "0.21.0",
+      "commit": "7870b5916ae0749d497d880989683bf2946d6c8b",
+      "sha256": "bc43b5dd2bf18e4929802aedc779c05a78623f823f7adf0dad0c6074cb748e35"
+    },
+    {
+      "id": "designcraft",
+      "repo": "storytold/designcraft",
+      "version": "0.17.0",
+      "commit": "e79d682e02dc66f14370958b193bfa46072b2f41",
+      "sha256": "ca22ae422b6a7b74f5fee1bfd559618ea0e9aa78fa0ec8cd44e4f68d06ed5139"
+    },
+    {
+      "id": "figcraft",
+      "repo": "storytold/figcraft",
+      "version": "0.15.0",
+      "commit": "02c38a6d959f0afd82e44d9d67d396266e6ab4a3",
+      "sha256": "f8846c7539edeca5763063ca7d886dfa0f2d9b8b8aa693a470e96b0549f1dd2d"
+    },
+    {
+      "id": "texturecraft",
+      "repo": "storytold/texturecraft",
+      "version": "0.3.0",
+      "commit": "85475143fa4d219cc7d60cd039923f57b6c2209c",
+      "sha256": "38c6c781daeeb03d923f7b78a6edfb900845c6f3d3a0599f746ecb8dd3153eba"
+    },
+    {
+      "id": "wordcraft",
+      "repo": "storytold/wordcraft",
+      "version": "0.15.0",
+      "commit": "b47079fc791595fd84bb499d64dcd3f0624ef35a",
+      "sha256": "709668cd52d189362c91be7aec20b2dbafb2be662452b42f6bd8ed9116f40cc3"
+    },
+    {
+      "id": "soundcraft",
+      "repo": "storytold/soundcraft",
+      "version": "0.17.0",
+      "commit": "b35dd0f9eb0c08a198c1306021bd138f3a22d87c",
+      "sha256": "12bdc3ac2d1db230d95e7ca99aabc5ed9004cdb165e83b0727ec3b04f222be6e"
+    },
+    {
+      "id": "deckcraft",
+      "repo": "storytold/deckcraft",
+      "version": "0.15.0",
+      "commit": "3e178d8f5a59c787a6a53a7ed0f052b3e4a1489f",
+      "sha256": "4128092e0eb04cc03539f77cadebe4569a268ce34850b7d2d8cd3c2fde0c7021"
+    },
+    {
+      "id": "cadcraft",
+      "repo": "storytold/cadcraft",
+      "version": "0.17.0",
+      "commit": "f389d6a72e3fc160ea125b4f264d68f64cbe2aba",
+      "sha256": "f2dfda3debfe318b6c9b77d37e1bc1dc4b7a8e9d0079c222a5bbad7145bafa00"
+    },
+    {
+      "id": "gridcraft",
+      "repo": "storytold/gridcraft",
+      "version": "0.16.0",
+      "commit": "85e51e009c24fad47575f04d3c08f12342615d82",
+      "sha256": "46f1ba1fa7e35556087a7f6c2ddc03c686a98a95a5d9d448db999b5cebf7579e"
+    },
+    {
+      "id": "craft-anything",
+      "repo": "storytold/craft-anything",
+      "version": "0.3.0",
+      "commit": "e6280b5dc518b9f3266c82d794a4e2f0367d9a53",
+      "sha256": "8d53191a0e52c5c67d7f11de6113038dd9489b016fff3e67a95b7baa94711548"
+    }
+  ],
+  "additionalSourceInputs": [
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "059cbf95c2a3eb95d637ca8584faca1129d17f48",
+      "sha256": "2abb92b3806bbdb5c0edf54f13621c04ef02923dcc761b39120b17a6d199671d"
+    }
+  ],
+  "reviewNotes": [
+    "All 15 engine top-level MIT OR Apache-2.0 license texts are unchanged.",
+    "Changed notices and contributor credits are retained; original attribution is preserved separately from rebranded artwork.",
+    "New registry package archives verified against Cargo.lock SHA-256; licenses include MIT/Apache/BSD, Unicode-3.0 and CDLA-Permissive-2.0, with their terms bundled in dependency-notices.txt.",
+    "Native-only packages are conservatively documented but are not enabled by the WASM target.",
+    "Writer pins craft-i18n translations and spelling/hyphenation data; SCOWL/Ispell, CC0/public-domain, MIT and BSD notices are retained. Language data is not rebranded.",
+    "RaTeX 0.1.14 and objc2-core-text 0.3.2 omit license files in their crate archives; notices were obtained from their exact upstream VCS commits.",
+    "GridCraft numeric AFM/Symbol data attribution is preserved. No proprietary font files were added.",
+    "This record covers the changed inputs and notice handling; runtime and file-format acceptance are reported separately."
+  ],
+  "additionalNoticeFile": "release/dependency-notices.txt",
+  "additionalNoticeSources": {
+    "RaTeX": "https://github.com/erweixin/RaTeX/blob/08cae05377938391117913ca4f278e6a3ffb6a8a/LICENSE",
+    "objc2": "https://github.com/madsmtm/objc2/blob/7b1abfd750a2cacaea71d6a56ecfb83cb7de560b/LICENSE.md"
+  },
+  "languageDataAttributionCheck": {
+    "files": 21,
+    "result": "PASS",
+    "checks": [
+      "exactly one attribution row per embedded data file",
+      "Embeddable license class",
+      "no GPL/AGPL/LGPL or CC-BY-SA data"
+    ]
+  }
+}

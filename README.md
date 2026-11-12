@@ -4,7 +4,7 @@ Mtouaa Studio is an independently branded offline creative suite for ARM64 Andro
 and phones. The Google Play edition packages 15 editors built from pinned open-source
 releases. Documents are processed locally, and no account is required.
 
-The Play package is `com.mtouaa.studio`; the release candidate is version `0.6.1` (code 10),
+The Play package is `com.mtouaa.studio`; the release candidate is version `0.7.0` (code 11),
 targeting Android API 36 with Android 8.0 as the minimum. The bundled Mozilla GeckoView
 runtime avoids dependence on Google Play Services or a separately installed system WebView.
 All editors are packaged for first-launch offline use.
@@ -30,21 +30,21 @@ Mozilla product.
 
 | Tool | Upstream source |
 | --- | --- |
-| Photos | PhotoCraft 0.20.1 |
-| Vectors | VectorCraft 0.21.0 |
-| Video | FilmCraft 0.17.0 |
-| Photo Library | LightCraft 0.18.0 |
-| PDF | PdfCraft 0.18.0 |
-| Motion | EffectCraft 0.21.0 |
-| Layouts | DesignCraft 0.17.0 |
-| Interface Design | FigCraft 0.15.0 |
-| Textures | TextureCraft 0.3.0 |
-| Writer | WordCraft 0.15.0 |
-| Audio | SoundCraft 0.17.0 |
-| Slides | DeckCraft 0.15.0 |
-| CAD | CADCraft 0.17.0 |
-| Sheets | GridCraft 0.16.0 |
-| Explorer | Craft Anything 0.3.0 |
+| Photos | PhotoCraft 0.23.1 |
+| Vectors | VectorCraft 0.24.1 |
+| Video | FilmCraft 0.20.1 |
+| Photo Library | LightCraft 0.21.1 |
+| PDF | PdfCraft 0.21.1 |
+| Motion | EffectCraft 0.24.1 |
+| Layouts | DesignCraft 0.20.1 |
+| Interface Design | FigCraft 0.18.1 |
+| Textures | TextureCraft 0.6.1 |
+| Writer | WordCraft 0.18.1 |
+| Audio | SoundCraft 0.20.1 |
+| Slides | DeckCraft 0.18.1 |
+| CAD | CADCraft 0.20.1 |
+| Sheets | GridCraft 0.19.1 |
+| Explorer | Craft Anything 0.6.1 |
 
 The Play flavor disables the GitHub engine updater, including its check/install APIs and
 activation of downloaded packs. New reviewed versions are distributed through Google Play.

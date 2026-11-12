@@ -72,6 +72,7 @@ Signed key rotation is not implemented: retain the existing key for Huawei relea
 ## Testing
 
 The completed public 0.6.0 → 0.6.1 upgrade is recorded in `release/ACCEPTANCE-0.6.1.md`.
+The 0.7.0 editor refresh and its current checks are recorded in `release/VERIFICATION.md`.
 
 Use only a disposable emulator or a device with exported/backed-up documents. Never install
 over an emulator in which the user has unsaved work. Build matching instrumentation APKs:

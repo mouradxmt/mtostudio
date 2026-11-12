@@ -1,414 +1,1963 @@
 {
   "registry": [
     {
-      "name": "sctk-adwaita",
-      "version": "0.10.1",
-      "sha256": "b6277f0217056f77f1d8f49f2950ac6c278c0d607c45f5ee99328d792ede24ec",
-      "licenses": [
-        "MIT"
+      "name": "js-sys",
+      "version": "0.3.107",
+      "sha256": "8dc09d2154098bbf4ef54eab6b117a3c24cbbffe94046b16ee6d6d4510584d3a",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "js-sys-0.3.107/LICENSE-APACHE",
+        "js-sys-0.3.107/LICENSE-MIT"
       ]
     },
     {
-      "name": "tiny-skia",
-      "version": "0.11.4",
-      "sha256": "83d13394d44dae3207b52a326c0c85a8bf87f1541f23b0d143811088497b09ab",
-      "licenses": [
-        "BSD-3-Clause"
+      "name": "wasm-bindgen",
+      "version": "0.2.130",
+      "sha256": "a0181c14ddd6c7b8b0b0132a5f1ea2f32be0d893cd3ea97b6e3b28886b8a3d1c",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "wasm-bindgen-0.2.130/LICENSE-APACHE",
+        "wasm-bindgen-0.2.130/LICENSE-MIT"
       ]
     },
     {
-      "name": "tiny-skia-path",
-      "version": "0.11.4",
-      "sha256": "9c9e7fc0c2e86a30b117d0462aa261b72b7a99b7ebd7deb3a14ceda95c5bdc93",
-      "licenses": [
-        "BSD-3-Clause"
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.130",
+      "sha256": "6e931a02a39abdbf66966fc35902b5ed58344750a70885bed4ebb3d8eaf28ed9",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "wasm-bindgen-macro-0.2.130/LICENSE-APACHE",
+        "wasm-bindgen-macro-0.2.130/LICENSE-MIT"
       ]
     },
     {
-      "name": "nix",
-      "version": "0.31.3",
-      "sha256": "cf20d2fde8ff38632c426f1165ed7436270b44f199fc55284c38276f9db47c3d",
-      "licenses": [
-        "MIT"
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.130",
+      "sha256": "2ca4b54280e455bd831e33a6b8e734baf432fe63fbc35c42ac14ce67a043a53a",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "wasm-bindgen-macro-support-0.2.130/LICENSE-APACHE",
+        "wasm-bindgen-macro-support-0.2.130/LICENSE-MIT"
       ]
     },
     {
-      "name": "typed-path",
-      "version": "0.12.4",
-      "sha256": "54ec2755506471f54baf5e4bb5499d8e510cc1caf271270e778a736bd2d7336c",
-      "licenses": [
-        "MIT OR Apache-2.0"
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.130",
+      "sha256": "3b1f9c3798725016c6ee5f2f57869ec0831e8bbc0ab0310a86e787e97f41389e",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "wasm-bindgen-shared-0.2.130/LICENSE-APACHE",
+        "wasm-bindgen-shared-0.2.130/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "web-sys",
+      "version": "0.3.107",
+      "sha256": "d7d179596ff5ec0f6de4db64d54011bde6289cc49603d3a6e4ce3f329207ab88",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "web-sys-0.3.107/LICENSE-APACHE",
+        "web-sys-0.3.107/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "ntapi",
+      "version": "0.4.3",
+      "sha256": "c3b335231dfd352ffb0f8017f3b6027a4917f7df785ea2143d8af2adc66980ae",
+      "license": "Apache-2.0 OR MIT",
+      "notices": [
+        "ntapi-0.4.3/LICENSE-APACHE",
+        "ntapi-0.4.3/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "objc2-io-kit",
+      "version": "0.3.2",
+      "sha256": "33fafba39597d6dc1fb709123dfa8289d39406734be322956a69f0931c73bb15",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "notices": [
+        "objc2-io-kit-0.3.2/LICENSE.md"
+      ],
+      "noticeSource": "https://github.com/madsmtm/objc2/blob/7b1abfd750a2cacaea71d6a56ecfb83cb7de560b/LICENSE.md"
+    },
+    {
+      "name": "sysinfo",
+      "version": "0.37.2",
+      "sha256": "16607d5caffd1c07ce073528f9ed972d88db15dd44023fa57142963be3feb11f",
+      "license": "MIT",
+      "notices": [
+        "sysinfo-0.37.2/LICENSE"
+      ]
+    },
+    {
+      "name": "windows",
+      "version": "0.61.3",
+      "sha256": "9babd3a767a4c1aef6900409f85f5d53ce2544ccdfaa86dad48c91782c6d6893",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-0.61.3/license-apache-2.0",
+        "windows-0.61.3/license-mit"
+      ]
+    },
+    {
+      "name": "windows-collections",
+      "version": "0.2.0",
+      "sha256": "3beeceb5e5cfd9eb1d76b381630e82c4241ccd0d27f1a39ed41b2760b255c5e8",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-collections-0.2.0/license-apache-2.0",
+        "windows-collections-0.2.0/license-mit"
+      ]
+    },
+    {
+      "name": "windows-core",
+      "version": "0.61.2",
+      "sha256": "c0fdd3ddb90610c7638aa2b3a3ab2904fb9e5cdbecc643ddb3647212781c4ae3",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-core-0.61.2/license-apache-2.0",
+        "windows-core-0.61.2/license-mit"
+      ]
+    },
+    {
+      "name": "windows-future",
+      "version": "0.2.1",
+      "sha256": "fc6a41e98427b19fe4b73c550f060b59fa592d7d686537eebf9385621bfbad8e",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-future-0.2.1/license-apache-2.0",
+        "windows-future-0.2.1/license-mit"
+      ]
+    },
+    {
+      "name": "windows-link",
+      "version": "0.1.3",
+      "sha256": "5e6ad25900d524eaabdbbb96d20b4311e1e7ae1699af4fb28c17ae66c80d798a",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-link-0.1.3/license-apache-2.0",
+        "windows-link-0.1.3/license-mit"
+      ]
+    },
+    {
+      "name": "windows-numerics",
+      "version": "0.2.0",
+      "sha256": "9150af68066c4c5c07ddc0ce30421554771e528bde427614c61038bc2c92c2b1",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-numerics-0.2.0/license-apache-2.0",
+        "windows-numerics-0.2.0/license-mit"
+      ]
+    },
+    {
+      "name": "windows-result",
+      "version": "0.3.4",
+      "sha256": "56f42bd332cc6c8eac5af113fc0c1fd6a8fd2aa08a0119358686e5160d0586c6",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-result-0.3.4/license-apache-2.0",
+        "windows-result-0.3.4/license-mit"
+      ]
+    },
+    {
+      "name": "windows-strings",
+      "version": "0.4.2",
+      "sha256": "56e6c93f3a0c3b36176cb1327a4958a0353d5d166c2a35cb268ace15e91d3b57",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-strings-0.4.2/license-apache-2.0",
+        "windows-strings-0.4.2/license-mit"
+      ]
+    },
+    {
+      "name": "windows-threading",
+      "version": "0.1.0",
+      "sha256": "b66463ad2e0ea3bbf808b7f1d371311c80e115c0b71d60efc142cafbcfb057a6",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "windows-threading-0.1.0/license-apache-2.0",
+        "windows-threading-0.1.0/license-mit"
+      ]
+    },
+    {
+      "name": "ecb",
+      "version": "0.1.2",
+      "sha256": "1a8bfa975b1aec2145850fcaa1c6fe269a16578c44705a532ae3edc92b8881c7",
+      "license": "MIT",
+      "notices": [
+        "ecb-0.1.2/LICENSE"
+      ]
+    },
+    {
+      "name": "hayro-cmap",
+      "version": "0.1.1",
+      "sha256": "a14afde3344be69225fec4f6f44f6a219a3a492f9d8301eb25ef608fe4b7014c",
+      "license": "Apache-2.0 OR MIT",
+      "notices": [
+        "hayro-cmap-0.1.1/LICENSE-APACHE",
+        "hayro-cmap-0.1.1/LICENSE-MIT",
+        "hayro-cmap-0.1.1/assets/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "hayro-postscript",
+      "version": "0.2.0",
+      "sha256": "bc2d80da85f31c3fdc0366431f44cfd645a9da1e242ed1f4a61f213d9765660f",
+      "license": "Apache-2.0 OR MIT",
+      "notices": [
+        "hayro-postscript-0.2.0/LICENSE-APACHE",
+        "hayro-postscript-0.2.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "icu_casemap",
+      "version": "2.3.0",
+      "sha256": "f2edfd120d8445de853cf53a1abec916f638f933a70a6f4bf8f7e2d7b7f884e9",
+      "license": "Unicode-3.0",
+      "notices": [
+        "icu_casemap-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "name": "icu_casemap_data",
+      "version": "2.3.0",
+      "sha256": "059fcda0fc8d33effc6633a8cf0d8a3c17caf7d7c91918fba9918744f501e4e8",
+      "license": "Unicode-3.0",
+      "notices": [
+        "icu_casemap_data-2.3.0/LICENSE"
+      ]
+    },
+    {
+      "name": "lopdf",
+      "version": "0.38.0",
+      "sha256": "c7184fdea2bc3cd272a1acec4030c321a8f9875e877b3f92a53f2f6033fdc289",
+      "license": "MIT",
+      "notices": [
+        "lopdf-0.38.0/LICENSE"
+      ]
+    },
+    {
+      "name": "nom_locate",
+      "version": "5.0.0",
+      "sha256": "0b577e2d69827c4740cba2b52efaad1c4cc7c73042860b199710b3575c68438d",
+      "license": "MIT",
+      "notices": [
+        "nom_locate-5.0.0/LICENSE"
+      ]
+    },
+    {
+      "name": "sysinfo",
+      "version": "0.40.1",
+      "sha256": "0e8a3edbe0394ce115f3917a00349dd242be09eb5a091ed509eaf67b55cfb8a8",
+      "license": "MIT",
+      "notices": [
+        "sysinfo-0.40.1/LICENSE"
+      ]
+    },
+    {
+      "name": "wintab",
+      "version": "0.1.1",
+      "sha256": "0e05efdae68aa69ef1f4bc0148a5c6cf7f2bc234963a723252fd75f2f9e70d86",
+      "license": "MIT",
+      "notices": [
+        "wintab-0.1.1/LICENSE"
+      ]
+    },
+    {
+      "name": "wintab-sys",
+      "version": "0.1.0",
+      "sha256": "2d3d0743ba07fe30ca1ccc1471ee50adf32bc70932b86a00c8f1051177950de2",
+      "license": "MIT",
+      "notices": [
+        "wintab-sys-0.1.0/LICENSE"
+      ]
+    },
+    {
+      "name": "resvg",
+      "version": "0.48.1",
+      "sha256": "67e3803f97b999e80cbf7c6ecdd07a8102204d92e1633cf48783720c521196bd",
+      "license": "Apache-2.0 OR MIT",
+      "notices": [
+        "resvg-0.48.1/LICENSE-APACHE",
+        "resvg-0.48.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "wasm-encoder",
+      "version": "0.263.0",
+      "sha256": "0b883a26aea02eaabe2d2c3fba7eb039ef5cdcb5d5201ae5551e73d5e251a81f",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "notices": [
+        "wasm-encoder-0.263.0/LICENSE-APACHE",
+        "wasm-encoder-0.263.0/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "wasm-encoder-0.263.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "wasmparser",
+      "version": "0.263.0",
+      "sha256": "4f5fa0a054ae153606df820eb0a84213e28cda41bbe04ba2628e71b6ba100fcb",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "notices": [
+        "wasmparser-0.263.0/LICENSE-APACHE",
+        "wasmparser-0.263.0/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "wasmparser-0.263.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "wast",
+      "version": "263.0.0",
+      "sha256": "69d90bcf581b501aa1c358bc5dc0faa979cd375796908860ebcb6d1d70b907c7",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "notices": [
+        "wast-263.0.0/LICENSE-APACHE",
+        "wast-263.0.0/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "wast-263.0.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "wat",
+      "version": "1.263.0",
+      "sha256": "bbc9c5aca783b3f1838be89f3f9937c528b90ec5faa6fb62d809726c16a7d8f7",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "notices": [
+        "wat-1.263.0/LICENSE-APACHE",
+        "wat-1.263.0/LICENSE-Apache-2.0_WITH_LLVM-exception",
+        "wat-1.263.0/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "openssl-probe",
+      "version": "0.2.2",
+      "sha256": "7e036b411754132fd6b74e94b74e9a13c5cf606fa93d1885c35860d3060820b1",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "openssl-probe-0.2.2/LICENSE-APACHE",
+        "openssl-probe-0.2.2/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "ureq",
+      "version": "3.5.1",
+      "sha256": "e7be76686bdf7198002062423ca0d8cf9b75a27c8e1de804513b97e97b555d9d",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "ureq-3.5.1/LICENSE-APACHE",
+        "ureq-3.5.1/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "ureq-proto",
+      "version": "0.7.1",
+      "sha256": "622dce33c252115466d83f63e9744a18f12b4406aae51a01c15ad8fcf1185eb3",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "ureq-proto-0.7.1/LICENSE-APACHE.txt",
+        "ureq-proto-0.7.1/LICENSE-MIT.txt"
+      ]
+    },
+    {
+      "name": "verifysign",
+      "version": "1.1.2",
+      "sha256": "a6efd25aadc22c756a9012267fae0b130278d335d6ceb512ec02ce82029b5ca9",
+      "license": "BSD-3-Clause",
+      "notices": [
+        "verifysign-1.1.2/LICENSE"
+      ]
+    },
+    {
+      "name": "constant_time_eq",
+      "version": "0.6.1",
+      "sha256": "9eb6feb175df65d0a3ccd3e73484e940d0ac664e8034f0519fd49a93db3071d9",
+      "license": "CC0-1.0 OR MIT-0 OR Apache-2.0",
+      "notices": [
+        "constant_time_eq-0.6.1/LICENSE-APACHE",
+        "constant_time_eq-0.6.1/LICENSE-MIT0",
+        "constant_time_eq-0.6.1/LICENSE-CC0"
+      ]
+    },
+    {
+      "name": "serde_path_to_error",
+      "version": "0.1.20",
+      "sha256": "10a9ff822e371bb5403e391ecd83e182e0e77ba7f6fe0160b795797109d1b457",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "serde_path_to_error-0.1.20/LICENSE-APACHE",
+        "serde_path_to_error-0.1.20/LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "webpki-root-certs",
+      "version": "1.0.12",
+      "sha256": "293198dcebfb821155b5092ab94b5a82ff180eddd7241df3bd6e66a4ffd1a585",
+      "license": "CDLA-Permissive-2.0",
+      "notices": [
+        "webpki-root-certs-1.0.12/LICENSE"
       ]
     },
     {
       "name": "zip",
-      "version": "9.0.5",
-      "sha256": "6e04976da629d3b04204ba8105b396a193af8ad2583b2c79bfb3ab8af580a11e",
-      "licenses": [
-        "MIT"
+      "version": "9.5.1",
+      "sha256": "e3476fd497ac8af5b1ec7b51acab7bef380f7e8dd8e0487595bafd839417a302",
+      "license": "MIT",
+      "notices": [
+        "zip-9.5.1/LICENSE"
       ]
     },
     {
-      "name": "fontique",
-      "version": "0.11.1",
-      "sha256": "6688bc1294fe7117d788937b6c53480169b29c566954af490830d4c09da9516a",
-      "licenses": [
-        "Apache-2.0 OR MIT"
+      "name": "landlock",
+      "version": "0.4.7",
+      "sha256": "4cca98e95f35b29d469dade6724c6f96cec9236640f745a0e99b0334ec320ab1",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "landlock-0.4.7/LICENSE-APACHE",
+        "landlock-0.4.7/COPYRIGHT",
+        "landlock-0.4.7/LICENSE-MIT"
       ]
     },
     {
-      "name": "objc2-core-text",
-      "version": "0.3.2",
-      "sha256": "0cde0dfb48d25d2b4862161a4d5fcc0e3c24367869ad306b0c9ec0073bfed92d",
-      "licenses": [
-        "Zlib OR Apache-2.0 OR MIT"
+      "name": "seccompiler",
+      "version": "0.5.0",
+      "sha256": "a4ae55de56877481d112a559bbc12667635fdaf5e005712fd4e2b2fa50ffc884",
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "notices": [
+        "seccompiler-0.5.0/LICENSE-APACHE",
+        "seccompiler-0.5.0/LICENSE-BSD-3-Clause"
       ]
     },
     {
-      "name": "parlance",
-      "version": "0.1.1",
-      "sha256": "73072a9470554c8e794778acece2312661218aaabb635600957d952cf01c716e",
-      "licenses": [
-        "Apache-2.0 OR MIT"
+      "name": "fs4",
+      "version": "1.1.0",
+      "sha256": "7e72ed92b67c146290f88e9c89d60ca163ea417a446f61ffd7b72df3e7f1dfd5",
+      "license": "MIT OR Apache-2.0",
+      "notices": [
+        "fs4-1.1.0/LICENSE-APACHE",
+        "fs4-1.1.0/LICENSE-MIT"
       ]
     },
     {
-      "name": "ruzstd",
-      "version": "0.9.1",
-      "sha256": "69e4ce4a039f42bf25920b95667e4d789e98749ab11bbb8d2c2936f788421bb5",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "webpki-roots",
-      "version": "1.0.11",
-      "sha256": "f5f280bbb2b287bc8e7de7e3852945a0ff50d1bbcb5ed42b6c7a568c546df171",
-      "licenses": [
-        "CDLA-Permissive-2.0"
-      ]
-    },
-    {
-      "name": "yeslogic-fontconfig-sys",
-      "version": "6.0.1",
-      "sha256": "1d8b8abf912b9a29ff112e1671c97c33636903d13a69712037190e6805af4f76",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "arrayref",
-      "version": "0.3.9",
-      "sha256": "76a2e8124351fda1ef8aaaa3bbd7ebbcb486bbcd4225aca0aa0d84bb2db8fecb",
-      "licenses": [
-        "BSD-2-Clause"
-      ]
-    },
-    {
-      "name": "strict-num",
-      "version": "0.1.1",
-      "sha256": "6637bab7722d379c8b41ba849228d680cc12d0a45ba1fa2b48f2a30577a06731",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "core_maths",
-      "version": "0.1.1",
-      "sha256": "77745e017f5edba1a9c1d854f6f3a52dac8a12dd5af5d2f54aecf61e43d80d30",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "icu_segmenter",
-      "version": "2.3.0",
-      "sha256": "82d07aafccd67af15d02512a6adf5896fbc5ed00f2e99b471d2efa14016db3db",
-      "licenses": [
-        "Unicode-3.0"
-      ]
-    },
-    {
-      "name": "icu_segmenter_data",
-      "version": "2.3.0",
-      "sha256": "ae293c039020f9ec10710af98d29ce6aa2051486638b49c9a6409f3b4a9e98ad",
-      "licenses": [
-        "Unicode-3.0"
-      ]
-    },
-    {
-      "name": "bit-set",
-      "version": "0.8.0",
-      "sha256": "08807e080ed7f9d5433fa9b275196cfc35414f66a0c79d864dc51a0d825231a3",
-      "licenses": [
-        "Apache-2.0 OR MIT"
-      ]
-    },
-    {
-      "name": "bit-vec",
-      "version": "0.8.0",
-      "sha256": "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7",
-      "licenses": [
-        "Apache-2.0 OR MIT"
-      ]
-    },
-    {
-      "name": "fancy-regex",
-      "version": "0.14.0",
-      "sha256": "6e24cb5a94bcae1e5408b0effca5cd7172ea3c5755049c5f3af4cd283a165298",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "phf",
-      "version": "0.11.3",
-      "sha256": "1fd6780a80ae0c52cc120a26a1a42c1ae51b247a253e4e06113d23d2c2edd078",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "phf_generator",
-      "version": "0.11.3",
-      "sha256": "3c80231409c20246a13fddb31776fb942c38553c51e871f8cbd687a4cfb5843d",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "phf_macros",
-      "version": "0.11.3",
-      "sha256": "f84ac04429c13a7ff43785d75ad27569f2951ce0ffd30a3321230db2fc727216",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "phf_shared",
-      "version": "0.11.3",
-      "sha256": "67eabc2ef2a60eb7faa00097bd1ffdb5bd28e62bf39990626a582201b7a754e5",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "rand",
-      "version": "0.8.8",
-      "sha256": "e058c7de0b26af77780c769414d6257830bb240f3c38477dbc2c16e5f54d6d4c",
-      "licenses": [
-        "MIT OR Apache-2.0"
-      ]
-    },
-    {
-      "name": "ratex-font",
-      "version": "0.1.14",
-      "sha256": "6a7b73531dabe934a3e725ed5c90d18dacf43778b7a208381390943a9a8c24db",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "ratex-layout",
-      "version": "0.1.14",
-      "sha256": "1792738e2e36683cd20de742296a5233759565efc8cd03831064a0ccfb1fe0f7",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "ratex-lexer",
-      "version": "0.1.14",
-      "sha256": "f704add86d7bf4c4ecc7767f45ab38a44f1bbfa4b49725b2ae53c32e83b8a61e",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "ratex-parser",
-      "version": "0.1.14",
-      "sha256": "079ec2e7ac6bc76137a6de093a173d1f901139a51318589ab9ce17139c21a6f0",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "ratex-types",
-      "version": "0.1.14",
-      "sha256": "0cf0be3d050525f0f7d37af55a443d7648c222ccc617639950e3de1f8e6f9900",
-      "licenses": [
-        "MIT"
-      ]
-    },
-    {
-      "name": "regex-lite",
-      "version": "0.1.9",
-      "sha256": "cab834c73d247e67f4fae452806d17d3c7501756d98c8808d7c9c7aa7d18f973",
-      "licenses": [
-        "MIT OR Apache-2.0"
-      ]
-    },
-    {
-      "name": "unicode-normalization",
-      "version": "0.1.26",
-      "sha256": "75cd3fb03d5288b3ba9a1ee103ac7e9cbb59f0b03d64f8ddfcc04dd42758a85d",
-      "licenses": [
-        "(MIT OR Apache-2.0) AND Unicode-3.0"
-      ]
-    },
-    {
-      "name": "sys-locale",
-      "version": "0.3.2",
-      "sha256": "8eab9a99a024a169fe8a903cf9d4a3b3601109bcc13bd9e3c6fff259138626c4",
-      "licenses": [
-        "MIT OR Apache-2.0"
+      "name": "thread-priority",
+      "version": "3.1.1",
+      "sha256": "8d2e834949be5111506bb252643498af1514f600d9e1dceedaa42afae155b67f",
+      "license": "MIT",
+      "notices": [
+        "thread-priority-3.1.1/LICENSE"
       ]
     }
   ],
   "git": [
     {
       "repo": "storytold/craft-libs",
-      "commit": "14d5dbb50c317b8747a9cf9eb35ab8a22515f137",
-      "sha256": "3cfe7f68be3da054c45108f26575e7debbde25cb89aed138664d2c5d1c91adee"
+      "commit": "b72cb4d68ca09cf067f144afc1f13abe1e82e1ed",
+      "sha256": "1b8e8405df5e38868082eec79ea97fdb78ea5b086b0ebae9d3c501a49a811e10",
+      "packages": [
+        {
+          "name": "craft-audio",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-docpath",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-fonts-build",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-i18n",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-media",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-ui",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-update",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/NOTICE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/crates/platform/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/crates/platform/NOTICE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/crates/platform/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/krilla/icc/LICENSE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "762a06a4c6b48b522b7d4de84a87917ef90265e6",
-      "sha256": "92af024515095c2a88a84cdf5065c99da51b8ed13f7948a8fc16735ba955dd0a"
+      "commit": "fd5e2feff6ea25bed371a99cc732b3968d621505",
+      "sha256": "089d3a38f4a4ea396717c955dd137e270ab044619e2aaa4e949b8049531057af",
+      "packages": [
+        {
+          "name": "craft-web-api",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-web-host",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/NOTICE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/crates/platform/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/crates/platform/NOTICE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/crates/platform/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/krilla/icc/LICENSE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "787a7a0f972fd1d7a7618fdbeca3a5267a0407ff",
-      "sha256": "dfdd68c3260c88634b7871fe5d50097eefd1fb061503669888f4989449075f96"
+      "commit": "32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4",
+      "sha256": "646dbbe697f2b701ac663ea3994658487de5d3393995b34d5e8afb6a43badc82",
+      "packages": [
+        {
+          "name": "craft-i18n",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/NOTICE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/crates/platform/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/crates/platform/NOTICE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/crates/platform/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/krilla/icc/LICENSE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-32b2fd8adf4bcf1bdf3e4f6728af6f3230c03ee4/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "89fa1559e94378ecef85cd7e4681400f4df053e0",
-      "sha256": "1f4943a1b3e5944f136f464ebb6811181a528f3352cef7bf00c8c27a260dde52"
+      "commit": "47c9f62530db72bc5c3831c86653b47b20c640be",
+      "sha256": "4fa5516581f1568e48adac45305d5f4913f0d9acfd74aed508c2c1afba274726",
+      "packages": [
+        {
+          "name": "craft-proof",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/NOTICE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/crates/platform/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/crates/platform/NOTICE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/crates/platform/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/krilla/icc/LICENSE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-47c9f62530db72bc5c3831c86653b47b20c640be/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "b8f7d93b00dfb8f172938f3d2d796ae62dcfe123",
-      "sha256": "247c219e3b51933d2939ffcc291fc6e1e3bb8ddca689461c1a23473bef9363f3"
+      "commit": "75895c0321d8cb6e175a42466cba050352b117c5",
+      "sha256": "5fd3647792901a34ba0d22e946ae8b39d7df1e6c4b96ef4fc1d82e34b22b5853",
+      "packages": [
+        {
+          "name": "craft-audio",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-media",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/NOTICE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/crates/platform/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/crates/platform/NOTICE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/crates/platform/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/krilla/icc/LICENSE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-75895c0321d8cb6e175a42466cba050352b117c5/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "ca1b5e2edb8568335c6c14f390307bd5beae8238",
-      "sha256": "8374ff3c164347f2332cc42714909e3845d1e98f79668f931eeef2044f103560"
+      "commit": "6e03f65bf45181db77ba6229716e6624db9eb25b",
+      "sha256": "2201d6146b788e84ef355db6d1eee271a85fb4c57b6f9204170e868aa88db0cc",
+      "packages": [
+        {
+          "name": "craft-docpath",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-fonts-build",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-i18n",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-ui",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-update",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-jpeg",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-pdf",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-print",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "hayro",
+          "version": "0.7.1",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-interpret",
+          "version": "0.7.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-jbig2",
+          "version": "0.3.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-syntax",
+          "version": "0.7.2",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "craft-vectorcraft-format",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-dialogs",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-keymap",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-menu",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-quit",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-window",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "krilla",
+          "version": "0.8.2",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/NOTICE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/crates/platform/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/crates/platform/NOTICE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/crates/platform/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/krilla/icc/LICENSE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-6e03f65bf45181db77ba6229716e6624db9eb25b/vendor/hayro-syntax/LICENSE-MIT"
+      ]
     },
     {
       "repo": "storytold/craft-libs",
-      "commit": "fb08be5fa19eee8d37e624397fcdc96df6035e92",
-      "sha256": "7d5aab88978a6c9d4646d033cf70961dd56740c283060fe9fcd70cd4e5748740"
+      "commit": "f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4",
+      "sha256": "34b45a4287b58db8b3638e91a0f7afc228cfd3dae8f8c7f29643678030741d35",
+      "packages": [
+        {
+          "name": "craft-media",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/NOTICE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/crates/platform/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/crates/platform/NOTICE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/crates/platform/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/krilla/icc/LICENSE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545",
+      "sha256": "96f21fddb976a7a4dfe84a086809e97c5885334934c6a140c557ce1f76935255",
+      "packages": [
+        {
+          "name": "craft-pdf",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "hayro-jbig2",
+          "version": "0.3.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-syntax",
+          "version": "0.7.2",
+          "license": "Apache-2.0 OR MIT"
+        }
+      ],
+      "notices": [
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/NOTICE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/crates/platform/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/crates/platform/NOTICE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/crates/platform/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/krilla/icc/LICENSE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/filmcraft",
+      "commit": "d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5",
+      "sha256": "6ad8d98640e0983677eb9b0b9646956b57bd4da8114015721a2bb2c15c365b60",
+      "packages": [
+        {
+          "name": "filmcraft-aac",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-ac3",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-apv",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-av1",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-avi",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-bitstream",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-cfb",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-codecs",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-color",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-dng",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-dnx",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-frame",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-geom",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-h264",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-h264enc",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-hevc",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-interchange",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-isobmff",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-matroska",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-media",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-mpa",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-mpeg2v",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-mpegts",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-mxf",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-ogg",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-opus",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-project",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-prores",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-time",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-vp8",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "filmcraft-vp9",
+          "version": "0.12.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/LICENSE-APACHE",
+        "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/NOTICE",
+        "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/LICENSE-MIT",
+        "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/docs/brand/LICENSE-brand.txt",
+        "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/assets/app-icon/LICENSE.txt"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "081078bb1b44aeedfa5bef3d4f13d978dc77510a",
+      "sha256": "87629e35ecaa771f01dda500b958ca8f41acbbf6f30a3ec18e3eb739ec16ea8b",
+      "packages": [
+        {
+          "name": "craft-heif",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/NOTICE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/crates/platform/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/crates/platform/NOTICE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/crates/platform/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/krilla/icc/LICENSE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-081078bb1b44aeedfa5bef3d4f13d978dc77510a/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/winprint.rs",
+      "commit": "64e7afd4d1483512385012c340ecaaaf0f3beb7f",
+      "sha256": "0f184c8cd0b5c0b782da312d2f4597dc5c5ac4986338c115958b7015a23b45e3",
+      "packages": [
+        {
+          "name": "craft-winprint-gdi",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "winprint.rs-64e7afd4d1483512385012c340ecaaaf0f3beb7f/LICENSE.md",
+        "winprint.rs-64e7afd4d1483512385012c340ecaaaf0f3beb7f/crates/gdi/LICENSE-APACHE",
+        "winprint.rs-64e7afd4d1483512385012c340ecaaaf0f3beb7f/crates/gdi/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/winprint.rs",
+      "commit": "bc06a7c48b768eb27a828c7986f6d2868b245ee0",
+      "sha256": "0692aa2af373533d8e40d765519e2aab6f5189e2cad9413272629370d14da247",
+      "packages": [
+        {
+          "name": "winprint",
+          "version": "0.2.1",
+          "license": "BSD-3-Clause"
+        }
+      ],
+      "notices": [
+        "winprint.rs-bc06a7c48b768eb27a828c7986f6d2868b245ee0/LICENSE.md",
+        "winprint.rs-bc06a7c48b768eb27a828c7986f6d2868b245ee0/crates/gdi/LICENSE-APACHE",
+        "winprint.rs-bc06a7c48b768eb27a828c7986f6d2868b245ee0/crates/gdi/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb",
+      "sha256": "f174bd39ce3415b1cc8d30132a8cf74d405d100dc0e9b96172d8c0bca4343b94",
+      "packages": [
+        {
+          "name": "craft-docpath",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-keymap",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-pdf",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-print",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-proof",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-window",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "hayro-cmap",
+          "version": "0.1.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-interpret",
+          "version": "0.7.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-jbig2",
+          "version": "0.3.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-postscript",
+          "version": "0.1.0",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "hayro-syntax",
+          "version": "0.7.2",
+          "license": "Apache-2.0 OR MIT"
+        },
+        {
+          "name": "krilla",
+          "version": "0.8.2",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/NOTICE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/crates/platform/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/crates/platform/NOTICE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/crates/platform/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/krilla/icc/LICENSE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "bb8320f5fa5d20fa78a026d0de06fe4e2f08a099",
+      "sha256": "18c5cf98430fd33ce1c24a275381faf5ff1c1ef3acee2dc30f72888da98f7403",
+      "packages": [
+        {
+          "name": "craft-fonts-build",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-i18n",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "craft-ui",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/NOTICE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/crates/platform/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/crates/platform/NOTICE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/crates/platform/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/krilla/icc/LICENSE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-bb8320f5fa5d20fa78a026d0de06fe4e2f08a099/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "481f66d287b2a06845f3667a19daf35f0fe958ed",
+      "sha256": "7d720af3c0d47699bb0e162a4ef6d7b7def178c4a604a3374acad677a24bb49f",
+      "packages": [
+        {
+          "name": "linesweeper",
+          "version": "0.5.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/NOTICE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/crates/platform/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/crates/platform/NOTICE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/crates/platform/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/krilla/icc/LICENSE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-481f66d287b2a06845f3667a19daf35f0fe958ed/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/indd-utils",
+      "commit": "7f3060e5bce78d21ea70e0d5eacb96edce15dfbe",
+      "sha256": "9fee612d7e03f749639a6d21a5ea988157d5ca56085c499f179c9549addc2558",
+      "packages": [
+        {
+          "name": "indd",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "indd-utils-7f3060e5bce78d21ea70e0d5eacb96edce15dfbe/LICENSE-APACHE",
+        "indd-utils-7f3060e5bce78d21ea70e0d5eacb96edce15dfbe/LICENSE-MIT",
+        "indd-utils-7f3060e5bce78d21ea70e0d5eacb96edce15dfbe/third_party/xmp-toolkit-sdk/LICENSE"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "a3e0b5a9440d18f19422a9dca13516747b7d3181",
+      "sha256": "ca595dc5c0b137bff90179ec2a82a8171680603e842e01729d56d3650846b5ee",
+      "packages": [
+        {
+          "name": "craft-print",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/NOTICE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/crates/platform/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/crates/platform/NOTICE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/crates/platform/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/krilla/icc/LICENSE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-a3e0b5a9440d18f19422a9dca13516747b7d3181/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "01315d9c92b5b0e69082d35ca56099461a1efd45",
+      "sha256": "717f118765e61aa6e44d9a47cade689666ab01f2597afda63f273334de7b228b",
+      "packages": [
+        {
+          "name": "craft-proof",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/NOTICE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/crates/platform/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/crates/platform/NOTICE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/crates/platform/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/krilla/icc/LICENSE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-01315d9c92b5b0e69082d35ca56099461a1efd45/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a",
+      "sha256": "68562d638894da0dd7f2c10a9182eb90c67bc3bd5fc70fa999ad678c22309045",
+      "packages": [
+        {
+          "name": "craft-update",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/NOTICE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/crates/platform/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/crates/platform/NOTICE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/crates/platform/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/krilla/icc/LICENSE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-6ac2a6a34ae83fc0f0bfb25a569ba6388b72266a/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "f3b62ec61f45534392376492fc5ad33047375205",
+      "sha256": "b96f4de1e2ce117a69f0bd97c8c77da78a93e78eece23fe1c4d19b91939b2365",
+      "packages": [
+        {
+          "name": "craft-crw",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/NOTICE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/crates/platform/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/crates/platform/NOTICE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/crates/platform/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/krilla/icc/LICENSE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "3b3104981bb3093904a12e44d6a3b41c6c4c39c8",
+      "sha256": "07865cbcf4aa2b1a1c64d34b0c758be324fc19f16b2c6dfc348bdc0aecdda1d9",
+      "packages": [
+        {
+          "name": "craft-tiff",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/NOTICE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/crates/platform/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/crates/platform/NOTICE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/crates/platform/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/krilla/icc/LICENSE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-3b3104981bb3093904a12e44d6a3b41c6c4c39c8/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/craft-libs",
+      "commit": "60ede99985ef1e5df87a2aca66ed538eb23dec99",
+      "sha256": "51109e8271915047c356b3d6505fa6ec599af8055089288e38c89c933799a7a4",
+      "packages": [
+        {
+          "name": "craft-print",
+          "version": "0.1.0",
+          "license": "MIT OR Apache-2.0"
+        }
+      ],
+      "notices": [
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/NOTICE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/crates/platform/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/crates/platform/NOTICE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/crates/platform/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-writer/LICENSE_APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-writer/LICENSE_MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/licenses/pdf-writer/LICENSE-ICC.txt",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/krilla/icc/LICENSE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-jbig2/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-jbig2/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/linesweeper/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/linesweeper/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-cmap/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-cmap/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-cmap/assets/LICENSE.txt",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-interpret/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-interpret/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-interpret/assets/LICENSE_FOXIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-postscript/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-postscript/LICENSE-MIT",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-syntax/LICENSE-APACHE",
+        "craft-libs-60ede99985ef1e5df87a2aca66ed538eb23dec99/vendor/hayro-syntax/LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "storytold/egui",
+      "commit": "725a39fca940f77149ffbb9c58eef405a16997bc",
+      "sha256": "f839550a25fbf5e7b9fd4997490d4842c868cbbf544a346028e9518c164a3000",
+      "packages": [
+        {
+          "name": "ecolor",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "eframe",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui-wgpu",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui-winit",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui_extras",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui_glow",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "egui_kittest",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "emath",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "epaint",
+          "version": "0.37.0",
+          "license": "MIT OR Apache-2.0"
+        },
+        {
+          "name": "epaint_default_fonts",
+          "version": "0.37.0",
+          "license": "(MIT OR Apache-2.0) AND OFL-1.1 AND Ubuntu-font-1.0"
+        }
+      ],
+      "notices": [
+        "egui-725a39fca940f77149ffbb9c58eef405a16997bc/LICENSE-APACHE",
+        "egui-725a39fca940f77149ffbb9c58eef405a16997bc/LICENSE-MIT"
+      ]
     }
   ],
-  "date": "2026-11-03",
-  "release": "0.5.0",
+  "date": "2026-11-12",
+  "release": "0.7.0",
   "sourcePins": [
     {
       "id": "photocraft",
       "repo": "storytold/photocraft",
-      "version": "0.20.1",
-      "commit": "327c4cc82e737a3e0af7c147a477126d77525495",
-      "sha256": "be16defd88c4f793c684da0eab0578bc21c0790b3139c56b810c0505707e95d0"
+      "version": "0.23.1",
+      "commit": "45066c48292e92229ada3459a83453439514c83d",
+      "sha256": "77adae07cb30939347b23a15c64e31a0f336ac065a0b82cade5e16d5ed451938"
     },
     {
       "id": "vectorcraft",
       "repo": "storytold/vectorcraft",
-      "version": "0.21.0",
-      "commit": "11862f61198c8f62c0b22b6c9a331cc5950ac98d",
-      "sha256": "97e451e2c9556e904c9f72aa907d1771665b9c66d14bf47e23a8cac74f9ac406"
+      "version": "0.24.1",
+      "commit": "f4922aa7ac99a4f6d56fc68a83a44945207ec610",
+      "sha256": "45afcc1fe03eb99c809f3307344f3e6c3802e0bfe99055be7d55dbf3bcb1215a"
     },
     {
       "id": "filmcraft",
       "repo": "storytold/filmcraft",
-      "version": "0.17.0",
-      "commit": "eb59ec09daaea519c9c8fffa404a594ae50d00e0",
-      "sha256": "41f80be7e2a05f37d97c41845a8cebbbab1da1583ebc8573167d7be7ab1ca7b7"
+      "version": "0.20.1",
+      "commit": "cedf0c9bd060eb06a977d532402be2097c9ebe42",
+      "sha256": "648a978accde105c67d56d6e3029ea38541155d17cfe1c66f7cf1b714f37d9e4"
     },
     {
       "id": "lightcraft",
       "repo": "storytold/lightcraft",
-      "version": "0.18.0",
-      "commit": "32d569ad5d19a6b55cf8d5c077127faa0f44a83b",
-      "sha256": "46684290f7ec1174aeb61869b001800e9df18d8cdc9e8141a92416c902dbb0d8"
+      "version": "0.21.1",
+      "commit": "361e3bc0c838ffe5e5cea515b1fe5b71951989c6",
+      "sha256": "7dd94cc90b5ab3aac4b859092e6db95caa02f071efe3568a611a7faae855ea20"
     },
     {
       "id": "pdfcraft",
       "repo": "storytold/pdfcraft",
-      "version": "0.18.0",
-      "commit": "3936f93a1479366a951206fc6d3094680fe2d3dc",
-      "sha256": "c36f79ffac9c05eb9809969cd1016a7f296669f5fb54b16aa99891a2bbd2ecd0"
+      "version": "0.21.1",
+      "commit": "b503b2e62dfeec5598f344e4e287d9c9cbdb34fa",
+      "sha256": "527b5835e6219eb7d0dbcb48e6e0425b7532172f9d130109f21ef47807122539"
     },
     {
       "id": "effectcraft",
       "repo": "storytold/effectcraft",
-      "version": "0.21.0",
-      "commit": "7870b5916ae0749d497d880989683bf2946d6c8b",
-      "sha256": "bc43b5dd2bf18e4929802aedc779c05a78623f823f7adf0dad0c6074cb748e35"
+      "version": "0.24.1",
+      "commit": "582344dd4ef462362c02e56e3094de7af01847ab",
+      "sha256": "6a750c344c7704e55066af231fe82bc81e818dd6e6408e04165ff32ee11ee3ce"
     },
     {
       "id": "designcraft",
       "repo": "storytold/designcraft",
-      "version": "0.17.0",
-      "commit": "e79d682e02dc66f14370958b193bfa46072b2f41",
-      "sha256": "ca22ae422b6a7b74f5fee1bfd559618ea0e9aa78fa0ec8cd44e4f68d06ed5139"
+      "version": "0.20.1",
+      "commit": "33a467872268c98536231491865b4011b0275b17",
+      "sha256": "776e8199a9da9eca0ca695ee895d07764ff132cbb07284fd42a7d7fe04b05c5a"
     },
     {
       "id": "figcraft",
       "repo": "storytold/figcraft",
-      "version": "0.15.0",
-      "commit": "02c38a6d959f0afd82e44d9d67d396266e6ab4a3",
-      "sha256": "f8846c7539edeca5763063ca7d886dfa0f2d9b8b8aa693a470e96b0549f1dd2d"
+      "version": "0.18.1",
+      "commit": "4acc293c2ec941ac1400837ee7e3ab51780399f8",
+      "sha256": "ffa4d2381c7c543dd161f128e29a3549d4fc7ff3350bc352387da7c563c68ed5"
     },
     {
       "id": "texturecraft",
       "repo": "storytold/texturecraft",
-      "version": "0.3.0",
-      "commit": "85475143fa4d219cc7d60cd039923f57b6c2209c",
-      "sha256": "38c6c781daeeb03d923f7b78a6edfb900845c6f3d3a0599f746ecb8dd3153eba"
+      "version": "0.6.1",
+      "commit": "34a196190fe2daa2f43017a0f32b254cca4836f2",
+      "sha256": "89b67f9e647fcf9d9b6e504a0ac72dcc577d65af45b2d23436ead174df4b0937"
     },
     {
       "id": "wordcraft",
       "repo": "storytold/wordcraft",
-      "version": "0.15.0",
-      "commit": "b47079fc791595fd84bb499d64dcd3f0624ef35a",
-      "sha256": "709668cd52d189362c91be7aec20b2dbafb2be662452b42f6bd8ed9116f40cc3"
+      "version": "0.18.1",
+      "commit": "079f478bd85df7bcc567e3bafa7d7219096f9c3c",
+      "sha256": "3195de51df8e03a491ac356c936bc04c813011b9590805d274d501a2f30b8e7d"
     },
     {
       "id": "soundcraft",
       "repo": "storytold/soundcraft",
-      "version": "0.17.0",
-      "commit": "b35dd0f9eb0c08a198c1306021bd138f3a22d87c",
-      "sha256": "12bdc3ac2d1db230d95e7ca99aabc5ed9004cdb165e83b0727ec3b04f222be6e"
+      "version": "0.20.1",
+      "commit": "a52bbdccbe15342f44e0de1906bf71a621e7a68f",
+      "sha256": "a4a4332be2f103fcd82455f8a7cc86ca60db47805624a631a41af7c348b4b21f"
     },
     {
       "id": "deckcraft",
       "repo": "storytold/deckcraft",
-      "version": "0.15.0",
-      "commit": "3e178d8f5a59c787a6a53a7ed0f052b3e4a1489f",
-      "sha256": "4128092e0eb04cc03539f77cadebe4569a268ce34850b7d2d8cd3c2fde0c7021"
+      "version": "0.18.1",
+      "commit": "7cc73ab1895ed2e30c8afbcada20c70b9ea0a440",
+      "sha256": "e7acaddcaad689d35c4813a28cda5a47f1c0d996608e7764e025d56afbd40d2d"
     },
     {
       "id": "cadcraft",
       "repo": "storytold/cadcraft",
-      "version": "0.17.0",
-      "commit": "f389d6a72e3fc160ea125b4f264d68f64cbe2aba",
-      "sha256": "f2dfda3debfe318b6c9b77d37e1bc1dc4b7a8e9d0079c222a5bbad7145bafa00"
+      "version": "0.20.1",
+      "commit": "7526dc62c14e71b3c8d46e73bbf1fa29ef506af1",
+      "sha256": "fd62f86b33ff06c563d8924ac3d099ff128f470a9fc7c28ed9c6134234dedd7e"
     },
     {
       "id": "gridcraft",
       "repo": "storytold/gridcraft",
-      "version": "0.16.0",
-      "commit": "85e51e009c24fad47575f04d3c08f12342615d82",
-      "sha256": "46f1ba1fa7e35556087a7f6c2ddc03c686a98a95a5d9d448db999b5cebf7579e"
+      "version": "0.19.1",
+      "commit": "476448d7d9f3a5f8e93fcf7d98b47fd52293fe7f",
+      "sha256": "ff0098d365b5c7e2422184398de94a4d3ff5a97622c2836c84059ac26e111871"
     },
     {
       "id": "craft-anything",
       "repo": "storytold/craft-anything",
-      "version": "0.3.0",
-      "commit": "e6280b5dc518b9f3266c82d794a4e2f0367d9a53",
-      "sha256": "8d53191a0e52c5c67d7f11de6113038dd9489b016fff3e67a95b7baa94711548"
+      "version": "0.6.1",
+      "commit": "48a9c5a60ff83ff620f98661339be6281a7debc6",
+      "sha256": "c4f49cf856b0053e3554fdcefb2f61bdbd61a5ae13fff1f5dfa29fe6cea834e3"
     }
   ],
   "additionalSourceInputs": [
@@ -416,30 +1965,237 @@
       "repo": "storytold/craft-i18n",
       "commit": "059cbf95c2a3eb95d637ca8584faca1129d17f48",
       "sha256": "2abb92b3806bbdb5c0edf54f13621c04ef02923dcc761b39120b17a6d199671d"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "e02939ef009218e81c44e8ec001fbb7603461de4",
+      "sha256": "0bd1481c0de61d0e31dd2dd9f955135e573f8ebdbb04a87f4567125674b350bd"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "575cfdef63227b14daf173b8cc87928bfdfa325e",
+      "sha256": "e20d52955038a2e5d8296dce0a0162b1daf1d5c7a03653da40527d5755830d76"
+    },
+    {
+      "repo": "storytold/craft-i18n",
+      "commit": "1e515422afdda2f317af430c1f9d68a5f83935b4",
+      "sha256": "f80b9e41011f55963cb3cdb06f0e613996b0593a8f6236cd7d09a52f8b10a2e6"
+    }
+  ],
+  "languageDataAttributionCheck": {
+    "files": [
+      "de/hyphenation.pat",
+      "en-au/spelling.aff",
+      "en-au/spelling.dic",
+      "en-ca/spelling.aff",
+      "en-ca/spelling.dic",
+      "en-gb/spelling.aff",
+      "en-gb/spelling.dic",
+      "en-us/LICENCE-SCOWL.txt",
+      "en-us/en-extra.txt",
+      "en-us/en-us.dic",
+      "en-us/en-variants.txt",
+      "en-us/hyphenation.pat",
+      "en-us/spelling.aff",
+      "en-us/spelling.dic",
+      "it/hyphenation.pat",
+      "pl/hyphenation.pat",
+      "pt/hyphenation.pat",
+      "ru/ru-extra.txt"
+    ],
+    "revisions": [
+      "1e515422afdda2f317af430c1f9d68a5f83935b4",
+      "575cfdef63227b14daf173b8cc87928bfdfa325e",
+      "e02939ef009218e81c44e8ec001fbb7603461de4"
+    ],
+    "result": "PASS"
+  },
+  "addedNoticeFiles": [
+    {
+      "path": "js-sys-0.3.107/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "path": "ntapi-0.4.3/LICENSE-MIT",
+      "sha256": "11a7964ccc0dd115d16720ab1d826c5d03e52838748ffaba3d21bae8bcacd82a"
+    },
+    {
+      "path": "sysinfo-0.37.2/LICENSE",
+      "sha256": "1f14f9ce70a5fdedab449bb32cd7d3f20e6e9d18c2a2b74221fc203db8684d43"
+    },
+    {
+      "path": "windows-0.61.3/license-apache-2.0",
+      "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+    },
+    {
+      "path": "windows-0.61.3/license-mit",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "ecb-0.1.2/LICENSE",
+      "sha256": "305f0f8f4db8470887a8819b2dd0779371b960de48067f4a4ace0bb311ba71da"
+    },
+    {
+      "path": "hayro-cmap-0.1.1/LICENSE-MIT",
+      "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac"
+    },
+    {
+      "path": "hayro-cmap-0.1.1/assets/LICENSE.txt",
+      "sha256": "742665db9c8e1bc72603c6d319ca3e90b83bd6d95202f0cd4ef11068a07a9c29"
+    },
+    {
+      "path": "lopdf-0.38.0/LICENSE",
+      "sha256": "2fb01e6708ea9d53e8b7e74bd82af23bce5256f19f4de93915027a53173c50d8"
+    },
+    {
+      "path": "nom_locate-5.0.0/LICENSE",
+      "sha256": "12de15dd3b3b4eae2ace70f8cb7ead8e780c07e5aadf25f61e3ebdc981c01c15"
+    },
+    {
+      "path": "wintab-0.1.1/LICENSE",
+      "sha256": "b945fedaae1b9cf03651a4be05f9b16800722491920b51b2382f1fdffefd19d1"
+    },
+    {
+      "path": "resvg-0.48.1/LICENSE-MIT",
+      "sha256": "f5d934dc281b44e0003ee461ac740b18b6629a454decd872c774d34e4ee0b21d"
+    },
+    {
+      "path": "wasm-encoder-0.263.0/LICENSE-Apache-2.0_WITH_LLVM-exception",
+      "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5"
+    },
+    {
+      "path": "ureq-3.5.1/LICENSE-MIT",
+      "sha256": "7e5886959f67f8c75063a9d55cd3cb08c5a8cbea9a944fa1df2d4ae038f53721"
+    },
+    {
+      "path": "ureq-proto-0.7.1/LICENSE-MIT.txt",
+      "sha256": "5b460f37be48ac4cf2181596181cc6cae432fc2caae05944873f380730829a4b"
+    },
+    {
+      "path": "verifysign-1.1.2/LICENSE",
+      "sha256": "ae8e95d4cb44989521fbe6fdaa75af6b250b1ba84df065c6fc40d8ad4675cfcd"
+    },
+    {
+      "path": "constant_time_eq-0.6.1/LICENSE-MIT0",
+      "sha256": "9a3aeb3f63659c4c6302d315e1d98784d1e8559858a47ff9562e091bb922d28d"
+    },
+    {
+      "path": "constant_time_eq-0.6.1/LICENSE-CC0",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "landlock-0.4.7/LICENSE-APACHE",
+      "sha256": "aa3233f1576aa9afb0a8418bb84b845fe07b6a76025b69af85f21df83323210c"
+    },
+    {
+      "path": "landlock-0.4.7/COPYRIGHT",
+      "sha256": "779951f48fee980e71c6bb48815f343929ec5e99cfda7e741856eb4e25c2624c"
+    },
+    {
+      "path": "landlock-0.4.7/LICENSE-MIT",
+      "sha256": "d11fe3f1df9c3fd6fd020091899fcfccd0a949e0a32b461b4c68915f770e31a9"
+    },
+    {
+      "path": "seccompiler-0.5.0/LICENSE-BSD-3-Clause",
+      "sha256": "051a73a9b3811f17c6b6ba5659d0258cee303a47af0e79ec4b05e6566e021750"
+    },
+    {
+      "path": "thread-priority-3.1.1/LICENSE",
+      "sha256": "186750c939ffa30d0f3a29a90ae50a130f0e4ac1f02d43f47a354fa8361582d4"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/NOTICE",
+      "sha256": "15b70ad85d681c27d2232d0a709a96d50b4f1dcc054ad2520d5acc74c0a8360e"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+      "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-writer/LICENSE_MIT",
+      "sha256": "9d1eb142840c7acfd5511b4dd298cece3f0053f5809228906445cd8a3365592f"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/licenses/pdf-writer/LICENSE-ICC.txt",
+      "sha256": "469d87b5fa48f8aaf69e25f4fcac3a309c97dbb7d561b917638abdb640e004d9"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/vendor/linesweeper/LICENSE-MIT",
+      "sha256": "23c23145f6eac25c28cdcc03d38506a5712a9a8cffb5bd5301457f6173ea696e"
+    },
+    {
+      "path": "craft-libs-b72cb4d68ca09cf067f144afc1f13abe1e82e1ed/ATTRIBUTION.md",
+      "sha256": "fbe8f666c0eee48d1726e6aa0cce7fdb899b41d9144da8d049c3f8ca00780732"
+    },
+    {
+      "path": "craft-libs-fd5e2feff6ea25bed371a99cc732b3968d621505/ATTRIBUTION.md",
+      "sha256": "3b3672996cf32acfee951e37cdcd9f12c8d0132a46eb489f4dd4f45c45826ccd"
+    },
+    {
+      "path": "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/NOTICE",
+      "sha256": "8b1fbe6211dada33e1e3536c3218d97767905101b9ce863a255e21937664fbcf"
+    },
+    {
+      "path": "craft-libs-f0ad6c1e1d297908915f4be315b0fcfc9be7b5d4/ATTRIBUTION.md",
+      "sha256": "683f9f3df33476bc51fe80bf83608f490b745582708bb8da00f29ed85defeadb"
+    },
+    {
+      "path": "craft-libs-e11f9d9aebea5f6b8e74643c1ea1ed172ba5f545/ATTRIBUTION.md",
+      "sha256": "6ac085e7f5e1187e7b202929ba3e18c5b4537979686c6993ce3d2594e468287a"
+    },
+    {
+      "path": "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/NOTICE",
+      "sha256": "2739937ee1602700973da804d4c01da8d65119fadacb723242eebedb1a7959e9"
+    },
+    {
+      "path": "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/LICENSE-MIT",
+      "sha256": "d2d8416f0883694c23b473e26372506e9e11f5f41b55a92b7388dab921d9a207"
+    },
+    {
+      "path": "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/docs/brand/LICENSE-brand.txt",
+      "sha256": "d30f3aee39b72be3d1c1bdf994b75470ff53a354ca8ba6039c3a70a647b732fe"
+    },
+    {
+      "path": "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/assets/app-icon/LICENSE.txt",
+      "sha256": "79d32f0c9576355f9eaedf8ba8727a149cf3e42ed753ff5d25ac882bf072e27a"
+    },
+    {
+      "path": "filmcraft-d5ead4ba1ee2f1cd13cb86a4239aee2730a3d9f5/ATTRIBUTION.md",
+      "sha256": "fec1cf368ee816a2a54ff4bb9e8c49481bfc33fc130611780d586e51b5961d87"
+    },
+    {
+      "path": "winprint.rs-64e7afd4d1483512385012c340ecaaaf0f3beb7f/LICENSE.md",
+      "sha256": "970f241e73b246bc077c8ed67fd1ce1ee47f1dce72290bfeb537a425a655fd6d"
+    },
+    {
+      "path": "winprint.rs-64e7afd4d1483512385012c340ecaaaf0f3beb7f/crates/gdi/LICENSE-MIT",
+      "sha256": "1a8f66d8a86b146f5336fa0d4b1186576c8aa98e60823080c85c7811cfd810af"
+    },
+    {
+      "path": "indd-utils-7f3060e5bce78d21ea70e0d5eacb96edce15dfbe/LICENSE-MIT",
+      "sha256": "03515604e5c375d2c2973c4dfe9c2f3b8ee2a505be92926066d5d613bd4a38a0"
+    },
+    {
+      "path": "indd-utils-7f3060e5bce78d21ea70e0d5eacb96edce15dfbe/third_party/xmp-toolkit-sdk/LICENSE",
+      "sha256": "99678ec755c91c9400a989fef7c6e1bd2907aff40eef4cf855c111bbd282c1d4"
+    },
+    {
+      "path": "craft-libs-f3b62ec61f45534392376492fc5ad33047375205/ATTRIBUTION.md",
+      "sha256": "3d55514b1880303a484a75ae8f8c3cb52bdcaa8bdeb71348ab0c10e0cc0f17eb"
+    },
+    {
+      "path": "egui-725a39fca940f77149ffbb9c58eef405a16997bc/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
     }
   ],
   "reviewNotes": [
-    "All 15 engine top-level MIT OR Apache-2.0 license texts are unchanged.",
-    "Changed notices and contributor credits are retained; original attribution is preserved separately from rebranded artwork.",
-    "New registry package archives verified against Cargo.lock SHA-256; licenses include MIT/Apache/BSD, Unicode-3.0 and CDLA-Permissive-2.0, with their terms bundled in dependency-notices.txt.",
-    "Native-only packages are conservatively documented but are not enabled by the WASM target.",
-    "Writer pins craft-i18n translations and spelling/hyphenation data; SCOWL/Ispell, CC0/public-domain, MIT and BSD notices are retained. Language data is not rebranded.",
-    "RaTeX 0.1.14 and objc2-core-text 0.3.2 omit license files in their crate archives; notices were obtained from their exact upstream VCS commits.",
-    "GridCraft numeric AFM/Symbol data attribution is preserved. No proprietary font files were added.",
-    "This record covers the changed inputs and notice handling; runtime and file-format acceptance are reported separately."
+    "All 15 top-level MIT and Apache-2.0 license texts match the previous reviewed versions.",
+    "New registry archives verified against Cargo.lock SHA-256; exact Git revisions downloaded and checksummed for license and attribution review.",
+    "Original legal documents, contributors and font notices are retained; independently generated artwork replaces protected branding.",
+    "New dependencies use permissive alternatives shown in the inventory. Native-only dependencies are conservatively included in notices.",
+    "objc2-io-kit omits license files in its crate; its exact VCS revision shares the previously retained objc2 upstream license.",
+    "All 18 embedded language-data paths in the reviewed craft-proof revisions have one Embeddable attribution row at each of the three new craft-i18n pins; no GPL/AGPL/LGPL or CC-BY-SA dictionary data is embedded. Optional language-pack downloads are unavailable in the web backend.",
+    "Native About includes new dependency license and attribution texts, deduplicated against existing notices. This is changed-input/notice verification, not a comprehensive legal or security audit."
   ],
-  "additionalNoticeFile": "release/dependency-notices.txt",
-  "additionalNoticeSources": {
-    "RaTeX": "https://github.com/erweixin/RaTeX/blob/08cae05377938391117913ca4f278e6a3ffb6a8a/LICENSE",
-    "objc2": "https://github.com/madsmtm/objc2/blob/7b1abfd750a2cacaea71d6a56ecfb83cb7de560b/LICENSE.md"
-  },
-  "languageDataAttributionCheck": {
-    "files": 21,
-    "result": "PASS",
-    "checks": [
-      "exactly one attribution row per embedded data file",
-      "Embeddable license class",
-      "no GPL/AGPL/LGPL or CC-BY-SA data"
-    ]
-  }
+  "additionalNoticeFile": "release/dependency-notices.txt"
 }

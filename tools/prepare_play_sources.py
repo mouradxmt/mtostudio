@@ -166,7 +166,7 @@ def prepare(app):
         changed.append('ATTRIBUTION.toml')
     notice=dest/'MTOUAA-MODIFICATIONS.txt'
     notice.write_text('Mtouaa Studio independent Android edition.\n'
-        'Modified 2026-11-03: replaced protected ArtCraft branding and app-icon artwork with original Mtouaa artwork; '
+        'Modified 2026-11-12: replaced protected ArtCraft branding and app-icon artwork with original Mtouaa artwork; '
         'redirected community links to the publisher website. Upstream engine code, authorship and licence notices remain credited.\n'
         'Original Mtouaa geometric artwork is distributed under MIT OR Apache-2.0 for this source build.\n')
     manifest={'id':app['id'],'recipeSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
